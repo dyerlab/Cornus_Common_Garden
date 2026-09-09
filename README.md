@@ -1,6 +1,6 @@
 # Early fitness consequences of cultivar gene escape in flowering dogwood (*Cornus florida*, Cornaceae L.)
 
-Jane Remfert, Andrew Eckert, Rodney Dyer · (in review)
+Jane Remfert, Andrew Eckert, Rodney Dyer 
 
 Open-pollinated dogwood seedlings from managed-landscape ("cultivar") and second-growth-forest ("native") mothers were grown together for two years in a deeply shaded forest common garden and scored for survival, growth, and biomass. Cultivar-origin seedlings were **not** disadvantaged — survival was high and did not vary with origin or genetic admixture, and origin explained little trait variation — so early viability selection is unlikely to stop escaped cultivar alleles from establishing, and longer-term introgression into wild populations deserves attention.
 
@@ -123,7 +123,7 @@ All maternal trees are identified by anonymized code: `urb**` = cultivar origin 
 
 If you use the data or code, please cite the paper:
 
-Remfert J, Eckert A, Dyer R. *Early fitness consequences of cultivar gene escape in flowering dogwood (*Cornus florida*)*. (in review). A Zenodo DOI will be minted from the tagged release.
+- Remfert J, Eckert A, Dyer R. *Early fitness consequences of cultivar gene escape in flowering dogwood (*Cornus florida* L.). A DOI will be minted from the tagged release.
 
 ---
 
