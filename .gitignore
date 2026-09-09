@@ -1,0 +1,137 @@
+# =============================================================================
+# .gitignore — Cornus florida common-garden manuscript repository
+#
+# This folder is the publication repo (code in R/, anonymized data in data/,
+# manuscript in *.md). The rules below keep out of history:
+#   1. everything private — it all lives in SENSITIVE/ (one line)
+#   2. regenerable pipeline output (data/derived/, data/results/, genepop scratch)
+#   3. the usual R / RMarkdown / Quarto / renv / editor / OS noise
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 1. Everything not for GitHub lives here: non-anonymized source data
+#    (SENSITIVE/data_raw/), the de-anonymization key, working/process notes
+#    (SENSITIVE/notes/), and the legacy repos (SENSITIVE/legacy/).
+#    Keep this folder in a local Documents backup, never push it.
+# -----------------------------------------------------------------------------
+/SENSITIVE/
+
+# belt-and-braces in case a key or de-anon file lands outside SENSITIVE/
+**/mom_anonymization_key.csv
+**/*anonymization*key*
+*_deanon.csv
+
+# -----------------------------------------------------------------------------
+# 2. Generated analysis output — everything a fresh checkout rebuilds from
+#    data/*.csv with `Rscript R/run_all.R`. Both folders are pipeline output:
+#    data/derived/ = intermediates the model scripts consume; data/results/ =
+#    the result tables (also rendered into manuscript.md).
+#    The one committed exception is data/admixture.csv — it derives from the
+#    non-public voucher panel, so a clone cannot rebuild it.
+# -----------------------------------------------------------------------------
+/data/derived/
+/data/results/
+
+# genepop scratch (step 04); run_all.R and 04_null_alleles.R delete these on
+# exit — this is the safety net if a run is interrupted.
+/cmdline.txt
+/fichier.in
+/Rplots.pdf
+
+# media/ (manuscript figures + diagnostics/) IS tracked, so manuscript.md
+# renders on GitHub without running R. Uncomment to treat it as build output:
+# /media/
+
+# -----------------------------------------------------------------------------
+# 3. R
+# -----------------------------------------------------------------------------
+.Rproj.user/
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+.Renviron
+*.Rout
+*_cache/
+/cache/
+.Rprofile.local
+
+# R CMD check / package builds (harmless if this never becomes a package)
+/*.Rcheck/
+*.tar.gz
+/..Rcheck/
+
+# -----------------------------------------------------------------------------
+# 4. renv  (keep renv.lock, renv/activate.R, renv/settings.json)
+# -----------------------------------------------------------------------------
+/renv/library/
+/renv/local/
+/renv/cellar/
+/renv/lock/
+/renv/python/
+/renv/sandbox/
+/renv/staging/
+
+# -----------------------------------------------------------------------------
+# 5. RMarkdown
+# -----------------------------------------------------------------------------
+*.knit.md
+*.utf8.md
+*.html
+!/docs/**/*.html
+/*_files/
+
+# -----------------------------------------------------------------------------
+# 6. Quarto
+# -----------------------------------------------------------------------------
+/.quarto/
+/_site/
+/_book/
+/_freeze/
+/site_libs/
+*_files/
+
+# -----------------------------------------------------------------------------
+# 7. pandoc / LaTeX intermediates (manuscript -> .docx / .pdf conversion)
+# -----------------------------------------------------------------------------
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.run.xml
+# built manuscript documents (regenerate from the .md sources)
+/*.docx
+/*.pdf
+
+# -----------------------------------------------------------------------------
+# 8. Editors / IDEs
+# -----------------------------------------------------------------------------
+.vscode/
+.idea/
+*.code-workspace
+*~
+.\#*
+\#*\#
+*.swp
+*.swo
+
+# -----------------------------------------------------------------------------
+# 9. macOS / Windows / Linux
+# -----------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+desktop.ini
