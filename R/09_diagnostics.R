@@ -15,7 +15,8 @@
 #
 # Inputs : data/derived/traits_harvest.csv, data/derived/traits_repeated.csv,
 #          data/admixture.csv
-# Outputs: media/diagnostics/<model>/{resid_fitted,scale_location,qq}.png
+# Outputs: media/fig_lmm_qq.png / .pdf   (composite Q-Q, all 10 LMMs — Appendix S1)
+#          media/diagnostics/<model>/{resid_fitted,scale_location,qq}.png
 #          data/results/lmm_diagnostics.csv
 #          data/results/lmm_influential_families.csv
 # -----------------------------------------------------------------------------
@@ -80,9 +81,11 @@ diagnose <- function(model, name) {
                  error = function(e) NA_real_)
   het <- suppressWarnings(cor(d$fitted, d$sqrt_abs, use = "complete.obs"))
 
-  tibble(model = name, n = nrow(d),
-         shapiro_p = sw, hetero_cor = het,
-         resid_sd = sd(d$resid))
+  list(
+    summary = tibble(model = name, n = nrow(d),
+                     shapiro_p = sw, hetero_cor = het, resid_sd = sd(d$resid)),
+    resid   = tibble(model = name, std_resid = d$std_resid)
+  )
 }
 
 # ---- Single-time trait models --------------------------------------
@@ -91,7 +94,7 @@ single_specs <- c(height = "height_cm_ln", stem_diam = "stemd_mm_ln",
                   leaf_number = "leaves_n_ln", AGB = "agb_g_ln", BGB = "bgb_g_ln",
                   leaf_biomass = "leaf_biomass_g_ln", stem_biomass = "stem_biomass_g_ln")
 
-single_diag <- imap_dfr(single_specs, function(y, nm) {
+single_diag <- imap(single_specs, function(y, nm) {
   d <- harvest %>% filter(!is.na(.data[[y]]))
   m <- lmer(reformulate(c("days_z", "seed_weight_z", "(1|origin)", "(1|family)"), y),
             data = d, REML = TRUE, control = LMM_CTRL)
@@ -100,16 +103,43 @@ single_diag <- imap_dfr(single_specs, function(y, nm) {
 
 # ---- Repeated-measures trait models -------------------------------
 
-repeated_diag <- imap_dfr(c(height = "PH", stem_diam = "SD", leaf_number = "NL"), function(tr, nm) {
+repeated_diag <- imap(c(height = "PH", stem_diam = "SD", leaf_number = "NL"), function(tr, nm) {
   d <- repdat %>% filter(trait == tr)
   m <- lmer(reformulate(c("days_z", "seed_weight_z", "census", "(1|plant)", "(1|family)"), "value_ln"),
             data = d, REML = TRUE, control = LMM_CTRL)
   diagnose(m, paste0("repeated_", nm))
 })
 
-lmm_diagnostics <- bind_rows(single_diag, repeated_diag) %>%
+all_diag <- c(single_diag, repeated_diag)
+
+lmm_diagnostics <- bind_rows(map(all_diag, "summary")) %>%
   mutate(across(c(shapiro_p, hetero_cor, resid_sd), ~ round(.x, 4)))
 write_csv(lmm_diagnostics, file.path(paths$results, "lmm_diagnostics.csv"))
+
+# ---- Composite Q-Q figure for Appendix S1 -------------------------
+# The Shapiro-Wilk tests in lmm_diagnostics.csv reject normality for most
+# models purely because n is large (465-2021); this figure shows the actual
+# departures are mild and confined to the tails.
+
+model_levels <- c(paste0("single_",   names(single_specs)),
+                  paste0("repeated_", c("height", "stem_diam", "leaf_number")))
+model_labels <- c("Height", "Stem diameter", "Leaf number", "AGB", "BGB",
+                  "Leaf biomass", "Stem biomass",
+                  "Height (RM)", "Stem diameter (RM)", "Leaf number (RM)")
+
+qq_all <- bind_rows(map(all_diag, "resid")) %>%
+  mutate(model = factor(model, levels = model_levels, labels = model_labels))
+
+fig_lmm_qq <- ggplot(qq_all, aes(sample = std_resid)) +
+  stat_qq(alpha = 0.3, size = 0.5, colour = "#2c7fb8") +
+  stat_qq_line(linetype = 2, colour = "grey40") +
+  facet_wrap(~ model, nrow = 2, scales = "free_y") +
+  labs(x = "Theoretical quantiles", y = "Standardised residual") +
+  theme_classic(base_size = 9) +
+  theme(strip.background = element_blank(), axis.text = element_text(colour = "black"))
+
+ggsave(file.path(paths$figures, "fig_lmm_qq.png"), fig_lmm_qq, width = 9, height = 4.2, dpi = 300)
+ggsave(file.path(paths$figures, "fig_lmm_qq.pdf"), fig_lmm_qq, width = 9, height = 4.2)
 
 # ---- Per-family influence for the single-time family models -------
 
