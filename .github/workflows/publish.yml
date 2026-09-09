@@ -15,10 +15,6 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
   site:
     uses: dyerlab/manuscript-theme/.github/workflows/render.yml@v1
