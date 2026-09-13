@@ -146,7 +146,7 @@ For the generalized linear mixed models (survival), fit was assessed using simul
 
 ![](media/fig_lmm_qq.png)
 
-**Fig_LMM_QQ.** Normal quantile–quantile plots of the standardised residuals from the top-supported model of each trait: the seven end-of-experiment single-measurement traits and the three repeated-measures traits (RM). Points on the dashed line indicate normally distributed residuals. The central distribution is well behaved for every model; departures are confined to the lower tail (mild left-skew), most visible for below-ground and leaf biomass. Shapiro–Wilk tests reject normality for most models (see text).
+**Fig_LMM_QQ.** Normal quantile–quantile plots of the standardized residuals from the top-supported model of each trait: the seven end-of-experiment single-measurement traits and the three repeated-measures traits (RM). Points on the dashed line indicate normally distributed residuals. The central distribution is well behaved for every model; departures are confined to the lower tail (mild left-skew), most visible for below-ground and leaf biomass. Shapiro–Wilk tests reject normality for most models (see text).
 
 ## Sensitivity Analyses
 
@@ -222,27 +222,27 @@ Combined multilocus exclusion probability (gstudio; Dyer 2009): full nine-locus 
 
 | Accession | Sample tag |
 | :-- | :-- |
-| Appalachian Blush | Appalachianblush |
-| Appalachian Joy | Appalachianjoy |
-| Appalachian Mist | Appalachianmist |
-| Appalachian Snow | Appalchiansnow |
-| Appalachian Snow 15 | Appalachiansnow15 |
-| Appalachian Spring | Appalachianspring |
-| Cherokee Brave | Cherokeebrave |
-| Cherokee Chief | Cherokeechief |
-| Cherokee Princess | Cherokeeprincess |
-| Cherokee Princess 3 | Cherokeeprincess3 |
-| Cloud Nine | Cloudnine |
-| Cornus Hyperion | Cornushyperion |
-| Double Pink | Doublepink |
-| Little Princess | Littleprincess |
-| Plena | Plena |
-| Red Beauty | RedBeauty |
-| Red Pygmy | Redpygmy |
-| Rubra | Rubra |
-| Rubra Pink 15 | Rubrapink15 |
-| Spring Grove | Springgrove |
-| Stellar Pink | Stellarpink |
+| *Appalachian Blush* | Appalachianblush |
+| *Appalachian Joy* | Appalachianjoy |
+| *Appalachian Mist* | Appalachianmist |
+| *Appalachian Snow* | Appalchiansnow |
+| *Appalachian Snow 15* | Appalachiansnow15 |
+| *Appalachian Spring* | Appalachianspring |
+| *Cherokee Brave* | Cherokeebrave |
+| *Cherokee Chief* | Cherokeechief |
+| *Cherokee Princess* | Cherokeeprincess |
+| *Cherokee Princess 3* | Cherokeeprincess3 |
+| *Cloud Nine* | Cloudnine |
+| *Cornus Hyperion* | Cornushyperion |
+| *Double Pink* | Doublepink |
+| *Little Princess* | Littleprincess |
+| *Plena* | Plena |
+| *Red Beauty* | RedBeauty |
+| *Red Pygmy* | Redpygmy |
+| *Rubra* | Rubra |
+| *Rubra Pink 15* | Rubrapink15 |
+| *Spring Grove* | Springgrove |
+| *Stellar Pink* | Stellarpink |
 
 ## Multilocus Linkage Disequilibrium (Index of Association)
 
