@@ -5,5 +5,5 @@
 Jane Remfert, Andrew Eckert, Rodney Dyer
 
 - [Manuscript](manuscript.html)
-- [Appendix S1: Statistical model structure, variance decomposition, and diagnostics](supplemental.html)
+- [Appendix S1: Statistical models, marker analyses, and supplementary results](supplemental.html)
 - [Repository on GitHub](https://github.com/dyerlab/Cornus_Common_Garden)

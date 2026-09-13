@@ -4,7 +4,11 @@ Jane Remfert, Andrew Eckert, Rodney Dyer
 
 Open-pollinated dogwood seedlings from managed-landscape ("cultivar") and second-growth-forest ("native") mothers were grown together for two years in a deeply shaded forest common garden and scored for survival, growth, and biomass. Cultivar-origin seedlings were **not** disadvantaged — survival was high and did not vary with origin or genetic admixture, and origin explained little trait variation — so early viability selection is unlikely to stop escaped cultivar alleles from establishing, and longer-term introgression into wild populations deserves attention.
 
-This repository holds the manuscript (`manuscript.md`, `supplemental.md`), the data, and the `R` code that reproduces every table and figure. The rest of this file is a standalone summary of the study; repository and reproduction details are at the bottom.
+This repository holds the manuscript (`manuscript.md`, `supplemental.md`), the data, and the `R` code that reproduces every table and figure. 
+
+An online version of the manuscript is [here](https://dyerlab.github.io/Cornus_Common_Garden/manuscript.html) and supplemental materials are [here](https://dyerlab.github.io/Cornus_Common_Garden/supplemental.html)
+
+The rest of this file is a standalone summary of the study; repository and reproduction details are at the bottom.
 
 ---
 

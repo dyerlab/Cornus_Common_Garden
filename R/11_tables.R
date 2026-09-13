@@ -81,17 +81,65 @@ w("\n## Tab_NullAlleles\n")
 w("Maximum-likelihood estimates of null-allele frequency per locus for the cultivar- ",
   "and native-origin samples (Genepop; Rousset 2008), with 95% confidence intervals.\n")
 na_wide <- na_tbl %>%
-  mutate(val = sprintf("%.4f [%.4f, %.4f]", null_est, ci_low, ci_high),
-         val = ifelse(is.na(ci_low), sprintf("%.4f", null_est), val)) %>%
+  mutate(val = sprintf("%.3f [%.3f, %.3f]", null_est, ci_low, ci_high),
+         val = ifelse(is.na(ci_low), sprintf("%.3f", null_est), val)) %>%
   select(Locus, population, val) %>%
   pivot_wider(names_from = population, values_from = val) %>%
   mutate(`In reduced set` = ifelse(Locus %in% red_loci, "yes", "no"))
-writeLines(md_table(na_wide, digits = 4), out)
+writeLines(md_table(na_wide, digits = 3), out)
 w("")
-w("Combined multilocus exclusion probability (gstudio; Dyer 2009):\n")
+w("Combined multilocus exclusion probability (gstudio; Dyer 2009). Kept at ",
+  "more than 3 decimal places deliberately: at 3dp both the full and reduced ",
+  "panel round to 1.000, which erases exactly the distinction the manuscript ",
+  "needs between them.\n")
 writeLines(md_table(excl %>% filter(set != "per-locus") %>%
   transmute(`Marker set` = set,
             `P(exclusion), multilocus` = signif(Pe, 5)), digits = 5), out)
+
+# ---- Tab_CultivarVoucherPanel ------------------------------------
+
+vouchers_tbl <- rd("cultivar_vouchers.csv")
+w("\n## Tab_CultivarVoucherPanel\n")
+w("Named cultivar accessions genotyped as the reference voucher panel for admixture ",
+  "scoring, sorted alphabetically. Sample tags are lab shorthand; a trailing number ",
+  "is part of an accession's identity, not a replicate index (see R/02_admixture.R).\n")
+writeLines(md_table(vouchers_tbl %>% transmute(Accession, `Sample tag` = raw_sample_tag)), out)
+
+# ---- Tab_AdmixturePanelComparison ----------------------------------
+# Full nine-locus AP (data/admixture.csv, data/admixture_maternal.csv -- the
+# model-covariate values used elsewhere) vs. the six-locus Wadl et al. (2008)
+# subset (data/results/admixture_wadl.csv, descriptive only), separately for
+# maternal trees and offspring.
+
+adm_full <- bind_rows(
+  read_csv(file.path(paths$data, "admixture.csv"), show_col_types = FALSE) %>%
+    mutate(group = "offspring"),
+  read_csv(file.path(paths$data, "admixture_maternal.csv"), show_col_types = FALSE) %>%
+    mutate(group = "maternal")
+)
+adm_wadl <- rd("admixture_wadl.csv")
+
+summarize_ap <- function(df, marker_set) {
+  df %>%
+    group_by(group) %>%
+    summarise(n = n(), mean_AP = mean(AP), sd_AP = sd(AP),
+              min_AP = min(AP), max_AP = max(AP), .groups = "drop") %>%
+    mutate(`Marker set` = marker_set)
+}
+
+ap_cmp <- bind_rows(
+  summarize_ap(adm_full, "full (9 loci)"),
+  summarize_ap(adm_wadl, "Wadl (6 loci)")
+)
+
+w("\n## Tab_AdmixturePanelComparison\n")
+w("Admixture Percentage (AP), summarized separately for maternal trees and their ",
+  "offspring array, computed from the full nine-locus panel versus the six-locus ",
+  "subset used by Wadl et al. (2008) as a cultivar lineage-identification key.\n")
+writeLines(md_table(ap_cmp %>%
+  transmute(Group = str_to_title(group), `Marker set`, n,
+            `Mean AP (%)` = sprintf("%.3f", mean_AP), SD = sprintf("%.3f", sd_AP),
+            `Range (%)` = paste0(sprintf("%.3f", min_AP), "\u2013", sprintf("%.3f", max_AP)))), out)
 
 # ---- Tab_Survival ----------------------------------------------
 
@@ -108,7 +156,7 @@ surv_tab <- sa %>%
     TRUE ~ NA_character_)) %>%
   left_join(sq_w, by = c("join_set" = "set")) %>%
   transmute(Subset = subset, Model = model,
-            AICc = round(AICc, 2), dAICc = round(dAICc, 2), wAICc = round(wAICc, 3),
+            AICc = sprintf("%.3f", AICc), dAICc = sprintf("%.3f", dAICc), wAICc = sprintf("%.3f", wAICc),
             `V origin` = ci(estimate_V_origin, ci_low_V_origin, ci_high_V_origin),
             `V family` = ci(estimate_V_family, ci_low_V_family, ci_high_V_family),
             `P family` = ifelse(is.na(estimate_P_family), "—", sprintf("%.3f", estimate_P_family)),
@@ -132,9 +180,9 @@ for (tr in names(trait_lab)) {
   writeLines(md_table(
     ga %>% filter(trait == tr) %>%
       transmute(Subset = subset, Model = model,
-        AIC = round(AIC, 1), dAIC = round(dAIC, 1), wAIC = round(wAIC, 2),
-        AICc = round(AICc, 1), dAICc = round(dAICc, 1), wAICc = round(wAICc, 2)) %>%
-      mutate(across(where(is.numeric), as.character)), digits = 2), out)
+        AIC = sprintf("%.3f", AIC), dAIC = sprintf("%.3f", dAIC), wAIC = sprintf("%.3f", wAIC),
+        AICc = sprintf("%.3f", AICc), dAICc = sprintf("%.3f", dAICc), wAICc = sprintf("%.3f", wAICc)) %>%
+      mutate(across(where(is.numeric), as.character)), digits = 3), out)
 }
 
 # ---- Tab_GrowthHeritability + Tab_OriginHeritability -------
@@ -172,9 +220,9 @@ w("\n## Tab_RepeatedAIC\n")
 for (tr in c("height", "stem_diam", "leaf_number")) {
   w("\n**", trait_lab[[tr]], "**\n")
   writeLines(md_table(ra %>% filter(trait == tr) %>%
-    transmute(Model = model, AIC = round(AIC, 1), dAIC = round(dAIC, 1), wAIC = round(wAIC, 2),
-      AICc = round(AICc, 1), dAICc = round(dAICc, 1), wAICc = round(wAICc, 2)) %>%
-    mutate(across(where(is.numeric), as.character)), digits = 2), out)
+    transmute(Model = model, AIC = sprintf("%.3f", AIC), dAIC = sprintf("%.3f", dAIC), wAIC = sprintf("%.3f", wAIC),
+      AICc = sprintf("%.3f", AICc), dAICc = sprintf("%.3f", dAICc), wAICc = sprintf("%.3f", wAICc)) %>%
+    mutate(across(where(is.numeric), as.character)), digits = 3), out)
 }
 w("\n## Tab_RepeatedHeritability\n")
 writeLines(md_table(rq %>% transmute(
