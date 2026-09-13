@@ -11,7 +11,10 @@
 #
 # Each step reads from data/ or data/derived/ and writes to data/derived/,
 # data/results/ or media/. Steps are independent given their inputs,
-# but 02-11 all depend on 01, and 05-07 depend on 02.
+# but 02-11 all depend on 01, and 05-07 depend on 02. Steps 13-15 (marker
+# validation: linkage disequilibrium, DAPC, relatedness) read data/genotypes.csv
+# directly and do not depend on any other step; their results are reported in
+# supplemental.md and are not assembled by 11_tables.R.
 # -----------------------------------------------------------------------------
 
 steps <- c(
@@ -23,10 +26,13 @@ steps <- c(
   "R/06_single_time.R",         # Tab_GrowthAIC, Tab_GrowthHeritability, Tab_OriginHeritability, Tab_CovariateEffects
   "R/07_repeated_measures.R",   # Tab_RepeatedAIC, Tab_RepeatedHeritability
   "R/08_site_effect.R",         # Tab_SiteEffect
-  "R/09_diagnostics.R",         # Appendix S1 LMM diagnostics
+  "R/09_diagnostics.R",         # Supplementary Materials LMM diagnostics
   "R/10_figures.R",             # Fig_Survival, Fig_BLUPs
   "R/11_tables.R",              # assemble data/results/manuscript_tables.md
-  "R/12_within_family_variance.R"  # Discussion: within-family variance, cultivar vs native
+  "R/12_within_family_variance.R", # Discussion: within-family variance, cultivar vs native
+  "R/13_multilocus_ld.R",          # Tab_LinkageDisequilibrium
+  "R/14_dapc_origin.R",            # Tab_DAPC
+  "R/15_relatedness_check.R"       # Tab_Relatedness
 )
 
 t0 <- Sys.time()

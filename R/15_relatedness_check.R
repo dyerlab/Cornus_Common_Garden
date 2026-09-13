@@ -1,7 +1,7 @@
 # 15_relatedness_check.R
 # -----------------------------------------------------------------------------
-# Side-check (not referenced in the manuscript): is the asymmetry in
-# family-level variance we see between the putative-native and
+# Side-check (referenced in the manuscript Discussion as Tab_Relatedness): is
+# the asymmetry in family-level variance we see between the putative-native and
 # putative-cultivar common-garden subsets (Tab_OriginHeritability) explained,
 # at least in part, by the two groups' maternal trees being differently
 # related to each other -- rather than by anything intrinsic to "cultivar"

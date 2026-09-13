@@ -8,25 +8,26 @@ Rscript R/run_all.R           # full run (bootstrap NSIM = 1000, ~15-20 min)
 NSIM=50 Rscript R/run_all.R    # fast dry run
 ```
 
-`run_all.R` runs steps 01–12 in order, then deletes any scratch files
+`run_all.R` runs steps 01–15 in order, then deletes any scratch files
 (`cmdline.txt`, `fichier.in`, `Rplots.pdf`) tools leave in the working directory.
 
 ## Layout
 
 | Path | Contents |
 |---|---|
-| `../data/*.csv` | inputs — 6 anonymized collected tables (genotypes, germination, phenotypes, biomass, seed weight, native mom sites) plus `admixture.csv` (see below) |
+| `../data/*.csv` | inputs — 6 anonymized collected tables (genotypes, germination, phenotypes, biomass, seed weight, native mom sites) plus `admixture.csv` and `admixture_maternal.csv` (see below) |
 | `../data/derived/` | pipeline intermediates the model scripts consume — **git-ignored**, rebuilt every run |
 | `../data/results/` | one CSV per result set, plus `manuscript_tables.md` — **git-ignored**, rebuilt every run (also rendered into `manuscript.md`) |
 | `../media/` | `fig_survival`, `fig_blups`, `fig_within_family_variance`, `fig_lmm_qq`, and per-model diagnostic panels under `diagnostics/` — **committed** so `manuscript.md` renders without R |
 | `../SENSITIVE/` | non-anonymized source (`data_raw/`), the anonymization key, notes, legacy repos — **git-ignored, local only, never published** |
 
 `data/derived/` and `data/results/` are both pipeline output and a fresh checkout
-rebuilds them from `data/*.csv` with `Rscript R/run_all.R`. The one committed
-generated file is **`data/admixture.csv`** (per-seedling Admixture Percentage):
-`02_admixture.R` builds it from the non-public plate7 voucher panel in
-`SENSITIVE/`, so a clone cannot regenerate it — step 02 detects a missing
-`SENSITIVE/` and skips, and steps 05–12 use the committed file.
+rebuilds them from `data/*.csv` with `Rscript R/run_all.R`. The two committed
+generated files are **`data/admixture.csv`** (per-seedling Admixture
+Percentage) and **`data/admixture_maternal.csv`** (per-maternal-tree Admixture
+Percentage): `02_admixture.R` builds both from the non-public plate7 voucher
+panel in `SENSITIVE/`, so a clone cannot regenerate them — step 02 detects a
+missing `SENSITIVE/` and skips, and steps 05–12 use the committed files.
 
 ## Scripts
 
@@ -42,10 +43,13 @@ generated file is **`data/admixture.csv`** (per-seedling Admixture Percentage):
 | `06_single_time.R` | Tab_GrowthAIC, Tab_GrowthHeritability, Tab_OriginHeritability, Tab_CovariateEffects |
 | `07_repeated_measures.R` | Tab_RepeatedAIC, Tab_RepeatedHeritability |
 | `08_site_effect.R` | Tab_SiteEffect |
-| `09_diagnostics.R` | `Fig_LMM_QQ` (composite Q-Q for all 10 LMMs) + per-model diagnostic panels and the Shapiro/heteroscedasticity summary — Appendix S1 |
+| `09_diagnostics.R` | `Fig_LMM_QQ` (composite Q-Q for all 10 LMMs) + per-model diagnostic panels and the Shapiro/heteroscedasticity summary — Supplementary Materials |
 | `10_figures.R` | Fig_Survival, Fig_BLUPs |
 | `11_tables.R` | `manuscript_tables.md` — all Tab_* blocks in Markdown |
 | `12_within_family_variance.R` | Discussion analysis: is within-family phenotypic variance larger for cultivar than native arrays? (`NPERM` permutation reps, default 9999) |
+| `13_multilocus_ld.R` | Tab_LinkageDisequilibrium — index of association (Ia, rbarD) within each origin group, on the 58 unrelated maternal trees |
+| `14_dapc_origin.R` | Tab_DAPC — discriminant analysis of principal components, testing whether native/cultivar maternal trees separate on full multilocus genotype |
+| `15_relatedness_check.R` | Tab_Relatedness — pairwise relatedness among maternal trees, checking whether native mothers are more closely related to one another than cultivar mothers |
 
 ## Analysis choices
 

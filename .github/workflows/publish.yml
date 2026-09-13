@@ -2,7 +2,7 @@ name: Build and deploy manuscript site
 
 on:
   push:
-    branches: [Main]
+    branches: [main]
     paths:
       - "*.md"
       - "*.meta.yml"
