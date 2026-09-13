@@ -39,13 +39,13 @@ To differentiate between these two hypothese, we sampled offspring arrays from m
 
 ## Sampling Design
 
-Maternal trees were identified in both managed urban environments and from second growth forests around Richmond, Virginia.  In the urban environment, maternal trees were sampled from residential yards, with landowner permission, and public spaces. Native maternal dogwood trees were sampled in the deciduous and pine second-growth forests of Pocahontas State Park in Chesterfield, VA, and at the Virginia Commonwealth University (VCU) Rice Rivers Center in Charles City County, VA.  We found no evidence that native tree sampling location impacted survival or any phenotypic trait (Tab_SiteEffect) and felt justified in combining samples from the Rice Rivers Center and Pocahontas State Park trees into the single *native* category. 
+Maternal trees were identified in both managed urban environments and from second growth forests around Richmond, Virginia.  In the urban environment, maternal trees were sampled from residential yards, with landowner permission, and public spaces. Native maternal dogwood trees were sampled in the deciduous and pine second-growth forests of Pocahontas State Park in Chesterfield, VA, and at the Virginia Commonwealth University (VCU) Rice Rivers Center in Charles City County, VA.  We found no evidence that native tree sampling location impacted survival or any phenotypic trait (Tab_SiteEffect, Supplementary Materials) and felt justified in combining samples from the Rice Rivers Center and Pocahontas State Park trees into the single *native* category. 
 
 Open-pollinated seeds were sampled from 36 focal maternal individuals in both the urban and native environments in fall 2017.  Trees sampled from the secondary understories (native) had much lower seed set than those mothers in urban environments.  Seeds were depulped, given an acid wash (following ==REF==), and weighed; family-seed weight was used later as a covariate for material provisioning.  Seeds were then planted in a 2:1 sphagnum-perlite mixture and sealed in gas-permeable bags. After stratification at 4°C for at least 90 days, seeds were monitored for signs of germination.  Germination occurred over an extended period and we recorded the germination date for each individual seed to account for differences in developmental time between germination and subsequent trait measurements. Following cotyledon expansion, seedlings were planted in 4-inch nursery pots and grown indoors before being transplanted into the common garden location. 
 
 ## Common Garden
 
-We established a common garden in the understory of a second-growth mixed hardwood forest at the VCU Rice Rivers Center.  To prevent seedling loss to deer browsing (Long *et al.* 2007), the common garden was surrounded by an 8-ft exclosure fence (Redick *et al.* 2020).  At plating, we had 20 family arrays ($n$ \= 395 seedlings) collected from maternal trees classified as *cultivar* and 16 family arrays ($n$ \= 174 seedlings; see Tab_Samples) whose maternal location was designated as *native*.  Each seedling was transplanted into a 2-gallon plastic nursery pot randomly placed within the garden.  
+We established a common garden in the understory of a second-growth mixed hardwood forest at the VCU Rice Rivers Center.  To prevent seedling loss to deer browsing (Long et al. 2007), the common garden was surrounded by an 8-ft exclosure fence (Redick and Jacobs 2020).  At plating, we had 20 family arrays ($n$ \= 395 seedlings) collected from maternal trees classified as *cultivar* and 16 family arrays ($n$ \= 174 seedlings; see Tab_Samples) whose maternal location was designated as *native*.  Each seedling was transplanted into a 2-gallon plastic nursery pot randomly placed within the garden.  
 
 We monitored seedling growth and survival over two growing seasons with survival censuses conducted each year at both peak growth (May/June) and end of the growing season prior to leaf drop (September/October).  All seedlings were measured for the following traits.  Height was measured from the base of the plant to the apical meristem, and stem diameter was measured just below the cotyledons (when present) or the cotyledon scar (thereafter). In spring of year 2, there was evidence of a powdery mildew infection, as commonly found in nursery populations. We were not specifically testing disease susceptibility and felt mildew mortality would impact the statistical power for early growth traits and thus treated all seedlings for two weeks with a rotation of Cleary’s 3336F, mixed to the manufacturer’s recommendation, neem oil (2%), or diluted milk (10%). At the end of the second growing season, before leaf drop, all plants were harvested.  Stem and leaf tissue were separated from the roots, placed in brown paper bags, and dried at 62°C for 72 hrs. Samples were subsequently weighed to determine above- and below-ground biomass (AGB and BGB, respectively). Above-ground biomass was further separated into leaf (leaf AGB) and stem biomass (stem AGB).
 
@@ -53,9 +53,9 @@ We monitored seedling growth and survival over two growing seasons with survival
 
 Leaves from maternal individuals were collected, and fresh tissue was frozen at -20°C until DNA extraction. Seedling leaf tissue was collected after seedlings were established in the common garden. We also collected samples from known *C. florida* cultivar varieties provided by the Rutgers University horticultural program and from individuals in commercial nurseries in the greater Richmond, VA metropolitan area. 
 
-Genomic DNA was extracted from approximately 50 mg of plant tissue following standard Qiagen DNeasy plant kit protocols, with concentrations standardized using a Nanodrop 8000 (Nanodrop, Wilmington, DE, USA). Qiagen Type-It Microsatellite PCR kits were used to perform 20 µL amplification reactions with ~20 ng of DNA. Samples were amplified at 9 microsatellite loci identified as diagnostic for cultivar strains: *cf213*, *cf273*, *cf581*, *cf585*, *cf597*, *cf634* (Table 2, Wadl et al. 2008), *cf020*, *cf125*, *cf701* (Table 3, Wang et al. 2009).  Polymerase Chain Reaction (PCR) amplification settings were: 5 min 95°C, 90s 60°C, 30s 72°C, x 34, 30 min 60 °C. Amplicons were sent to the Nevada Genomics Center for fragment analysis. Peaks were called in Geneious Prime (v. 2021.0.3). The presence of null alleles was assessed with the `nulls` function in the `genepop` R package (v. 1.2.17; Rousset 2008), which returns a maximum-likelihood estimate of null-allele frequency and its confidence interval for each locus. Genetic diversity of maternal trees and offspring arrays was quantified across the nine microsatellite loci as number of alleles per locus ($A$), effective number of alleles ($A_e$), observed and expected heterozygosity ($H_o$, $H_e$), and single-locus and combined multilocus exclusion probabilities ($P_e$) using the `gstudio` R package (v. 1.14; Dyer 2009). 
+Genomic DNA was extracted from approximately 50 mg of plant tissue following standard Qiagen DNeasy plant kit protocols, with concentrations standardized using a Nanodrop 8000 (Nanodrop, Wilmington, DE, USA). Qiagen Type-It Microsatellite PCR kits were used to perform 20 µL amplification reactions with ~20 ng of DNA. Samples were amplified at 9 microsatellite loci identified as diagnostic for cultivar strains: *cf213*, *cf273*, *cf581*, *cf585*, *cf597*, *cf634* (Table 2, Wadl et al. 2008), *cf020*, *cf125*, *cf701* (Table 3, Wang et al. 2009).  Polymerase Chain Reaction (PCR) amplification settings were: 5 min 95°C, 90s 60°C, 30s 72°C, x 34, 30 min 60 °C. Amplicons were sent to the Nevada Genomics Center for fragment analysis. Peaks were called in Geneious Prime (v. 2021.0.3). The presence of null alleles was assessed with the `nulls` function in the `genepop` R package (v. 1.2.17; Rousset 2008), which returns a maximum-likelihood estimate of null-allele frequency and its confidence interval for each locus. Genetic diversity of maternal trees and offspring arrays was quantified across the nine microsatellite loci as number of alleles per locus ($A$), effective number of alleles ($A_e$), observed and expected heterozygosity ($H_o$, $H_e$), and single-locus and combined multilocus exclusion probabilities ($P_e$) using the `gstudio` R package (v. 1.14; Dyer 2009). 
 
-Multilocus genotypes of maternal trees and offspring arrays were used to develop a secondary classification system based on shared ancestry with cultivar varieties, following the approach of Wadl *et al.* (2008), who used a six-locus subset of our panel (*cf213*, *cf273*, *cf581*, *cf585*, *cf597*, *cf634*) as a diagnostic key for identifying specific named cultivar lineages. We instead used the full nine-locus panel, including three loci not part of that original key (*cf020*, *cf125*, *cf701*; Wang et al. 2009), for a broader, similarity-based admixture score rather than exact lineage matching. Each seedling was compared with every cultivar voucher genotype and scored at each locus and classified as the proportion of alleles shared with known cultivar varities (Admixture Percentage; AP). We did not have sufficient sample sizes to distinguish among individual cultivar varieties, so we treated all cultivars identically.  Both maternal sample location (*cultivar* vs. *native*) and admixture percentage were used as covaraites in the following analyses.  
+Multilocus genotypes of maternal trees and offspring arrays were used to develop a secondary classification system based on shared ancestry with cultivar varieties, following the approach of Wadl et al. (2008), who used a six-locus subset of our panel (*cf213*, *cf273*, *cf581*, *cf585*, *cf597*, *cf634*) as a diagnostic key for identifying specific named cultivar lineages. We instead used the full nine-locus panel, including three loci not part of that original key (*cf020*, *cf125*, *cf701*; Wang et al. 2009), for a broader, similarity-based admixture score rather than exact lineage matching. Each seedling was compared with every cultivar voucher genotype and scored at each locus and classified as the proportion of alleles shared with known cultivar varities (Admixture Percentage; AP). We did not have sufficient sample sizes to distinguish among individual cultivar varieties, so we treated all cultivars identically.  Both maternal sample location (*cultivar* vs. *native*) and admixture percentage were used as covaraites in the following analyses.  
 
 ## Cultivar Impact Analysis
 
@@ -63,26 +63,26 @@ After harvest and tissue processing, we evaluated the following traits intended 
 
 Mixed-effects models with continuous response variables were fitted using the *lme4* package (version 2.0.6; Bates et al. 2015), with significance of fixed effects evaluated from *t*-tests with Satterthwaite degrees of freedom (*lmerTest*; Kuznetsova et al. 2017). Survival was fitted with a binomial error distribution and logit link (*lme4*; Bates et al. 2015). Variance-component and heritability estimates were taken from models fit by restricted maximum likelihood (REML); models compared by AIC were fit by maximum likelihood. Models included maternal family and, under the location-based classification, origin as random effects, with developmental time since germination (a proxy for germination timing; excluded when modeling germination date itself) and the maternal family's mean seed weight included as fixed covariates to account for early developmental and maternal effects. Under the admixture-based classification, each seedling's AP was included as a continuous fixed covariate in place of the origin random effect. Traits measured repeatedly across the two growing seasons (height, stem diameter, number of leaves) additionally included individual plant as a random effect and a fixed term for census. For each trait, we compared models with and without origin (or AP) using Akaike Information Criterion (AIC), to evaluate whether cultivar ancestry explained variation in seedling performance beyond that attributable to maternal family alone.
 
-Heritability was estimated for each trait from the top-supported model, using both the combined sample and, separately, each putative origin subset. Maternal family is nested within origin — no family contributed both native and cultivar offspring — so a model fit to the combined sample yields a single family-variance estimate shared across all families, which need not represent either origin class individually; fitting the family model separately within each origin subset instead lets family-level variance differ freely between native and cultivar lineages, allowing origin-specific heritability to be estimated directly. Survival heritability was estimated on the latent liability scale following Gilmour et al. (1985). For quantitative plant traits, we estimated narrow-sense heritability under a half-sib design, in which maternal family variance is treated as one-quarter of the additive genetic variance. Full model structure, variance decomposition, and heritability derivations, along with model diagnostics and sensitivity analyses, are provided in the Appendix.  All statistical analyses were performed in `R` (version 4.5.3; R Core Team 2026) and all code and data used are available in the online supplementary materials.
+Heritability was estimated for each trait from the top-supported model, using both the combined sample and, separately, each putative origin subset. Maternal family is nested within origin — no family contributed both native and cultivar offspring — so a model fit to the combined sample yields a single family-variance estimate shared across all families, which need not represent either origin class individually; fitting the family model separately within each origin subset instead lets family-level variance differ freely between native and cultivar lineages, allowing origin-specific heritability to be estimated directly. Survival heritability was estimated on the latent liability scale following Gilmour et al. (1985). For quantitative plant traits, we estimated narrow-sense heritability under a half-sib design, in which maternal family variance is treated as one-quarter of the additive genetic variance. Full model structure, variance decomposition, and heritability derivations, along with model diagnostics and sensitivity analyses, are provided in the Supplementary Materials.  All statistical analyses were performed in `R` (version 4.5.3; R Core Team 2026) and all code and data used are available in the online supplementary materials.
 
 
 # Results
 
 ## Genetic Analysis 
 
-The nine microsatellite markers assayed had moderate to high levels of polymorphism (with 5–26 alleles per locus) in maternal individuals and comparable diversity among the offspring genotypes (Tab_MarkerDiversity). Maximum-likelihood estimates of null-allele frequency were low at every locus (all point estimates < 0.07) but their confidence intervals excluded zero at four loci (cf020, cf585, cf597, cf701) found in both native and cultivar samples (Tab_NullAlleles).  Genetic marker panels, including either the full set of loci or only those subset that are not indicated of having any null alleles retained almost identical discriminatory power ($P_{excl,multi,full} > 0.9999$ vs $P_{excl,multi} = 0.9990$).
+The nine microsatellite markers assayed had moderate to high levels of polymorphism (with 5–26 alleles per locus) in maternal individuals and comparable diversity among the offspring genotypes (Tab_MarkerDiversity, Supplementary Materials). Maximum-likelihood estimates of null-allele frequency were low at every locus (all point estimates < 0.07) but their confidence intervals excluded zero at four loci (cf020, cf585, cf597, cf701) found in both native and cultivar samples (Tab_NullAlleles, Supplementary Materials).  Genetic marker panels, including either the full set of loci or only those subset that are not indicated of having any null alleles retained almost identical discriminatory power ($P_{excl,multi,full} > 0.9999$ vs $P_{excl,multi} = 0.9990$).
 
-The sampled cultivar voucher panel comprised 21 named accessions, spanning the disease-resistant Appalachian series, the Cherokee series, and several other commercial lines (Tab_CultivarVoucherPanel), genotyped alongside the target maternal individuals and their offspring arrays to serve as the reference key for admixture scoring.
+The sampled cultivar voucher panel comprised 21 named accessions, spanning the disease-resistant Appalachian series, the Cherokee series, and several other commercial lines (Tab_CultivarVoucherPanel, Supplementary Materials), genotyped alongside the target maternal individuals and their offspring arrays to serve as the reference key for admixture scoring.
 
-Admixture percentage (AP), the proportion of alleles shared with the best-matching cultivar voucher, was broadly distributed rather than clustering into two discrete groups. Among the 58 genotyped maternal trees, AP averaged 49.210% (range 33.333–88.889%), and across the 828 genotyped offspring it averaged 49.263% (range 27.778–75.000%), with the offspring distribution largely overlapping that of the maternal generation. Restricting the comparison to the six loci Wadl *et al.* (2008) used as a cultivar-identification key gave a similar picture: AP averaged 51.667% (range 33.333–91.667%) among maternal trees and 52.104% (range 25.000–100.000%) among offspring under this reduced panel — slightly higher on average and somewhat more variable than under the full nine-locus panel, but showing the same broad overlap between generations rather than a sharper separation (Tab_AdmixturePanelComparison). This diffuse pattern of allele sharing with cultivar vouchers, evident under both marker sets and across both the maternal and offspring generations, suggests that the diagnostic loci, while collectively providing strong discriminatory power (above), are not privately fixed to cultivar lineages individually — consistent with cultivars being derived from wild-collected material, though perhaps not long enough in the past to have unique lineage sorting.
+Admixture percentage (AP), the proportion of alleles shared with the best-matching cultivar voucher, was broadly distributed rather than clustering into two discrete groups. Among the 58 genotyped maternal trees, AP averaged 49.210% (range 33.333–88.889%), and across the 828 genotyped offspring it averaged 49.263% (range 27.778–75.000%), with the offspring distribution largely overlapping that of the maternal generation. Restricting the comparison to the six loci Wadl et al. (2008) used as a cultivar-identification key gave a similar picture: AP averaged 51.667% (range 33.333–91.667%) among maternal trees and 52.104% (range 25.000–100.000%) among offspring under this reduced panel — slightly higher on average and somewhat more variable than under the full nine-locus panel, but showing the same broad overlap between generations rather than a sharper separation (Tab_AdmixturePanelComparison). This diffuse pattern of allele sharing with cultivar vouchers, evident under both marker sets and across both the maternal and offspring generations, suggests that the diagnostic loci, while collectively providing strong discriminatory power (above), are not privately fixed to cultivar lineages individually — consistent with cultivars being derived from wild-collected material, though perhaps not long enough in the past to have unique lineage sorting.
 
 ## Cultivar Impacts
 
-Under maternal location classification, seedling survival to the end of the second growing season was high in both groups (native 79.310%, cultivar 83.544%), and similar to previous findings (Redwine, 2013).  Mortality remained relatively consistent across the entire experiment (Fig_Survival).  Adding *native*/*cultivar* origin to the generalized linear mixed model did not improve fit over maternal family alone (family: ΔAICc = 0.000, wAICc = 0.538; fixed-effects only: ΔAICc = 1.398, wAICc = 0.267; origin + family: ΔAICc = 2.036, wAICc = 0.194; Tab_Survival), and the origin random effect explained little of the unexplained variance (likelihood-ratio test, χ² = 1.431 × 10⁻⁷, p = 0.500). 
+Under maternal location classification, seedling survival to the end of the second growing season was high in both groups (native 79.310%, cultivar 83.544%), and similar to previous findings (Redwine 2013).  Mortality remained relatively consistent across the entire experiment (Fig_Survival).  Adding *native*/*cultivar* origin to the generalized linear mixed model did not improve fit over maternal family alone (family: ΔAICc = 0.000, wAICc = 0.538; fixed-effects only: ΔAICc = 1.398, wAICc = 0.267; origin + family: ΔAICc = 2.036, wAICc = 0.194; Tab_Survival), and the origin random effect explained little of the unexplained variance (likelihood-ratio test, χ² = 1.431 × 10⁻⁷, p = 0.500). 
 
 Origin also did not account for significantly variation in the timing of germination: adding origin did not improve model fit for germination date over maternal family alone (ΔAICc = 2.036; likelihood-ratio test *p* = 0.475), although germination timing was itself heritable among families (h² = 0.421 [95% CI 0.145, 0.722]; Tab_GerminationTiming).
 
-For plant growth traits, the *family* and *family + origin* models were within ΔAICc ≤ 2 of one another for plant height (PH), stem diameter (SD), number of leaves (NL), above-ground biomass (AGB), below-ground biomass (BGB), and stem biomass (SB), indicating that origin added little beyond family alone (Tab_GrowthAIC); the bootstrap confidence interval for the variance attributed to origin included zero for every trait (Tab_GrowthHeritability). Leaf biomass (LB) was the exception: the origin-inclusive model was clearly favored (ΔAICc = 4.886, wAICc = 0.916 vs. 0.080; Tab_GrowthAIC), although its origin variance component's confidence interval also included zero (Tab_GrowthHeritability). Repeated-measures models showed the same pattern (Tab_RepeatedAIC and Tab_RepeatedHeritability). Together, these results indicate that origin contributed little to trait variation under the location-based classification, with the partial exception of leaf biomass, and that considerable uncertainty remains about the magnitude of any effect.
+For plant growth traits, the *family* and *family + origin* models were within ΔAICc ≤ 2 of one another for plant height (PH), stem diameter (SD), number of leaves (NL), above-ground biomass (AGB), below-ground biomass (BGB), and stem biomass (SB), indicating that origin added little beyond family alone (Tab_GrowthAIC); the bootstrap confidence interval for the variance attributed to origin included zero for every trait (Tab_GrowthHeritability). Leaf biomass (LB) was the exception: the origin-inclusive model was clearly favored (ΔAICc = 4.886, wAICc = 0.916 vs. 0.080; Tab_GrowthAIC), although its origin variance component's confidence interval also included zero (Tab_GrowthHeritability). Repeated-measures models showed the same pattern (Tab_RepeatedAIC and Tab_RepeatedHeritability, Supplementary Materials). Together, these results indicate that origin contributed little to trait variation under the location-based classification, with the partial exception of leaf biomass, and that considerable uncertainty remains about the magnitude of any effect.
 
 Under the admixture-based classification, adding Admixture Percentage as a fixed covariate also did not improve model fit over maternal family alone for any trait (family alone favored or tied in every case; Tab_GrowthAIC), and the AP coefficient was not significant for any trait (the smallest of which was for plant height, *p* = 0.112) or for survival (*p* = 0.879). We therefore found no evidence that cultivar ancestry, whether inferred from maternal location or from genetic admixture, had a meaningful effect on seedling survival, growth, or persistence.
 
@@ -90,45 +90,41 @@ Under the admixture-based classification, adding Admixture Percentage as a fixed
 
 Maternal family is nested within origin, so we compared heritability estimated from the combined sample to that estimated separately within each putative origin subset. Maternal family explained substantially more variation in survival and growth among putative cultivar-origin seedlings than among native-origin seedlings, based on the same location-based origin split described above.  The family model was the best model for the cultivar offspring for every growth trait except leaf biomass, whereas the fixed-effects-only model was best supported for every trait in the native set (Tab_GrowthAIC and Tab_OriginHeritability). For survival, the same split showed that adding family improved model fit in the cultivar subset (ΔAICc = 1.481, wAICc = 0.677 vs. 0.323; likelihood-ratio test χ² = 3.522, df = 1, *p* = 0.030) but not in the native subset, where the fixed-effects-only model remained best supported (ΔAICc = 2.096, wAICc = 0.740 vs. 0.260; Tab_Survival). While there was evidence for family-level variance in survival among cultivar-origin families, the heritability estimate was highly uncertain (h² = 0.510, 95% CI [0.000, 1.072]). However, family-specific conditional modes (analogous to BLUPs in linear models) extracted from the putative cultivar survival GLMM show variation in survival was heterogeneous among cultivar-origin families (Fig_BLUPs).  
 
-Confidence intervals for the family variance component in the native subset included zero for all plant growth traits, but in the putative cultivar set the variance attributed to family was significant, though modest, for PH (11.853% of phenotypic variance), AGB (8.061%), and SB (10.946%; Tab_OriginHeritability). Heritability estimates were treated as significant when their confidence intervals excluded zero. In the putative cultivar set, heritabilities were significant for the same three traits, ranging from h² = 0.322 [95% CI 0.030, 0.720] for AGB to h² = 0.474 [0.112, 0.933] for PH (Tab_OriginHeritability), consistent with heritable variation among cultivar families and the potential for evolutionary responses to selection when seedlings are grown in understory conditions. 
+Confidence intervals for the family variance component in the native subset included zero for all plant growth traits, but in the putative cultivar set the variance attributed to family was significant, though modest, for plant height (PH;11.853% of phenotypic variance), above-ground biomass (AGB; 8.061%), and stem biomass (SB; 10.946%; Tab_OriginHeritability). Heritability estimates were treated as significant when their confidence intervals excluded zero. In the putative cultivar set, heritabilities were significant for the same three traits, ranging from h² = 0.322 [95% CI 0.030, 0.720] for AGB to h² = 0.474 [0.112, 0.933] for PH (Tab_OriginHeritability), consistent with heritable variation among cultivar families and the potential for evolutionary responses to selection when seedlings are grown in understory conditions. 
 
 Sensitivity tests included the removal of influential observations at the family and individual levels. Results for putative cultivar families were robust to the removal of outlier individual observations; if anything, the family effect strengthened (e.g., NL and BGB; Tab_OriginHeritability), and the largest heritability shift was in BGB (h² = 0.233 → 0.363). Removal of the single most influential maternal family had a larger effect on the variance-component and heritability estimates. In most growth traits this family was urb09: for stem biomass, removing urb09 reduced the family variance component ($V_{family}$ = 0.046 → 0.016) and heritability ($h^2$ = 0.512 → 0.188), and weakened but did not eliminate support for the family random effect (likelihood-ratio test χ² = 5.251, df = 1, *p* = 0.022; Tab_GrowthHeritability).   
 
-Native-origin mothers were sampled from only two nearby forest sites, whereas cultivar-origin mothers represent potentially subsets of independently propagated named lines.  We tested whether native mothers are more closely related to one another than cultivar mothers are, which could confound origin with kinship structure rather than a genuine origin effect (Table S3, Appendix S1). We found no evidence of such a difference, suggesting that the family-level variance asymmetry described above is unlikely to simply reflect unequal relatedness between the adults grouped into native and cultivar designations.
+Native-origin mothers were sampled from only two nearby forest sites, whereas cultivar-origin mothers represent potentially subsets of independently propagated named lines.  We tested whether native mothers are more closely related to one another than cultivar mothers are, which could confound origin with kinship structure rather than a genuine origin effect (Tab_Relatedness, Supplementary Materials). We found no evidence of such a difference, suggesting that the family-level variance asymmetry described above is unlikely to simply reflect unequal relatedness between the adults grouped into native and cultivar designations.
 
-Earlier germination was a strong positive predictor of survival and of every growth trait except number of leaves, in both origin classes (Tab_CovariateEffects), indicating that a developmental head start is an important early advantage regardless of origin. Maternal seed weight had a weaker and more variable effect. It did not predict survival in the cultivar subset (though it was negatively associated with survival overall and in the native subset), and among cultivar-origin seedlings it was negatively associated with above-ground, below-ground, and leaf biomass: seedlings from families with smaller mean seed weight accumulated more biomass. Seed weight was not a significant predictor of any growth trait among native-origin seedlings.
+Earlier germination was a strong positive predictor of survival and of every growth trait except number of leaves, in both origin classes (Tab_CovariateEffects, Supplementary Materials), indicating that a developmental head start is an important early advantage regardless of origin. Maternal seed weight had a weaker and more variable effect. It did not predict survival in the cultivar subset (though it was negatively associated with survival overall and in the native subset), and among cultivar-origin seedlings it was negatively associated with above-ground, below-ground, and leaf biomass: seedlings from families with smaller mean seed weight accumulated more biomass. Seed weight was not a significant predictor of any growth trait among native-origin seedlings.
 
 # Discussion
 
 In this study, we investigated how early fitness consequences associated with cultivar gene escape from urban enviornments into surrounding native populations of flowering dogwood.  Seedlings from maternal individuals sampled in cultivated and natural landscapes were grown in conditions representative of native environments.  We classified seedling  based on the sampling location of the maternal individual (cultivar vs. native) and by estimating admixture percentages with known cultivar lineages.  Following survival and growth over two years, we found that maternal families contributed significantly, though modestly, to variance in plant traits. In contrast, the variance attributed to origin was small and inconsistent across traits. Likewise, when cultivar admixture was not a significant predictor of any plant trait or of survival. Moderate heritability estimates for plant traits among putative cultivar seedlings are consistent with among-family variation upon which selection could act. High overall survival indicates gene flow from cultivated genotypes into native populations may not be self-limiting due to early viability selection. Together, these results indicate that, if established, cultivar-origin offspring are not likely to be disadvantaged compared to native genotypes and therefore have the potential to persist in native forested habitats. This has important implications for the evolutionary trajectory and conservation of conspecifics which inhabit the areas adjacent to human tended cultivars. 
 
-While maternal origin was an important factor in quantifying variation in survial and early fitness traits across all the data, when partitioned into cultivar and natives subsets, we did see 
+While maternal origin did not differentiate survial and early fitness traits for seedlings, survival and growth traits among families within each origin were impacted differentially (Fig_BLUPs). We found no evidence that early survival differed among broad classifications of origin, but rather family variation among putative cultivar offspring arrays may play an important role. Estimate of narrow-sense heritability for survival among cultivar seedlings was imprecise (h² = 0.510 [0.000, 1.072]) with differences among families accounted for 12.741% of the latent-scale variance in survival. Convesely, no latent-scale survival variance was attributable to family among putative native families.  These results begin to establish a pattern seen in other traits where native family arrays are more homogenous than those sampled from the urban (cultivar) environment.
 
-We did not find evidence that seedlings with cultivar provenance will experience different outcomes from native seedlings in terms of survival. However, when the data were analyzed separately for offspring from putative native and cultivar maternal trees, different levels of variation among families became apparent (Fig_BLUPs). While the estimate of narrow-sense heritability of survival among putative cultivar seedlings was imprecise (h² = 0.510 [0.000, 1.072]), differences among families accounted for 12.741% of the latent-scale variance in survival. In contrast, no latent-scale survival variance was attributable to family among putative native families. Thus, we found no evidence that early survival differed among broad classifications of origin, but rather family variation among putative cultivar offspring arrays may play an important role. This indicates that which cultivar-origin families escape may be an important factor in cultivar escape and establishment. 
+Our results indicate a similar pattern for growth traits. Evidence that origin contributed significantly to trait variation was weak and inconsistent, though the origin + family models still predicted consistently higher growth for putative cultivar-origin than native-origin seedlings in height, stem biomass, and above- and below-ground biomass (reflected in the sign of the origin random effect's conditional modes for each group). Because vegetative size is a recognized proxy for fitness in conspecifics (Gross 1984; Younginger et al. 2017) and early juvenile vigor often determines establishment success under competitive conditions, these patterns suggest that cultivar-origin seedlings are not at a competitive disadvantage in native understories. More consistent was the contribution of maternal family to variance among cultivar-origin seedlings. Significant family-level variation in growth traits indicates that certain cultivar lineages will outperform others. This pattern aligns with previous findings in switchgrass, where performance varied by cultivar variety and routinely matched or exceeded that of local wild populations across competitive regimes (Palik et al. 2016). Selection for vigor and floral display during cultivar development may therefore yield lineages that perform robustly beyond managed urban plantings.
 
-Our results indicate a similar pattern for growth traits. Evidence that origin contributed significantly to trait variation was weak and inconsistent, though the origin conditional modes from the origin + family models were consistently positive for cultivar origin and negative for native origin (height, above- and below-ground biomass, and stem biomass), indicating higher model-predicted growth for putative cultivar-origin seedlings. Since early height and biomass advantages are linked to adult fitness (Younginger et al. 2017) these patterns suggest that cultivar-origin seedlings are not at a growth disadvantage in native understories. More consistent was the contribution of maternal family to variance among cultivar-origin seedlings. Significant family-level variation in growth traits further supports the possibility that certain cultivar families will outperform others. This is consistent with other findings where different cultivar varieties of switchgrass performed as well or better than native-sourced seedlings (Palik et al. 2016). It is possible that cultivar selection for vigor and showy floral displays could translate into overall superior lineages that will do well beyond urban landscaping environments. 
+Significant heritability estimates for plant height, above-ground biomass, and stem biomass for putative cultivar-origin seedlings were moderate and consistent with those reported in other tree species (Galeano and Thomas 2023), indicating that some of the variation in seedling growth-related traits may have a genetic basis that can provide variation upon which selection may act. Following realized gene flow between differentiated populations or species, the persistence or extinction of one or both populations is, in part, shaped by relative fitness of hybrids. Feurtey et al. (2017) found increased fitness of domestic × native hybrid apple trees and significant levels of introgression has led to concerns about the conservation status of European crab apples while, transfer of advantageous alleles may alter native populations as in frost resistant ornamental × wild holly that may be driving range expansion in Denmark (Skou et al. 2012).  Give the importance of producing anthracnose resistant lineages in contemporary cultivar strains, introgression of these genotypes in proximate native populations would not seem to be impacted by early seedling fitness differences.
 
-Significant heritability estimates for PH, AGB, and SB for putative cultivar-origin seedlings were moderate and consistent with those reported in other tree species (Galeano and Thomas 2023), indicating that some of the variation in seedling growth-related traits may have a genetic basis that can provide variation upon which selection may act. Following realized gene flow between differentiated populations or species, the persistence or extinction of one or both populations is, in part, shaped by relative fitness of hybrids. Feurtey et al. (2017) found increased fitness of domestic × native hybrid apple trees and significant levels of introgression has led to concerns about the conservation status of European crab apples while, transfer of advantageous alleles may alter native populations as in frost resistant ornamental × wild holly that may be driving range expansion in Denmark (Skou et al. 2012).
+While our results do not demonstrate disadvantages to cultivar-origin seedlings in native habitats, a general fitness advantage over native seedlings is not strictly necessary for introgression to occur (Lenormand 2002). Pollen migration can be species, population, and season specific, but is generally considered the dominant driver of gene flow in plant populations (Ellstrand 1992). Evidence of local isolation by distance in *C. florida* indicates that seed migration is likely restricted (Dyer et al. 2012). Thus, in forested habitats, it is possible that cultivar pollen × wild ovules may be a more likely form of hybridization, though the forest/urban margin could experience some seed migration from cultivars. Cultivar trees, particularly in adjacent, peri-urban locations, could represent sources of pollen migrants that are subsidized by human tending and higher light environments. Additionally, in this system, there will likely be high selective pressure against all seedlings in urban lawns, with the exception of natural green spaces. Thus, wild pollen flow to cultivar ovules may be less likely to result in successful establishment unless seeds are dispersed into urban natural areas or the adjacent forest.  
 
-While our results do not demonstrate disadvantages to cultivar-origin seedlings in native habitats, a general fitness advantage over native seedlings is not strictly necessary for introgression to occur (Lenormand 2002). Pollen migration can be species, population, and season specific, but is generally considered the dominant driver of gene flow in plant populations (Ellstrand 1992). Evidence of local isolation by distance in *C. florida* indicates that seed migration is likely restricted (Dyer et al. 2012). Thus, in forested habitats, it is possible that cultivar pollen × wild ovules may be a more likely form of hybridization, though the forest/urban margin could experience some seed migration from cultivars. Cultivar trees, particularly in adjacent, peri-urban locations, could represent sources of pollen migrants that are subsidized by human tending and higher light environments. Additionally, in this system, there will likely be high selective pressure against all seedlings in urban lawns, with the exception of natural green spaces. Thus, wild pollen flow to cultivar ovules may be less likely to result in successful establishment unless seeds are dispersed into urban natural areas or the adjacent forest.
+With indications that cultivar seedlings can readily survive and perform as well as wild seedlings, an additional factor shaping the persistence of cultivar alleles in native forests is landscape-level parameters that influence gene flow, such as the shape and size of donor populations and the matrix through which gene flow occurs. Much of urban landscape genetics investigates whether urban land cover impedes or facilitates gene flow, and the answer to that question is often organism-specific (Miles et al. 2019). Previous research has found that conspecific canopy cover is a significant facilitator of pollen flow in *C. florida* (DiLeo et al. 2014), but has provided conflicting evidence regarding the influence of canopy openings, with scale likely an important factor (Sork et al. 2005; DiLeo et al. 2014). The permeability of the intervening environment will shape whether gene flow can repeatedly facilitate the establishment of cultivar genotypes in forested habitats. Linear landscape elements have been found to promote insect-mediated pollen flow in urban spaces (Van Rossum and Triest 2012). Additionally, natural areas within cities can experience increased pollen immigration (Noreen et al. 2016) and serve as hybridization zones that facilitate the establishment of hybrid populations (Roe et al. 2014). Thus, urban natural areas represent a possible repository for seed and pollen migration.
 
-With indications that cultivar seedlings can readily survive and perform as well as wild seedlings, an additional factor shaping the persistence of cultivar alleles in native forests is landscape-level parameters that influence gene flow, such as the shape and size of donor populations and the matrix through which gene flow occurs. Much of urban landscape genetics investigates whether urban land cover impedes or facilitates gene flow, and the answer to that question is often organism-specific (Miles et al. 2019). Previous research has found that conspecific canopy cover is a significant facilitator of pollen flow in C. florida (DiLeo et al. 2014), but has provided conflicting evidence regarding the influence of canopy openings, with scale likely an important factor (Sork et al. 2005; DiLeo et al. 2014). The permeability of the intervening environment will shape whether gene flow can repeatedly facilitate the establishment of cultivar genotypes in forested habitats. Linear landscape elements have been found to promote insect-mediated pollen flow in urban spaces (Van Rossum and Triest 2012). Additionally, natural areas within cities can experience increased pollen immigration (Noreen et al. 2016) and serve as hybridization zones that facilitate the establishment of hybrid populations (Roe et al. 2014). Thus, urban natural areas represent a possible repository for seed and pollen migration.
+Importantly, our experimental design eliminated certain forces such as selection pressure imposed by disease. Some cultivar lines are known to have differential resistance to a variety of diseases, from the susceptibility of *Cherokee Chief* to canker caused by *Lasiodiplodia theobromae* (Mullen 1991), to the spot anthracnose (Elsinoe corni Jenkins & Bitanc. (1948)) resistant ‘*Cherokee Brave*’ (Hagan et al. 1998). Powdery mildew (*Erysiphe pulchra* Cooke & Peck, Braun & Takamatsu, 2000) resistance is a highly heritable trait in *C. florida* (Parikh et al. 2016a), with ‘*Kay’s Appalachian Mist*‘, ‘*Jean’s Appalachian Snow*’, and *‘Karen’s Appalachian Blush*’ all showing resistance (Windham et al. 2003). Although these diseases are mostly cosmetic for adult trees, they can be impactful for seedlings and inhibit growth (Hagan et al. 1998; Mmbaga and Sauvé 2004). *Discula destructiva*, however, has been highly destructive to *C. florida* populations, and resistance could pose a significant advantage in the cooler, more humid parts of the *C. florida* range. ‘Appalachian Spring’ is a *C. florida* cultivar derived from a resistant individual found in Catoctin Mountain, MD, amongst a high incidence of conspecific loss to *D. destructiva* (Windham et al. 1998). The vigor and prolific blooming of this strain do not indicate a defense-growth trade-off common in crop breeding (Gao et al. 2024). Transfer of disease resistance to nearby wild populations of *C. florida* could benefit them, particularly those under disease pressure.
 
-Importantly, our experimental design eliminated certain forces such as selection pressure imposed by disease. Some cultivar lines are known to have differential resistance to a variety of diseases, from the susceptibility of *Cherokee Chief* to canker caused by *Lasiodiplodia theobromae* (Mullen 1991), to the spot anthracnose (Elsinoe corni Jenkins & Bitanc. (1948)) resistant ‘*Cherokee Brave*’ (Hagan et al. 1998). Powdery mildew (*Erysiphe pulchra* Cooke & Peck, Braun & Takamatsu, 2000) resistance is a highly heritable trait in *C. florida* (Parikh, Mmbaga, Kodati, Blair, et al. 2016), with ‘*Kay’s Appalachian Mist*‘, ‘*Jean’s Appalachian Snow*’, and *‘Karen’s Appalachian Blush*’ all showing resistance (Windham et al. 2003). Although these diseases are mostly cosmetic for adult trees, they can be impactful for seedlings and inhibit growth (Hagan et al. 1998; Mmbaga and Sauvé 2004). *D. destructiva*, however, has been highly destructive to *C. florida* populations, and resistance could pose a significant advantage in the cooler, more humid parts of the *C. florida* range. ‘Appalachian Spring’ is a *C. florida* cultivar derived from a resistant individual found in Catoctin Mountain, MD, amongst a high incidence of conspecific loss to *D. destructiva* (Windham et al. 1998). The vigor and prolific blooming of this strain do not indicate a defense-growth trade-off common in crop breeding (Gao et al. 2024). Transfer of disease resistance to nearby wild populations of *C. florida* could benefit them, particularly those under disease pressure.
+Disease resistance is a major cost-saving trait for nurseries and a desirable trait for home landscaping (Klingeman et al. 2004), so the pursuit of disease resistance will continue to factor into breeding programs (Parikh et al. 2016a, b). This includes interspecific hybrids between *C. florida* and the generally highly resistant *C. kousa*. Artificial methods to overcome non-overlap in flowering timing between species successfully produced hybrids with intermediate phenological characteristics, and increased vigor (Mattera et al. 2015). Though *Cornus* × *rutgersensis* hybrids often produce sterile fruits, some fertile seeds can be produced (Mattera et al. 2015). Certain *C. kousa* cultivars and *C. florida* × *C. kousa* hybrids have been assessed as disease-resistant varieties (Ranney et al. 1995; Hagan et al. 1998). Even among *C. florida* cultivars, differences in disease resistance have been shown to have high heritabilities (Parikh et al. 2016a, b). These all pose potential pathways for genetic leakage from urban and peri-urban landscapes into wild *C. florida* populations.
 
-Disease resistance is a major cost-saving trait for nurseries and a desirable trait for home landscaping (Klingeman et al. 2004), so the pursuit of disease resistance will continue to factor into breeding programs (Parikh et al. 2016). This includes interspecific hybrids between *C. florida* and the generally highly resistant *C. kousa*. Artificial methods to overcome non-overlap in flowering timing between species successfully produced hybrids with intermediate phenological characteristics, and increased vigor (Mattera et al. 2015). Though *Cornus* × *rutgersensis* hybrids often produce sterile fruits, some fertile seeds can be produced (Mattera et al. 2015). Certain C. kousa cultivars and *C. florida* × *C. kousa* hybrids have been assessed as disease-resistant varieties (Hagan et al. 1998; Ranney et al. 1995). Even among *C. florida* cultivars, differences in disease resistance have been shown to have high heritabilities (Parikh, Mmbaga, Kodati, and Zhang 2016). These all pose potential pathways for genetic leakage from urban and peri-urban landscapes into wild *C. florida* populations.
+A suprising result in this work was the lack of admixture signal and several caveats relative to our classification scheme should be discussed.  First, our voucher panel comprised only the cultivar lines we were able to obtain (approximately 19 distinct named lines), and though it included several popular lines, many remain unrepresented. Next, we do not know the exclusive fidelity of these alleles to specific cultivar lines. Some cultivars are derived from wild individuals through vegetative propagation, so there may be allelic overlap with wild individuals, as the alleles likely existed in the surrounding population at some frequency. Indeed, the broadly overlapping distribution of admixture percentage between maternal trees and their offspring arrays is consistent with this concern, and suggests that the loci identified as cultivar-diagnostic in prior work (Wadl et al. 2008; Wang et al. 2009) may not be as exclusively informative for distinguishing cultivar from native ancestry in our sampled populations as originally assumed. As a further check, we tested for non-random multilocus allelic association (linkage disequilibrium) among these nine loci within each origin group, restricted to the 58 unrelated maternal trees to avoid the confound of family structure present among the offspring arrays, and found no evidence in either the native ($I_A$ = -0.071, *p* = 0.717) or cultivar ($I_A$ = 0.063, *p* = 0.235) samples (index of association; Agapow and Burt 2001; `poppr`; Kamvar et al. 2014; Tab_LinkageDisequilibrium, Supplementary Materials). As a complementary multivariate test, we also used discriminant analysis of principal components (DAPC; Jombart et al. 2010) to ask whether native and cultivar maternal trees separate on their full nine-locus genotype; even allowing a large number of retained principal components (18 of a maximum 20, chosen by cross-validation), which would tend to favor overfitting and inflate apparent separability, cross-validated classification accuracy (56.061%) was indistinguishable from chance given the sample's class balance (no-information rate 55.172%) and from a permutation null built by re-running the same procedure on 999 relabelings of the same 58 trees (*p* = 0.237), again finding no evidence that the two groups separate on multivariate genotype combinations (Tab_DAPC, Supplementary Materials). Finally, while shared neutral alleles may indicate a degree of shared ancestry among individuals, we do not observe a positive relationship with differences in fitness-related phenotypic traits. This suggests either that seedlings sharing more cultivar alleles perform similarly to native seedlings under understory conditions or that our marker set lacks the resolution to capture ancestry in genomic regions that influence these traits.
 
-In this study, we compared seedling genotypes with known cultivar genotypes and subsequently included Admixture Percentage as a continuous fixed covariate to account for cultivar ancestry in our models of plant trait variation. As described in the methods, our allele sizes did not match those of Wadl et al. 2008, so we relied on our own genotyped samples. Several caveats may be applicable to this classification. First, our voucher panel comprised only the cultivar lines we were able to obtain (approximately 19 distinct named lines), and though it included several popular lines, many remain unrepresented. Next, we do not know the exclusive fidelity of these alleles to cultivar lines. Many cultivars are derived from wild individuals through vegetative propagation, so there may be allelic overlap with wild individuals, as the alleles likely existed in the surrounding population at some frequency. Indeed, the broadly overlapping distribution of admixture percentage between maternal trees and their offspring array (Results, Genetic Analysis) is consistent with this concern, and suggests that the loci identified as cultivar-diagnostic in prior work (Wadl et al. 2008; Wang et al. 2009) may not be as exclusively informative for distinguishing cultivar from native ancestry in our sampled populations as previously assumed. As a further check, we tested for non-random multilocus allelic association (linkage disequilibrium) among these nine loci within each origin group, restricted to the 58 unrelated maternal trees to avoid the confound of family structure present among the offspring arrays, and found no evidence of it in either the native ($I_A$ = -0.071, *p* = 0.717) or cultivar ($I_A$ = 0.063, *p* = 0.235) samples (index of association; Agapow and Burt 2001; `poppr`; Kamvar, Tabima, and Grünwald 2014; Table S1, Appendix S1). As a complementary multivariate test, we also used discriminant analysis of principal components (DAPC; Jombart, Devillard, and Balloux 2010) to ask whether native and cultivar maternal trees separate on their full nine-locus genotype; even allowing a large number of retained principal components (18 of a maximum 20, chosen by cross-validation), which would tend to favor overfitting and inflate apparent separability, cross-validated classification accuracy (56.061%) was indistinguishable from chance given the sample's class balance (no-information rate 55.172%) and from a permutation null built by re-running the same procedure on 999 relabelings of the same 58 trees (*p* = 0.237), again finding no evidence that the two groups separate on multivariate genotype (Table S2, Appendix S1). Finally, while shared neutral alleles may indicate a degree of shared ancestry among individuals, we do not observe a positive relationship with differences in fitness-related phenotypic traits. This suggests either that seedlings sharing more cultivar alleles perform similarly to native seedlings under understory conditions or that our marker set lacks the resolution to capture ancestry in genomic regions that influence these traits.
-
-Our current study is limited by temporal scope, as two growing seasons did not allow us to collect data on reproduction. We relied on early fitness traits, which overall have a positive allometric relationship with reproductive output (Younginger et al. 2017), but C. florida generally does not flower in the first 6 years, making measures of reproductive structures not feasible in our study. Furthermore, a critical component of cultivar x wild gene escape is the breakdown of hybrid vigor after subsequent generations of backcrossing (Hooftman et al. 2007), which we are not able to assess here.
-
-Our results do not indicate immediate detrimental impacts for native *C. florida* populations in the Piedmont region of the Eastern United States. Cultivar seedlings performed as well or better than native seedlings and showed no difference in survival. It is quite possible that hybridization has been occurring continuously as urban areas have expanded and ornamental C. florida has become ubiquitous in residential plantings. Deforestation and reforestation in the Eastern United States also provide a land-use history that may have included cultivar C. florida in rural residential landscaping, which was later abandoned. Further investigation into the impacts of cultivar gene escape in C. florida that includes disease challenge, or pull from populations heavily affected by D. destructiva, may provide different results if disease resistance is conferred from cultivar to native trees.
+Our current study is limited by temporal scope, as two growing seasons did not allow us to collect data on reproduction. We relied on early fitness traits, which overall have a positive allometric relationship with reproductive output (Gross 1984; Younginger et al. 2017), but *C. florida* generally does not flower in the first 6 years, making measures of reproductive structures infeasible in this study. Furthermore, a critical component of cultivar x wild gene escape is the breakdown of hybrid vigor after subsequent generations of backcrossing (Hooftman et al. 2007), which we were also unable to assess here.  However, our results do not indicate immediate detrimental impacts for native *C. florida* populations in the Piedmont region of the Eastern United States. Cultivar seedlings performed as well or better than native seedlings and showed no difference in survival. It is possible that hybridization has been occurring continuously as urban areas have expanded and ornamental *C. florida* has become ubiquitous in residential plantings. Deforestation and reforestation in the Eastern United States also provide a land-use history that may have included cultivar *C. florida* in rural residential landscaping, which was later abandoned. Further investigation into the impacts of cultivar gene escape in *C. florida* that includes disease challenge, or pull from populations heavily affected by *D. destructiva*, may provide different results if disease resistance is conferred from cultivar to native trees.
 
 ***
 
 ## Data availability
 
-The anonymized data and the annotated R code that reproduce every table and figure are available at [GitHub repository URL — to be added on acceptance] and archived at Zenodo (DOI to be minted from the release).
+The anonymized data and the annotated R code that reproduce every table and figure are available from the Dyer Laboratory GitHub repository [URL](https://github.com/dyerlab/Cornus_Common_Garden) and archived at ==XXX== (DOI to be minted from the release).
 
 ## Competing interests
 
@@ -140,7 +136,7 @@ The authors declare no competing interests.
 
 ## Funding
 
-<!-- TODO: add funding sources and grant numbers. -->
+<!-- TODO: JR. Add any funding you had received from VCU, RRC, or ILS.  AE, any Funding sources you want to associate with your contributions on this manuscript?  Contributions by RD was not supported by any external funding source. -->
 
 ## Ethics and permissions
 
@@ -153,191 +149,119 @@ Maternal trees on private property were sampled with landowner permission. Sampl
 
 # Literature Cited
 
+Agapow PM, Burt A (2001) Indices of multilocus linkage disequilibrium. Mol Ecol Notes 1:101–102. https://doi.org/10.1046/j.1471-8278.2000.00014.x
 
-Agapow, Paul-Michael, and Austin Burt. 2001\. “Indices of Multilocus Linkage Disequilibrium.” Molecular Ecology Notes 1 (1–2): 101–2\. [https://doi.org/10.1046/j.1471-8278.2000.00014.x](https://doi.org/10.1046/j.1471-8278.2000.00014.x).  
+Bates D, Mächler M, Bolker B, Walker S (2015) Fitting linear mixed-effects models using lme4. J Stat Softw 67:1–48. https://doi.org/10.18637/jss.v067.i01
 
-Arias, D. M., and L. H. Rieseberg. 1994\. “Gene Flow Between Cultivated and Wild Sunflowers.” Theoretical and Applied Genetics 89 (6): 655–60. [https://doi.org/10.1007/BF00223700](https://doi.org/10.1007/BF00223700).  
+Carr DE, Banas LE (2000) Dogwood anthracnose (*Discula destructiva*): effects of and consequences for host (Cornus florida) demography. Am Midl Nat 143:169–177. https://doi.org/10.1674/0003-0031(2000)143[0169:DADDEO]2.0.CO;2
 
-Arnaud, J. F., F. Viard, M. Delescluse, and J. Cuguen. 2003\. “Evidence for Gene Flow via Seed Dispersal from Crop to Wild Relatives in Beta Vulgaris (Chenopodiaceae): Consequences for the Release of Genetically Modified Crop Species with Weedy Lineages.” Proceedings of the Royal Society of London. Series B: Biological Sciences 270 (1524): 1565–71. [https://doi.org/10.1098/rspb.2003.2407](https://doi.org/10.1098/rspb.2003.2407).  
+Carr D (2010) Canopy disturbance and reproduction in *Cornus florida* L. MS Thesis, Virginia Commonwealth University. https://scholarscompass.vcu.edu/etd/2245/
 
-Auer, Carol. 2008\. “Ecological Risk Assessment and Regulation for Genetically-Modified Ornamental Plants.” Critical Reviews in Plant Sciences 27 (4): 255–71. [https://doi.org/10.1080/07352680802237162](https://doi.org/10.1080/07352680802237162).  
+DiLeo MF, Siu JC, Rhodes MK, et al (2014) The gravity of pollination: integrating at-site features into spatial analysis of contemporary pollen movement. Mol Ecol 23:3973–3982. https://doi.org/10.1111/mec.12839
 
-Avolio, Meghan L. 2023\. “The Unexplored Effects of Artificial Selection on Urban Tree Populations.” American Journal of Botany 110 (7): e16187. [https://doi.org/10.1002/ajb2.16187](https://doi.org/10.1002/ajb2.16187).  
+Dyer RJ (2009) GeneticStudio: a suite of programs for spatial analysis of genetic-marker data. Mol Ecol Resour 9:110–113. https://doi.org/10.1111/j.1755-0998.2008.02384.x
 
-Bates, Douglas, Martin Mächler, Ben Bolker, and Steve Walker. 2015\. “Fitting Linear Mixed-Effects Models Using Lme4.” Journal of Statistical Software 67 (1). [https://doi.org/10.18637/jss.v067.i01](https://doi.org/10.18637/jss.v067.i01).  
+Dyer RJ, Chan DM, Gardiakos VA, Meadows CA (2012) Pollination graphs: quantifying pollen pool covariance networks and the influence of intervening landscape on genetic connectivity in the North American understory tree, Cornus florida L. Landsc Ecol 27:239–251. https://doi.org/10.1007/s10980-011-9696-x
 
-Beaury, Evelyn M, Jenica M Allen, Annette E Evans, Matthew E Fertakos, William G Pfadenhauer, and Bethany A Bradley. 2023\. “Horticulture Could Facilitate Invasive Plant Range Infilling and Range Expansion with Climate Change.” BioScience 73 (9): 635–42. [https://doi.org/10.1093/biosci/biad069](https://doi.org/10.1093/biosci/biad069).  
+Ellstrand NC (1992) Gene flow by pollen: implications for plant conservation genetics. Oikos 63:77–86. https://doi.org/10.2307/3545517
 
-Carr, Daniel. 2010\. Canopy Disturbance and Reproduction in Cornus Florida L.  
+Feurtey A, Cornille A, Shykoff JA, Snirc A, Giraud T (2017) Crop-to-wild gene flow and its fitness consequences for a wild fruit tree: towards a comprehensive conservation strategy of the wild apple in Europe. Evol Appl 10:180–188. https://doi.org/10.1111/eva.12441
 
-Carr, D, and L Banas. 2000\. Dogwood Anthracnose (Discula Destructiva): Effects of and Consequences for Host (Cornus Florida) Demography. American Midland Naturalist.  
+Galeano E, Thomas BR (2023) Unraveling genetic variation among white spruce families generated through different breeding strategies: heritability, growth, physiology, hormones and gene expression. Front Plant Sci 14:1052425. https://doi.org/10.3389/fpls.2023.1052425
 
-Chapman, Mark A., and John M. Burke. 2006\. “Letting the Gene Out of the Bottle: The Population Genetics of Genetically Modified Crops.” New Phytologist 170 (3): 429–43. [https://doi.org/10.1111/j.1469-8137.2006.01710.x](https://doi.org/10.1111/j.1469-8137.2006.01710.x).  
+Gao M, Hao Z, Ning Y, He Z (2024) Revisiting growth–defence trade-offs and breeding strategies in crops. Plant Biotechnol J 22:1198–1205. https://doi.org/10.1111/pbi.14258
 
-Charbonneau, Amanda, David Tack, Allison Lale, et al. 2018\. “Weed Evolution: Genetic Differentiation Among Wild, Weedy, and Crop Radish.” Evolutionary Applications 11 (10): 1964–74. [https://doi.org/10.1111/eva.12699](https://doi.org/10.1111/eva.12699).  
+Gilmour AR, Anderson RD, Rae AL (1985) The analysis of binomial data by a generalized linear mixed model. Biometrika 72:593–599
 
-Corbi, Jonathan, Eric J. Baack, Jennifer M. Dechaine, Gerald Seiler, and John M. Burke. 2018\. “Genome-Wide Analysis of Allele Frequency Change in Sunflower Crop–Wild Hybrid Populations Evolving Under Natural Conditions.” Molecular Ecology 27 (1): 233–47. [https://doi.org/10.1111/mec.14202](https://doi.org/10.1111/mec.14202).  
+Gross KL (1984) Effects of seed size and growth form on seedling establishment of six monocarpic perennial plants. J Ecol 72:369–387. https://doi.org/10.2307/2260053
 
-Cornille, Amandine, Pierre Gladieux, and Tatiana Giraud. 2013\. “Crop-to-Wild Gene Flow and Spatial Genetic Structure in the Closest Wild Relatives of the Cultivated Apple.” Evolutionary Applications 6 (5): 737–48. [https://doi.org/10.1111/eva.12059](https://doi.org/10.1111/eva.12059).  
+Hadziabdic D, Fitzpatrick BM, Wang X, et al (2010) Analysis of genetic diversity in flowering dogwood natural stands using microsatellites: the effects of dogwood anthracnose. Genetica 138:1047–1057. https://doi.org/10.1007/s10709-010-9490-8
 
-Cruzan, Mitchell B., and Elizabeth C. Hendrickson. 2020\. “Landscape Genetics of Plants: Challenges and Opportunities.” Plant Communications 1 (6). [https://doi.org/10.1016/j.xplc.2020.100100](https://doi.org/10.1016/j.xplc.2020.100100).  
+Hadziabdic D, Wang X, Wadl PA, Rinehart TA, Ownley BH, Trigiano RN (2012) Genetic diversity of flowering dogwood in the Great Smoky Mountains National Park. Tree Genet Genomes 8:855–871. https://doi.org/10.1007/s11295-012-0471-1
 
-Dida, Gudeta. 2022\. “Ecological and Evolutionary Consequences of Gene Flow Through Pollen from Transgenic Crops to Their Wild Relatives.” Journal of Ecology & Natural Resources 6 (4). [https://doi.org/10.23880/jenr-16000315](https://doi.org/10.23880/jenr-16000315).  
+Hagan AK, Hardin B, Gilliam CH, Keever GJ, Williams JD, Eakes J (1998) Susceptibility of cultivars of several dogwood taxa to powdery mildew and spot anthracnose. J Environ Hortic 16:147–151. https://doi.org/10.24266/0738-2898-16.3.147
 
-DiLeo, Michelle F., Jenna C. Siu, Matthew K. Rhodes, et al. 2014\. “The Gravity of Pollination: Integrating at-Site Features into Spatial Analysis of Contemporary Pollen Movement.” Molecular Ecology 23 (16): 3973–82. [https://doi.org/10.1111/mec.12839](https://doi.org/10.1111/mec.12839).  
+Hartig F (2016) DHARMa: residual diagnostics for hierarchical (multi-level/mixed) regression models. R package. https://doi.org/10.32614/CRAN.package.DHARMa
 
-Dyer, Rodney J., David M. Chan, Vicki A. Gardiakos, and Crystal A. Meadows. 2012\. “Pollination Graphs: Quantifying Pollen Pool Covariance Networks and the Influence of Intervening Landscape on Genetic Connectivity in the North American Understory Tree, Cornus Florida L.” Landscape Ecology 27 (2): 239–51. [https://doi.org/10.1007/s10980-011-9696-x](https://doi.org/10.1007/s10980-011-9696-x).  
+Herrera CM (1981) Fruit variation and competition for dispersers in natural populations of *Smilax aspera*. Oikos 36:51
 
-Ebeling, S. K., J. Stocklin, I. Hensen, and H. Auge. 2011\. “Multiple Common Garden Experiments Suggest Lack of Local Adaptation in an Invasive Ornamental Plant.” Journal of Plant Ecology 4 (4): 209–20. [https://doi.org/10.1093/jpe/rtr007](https://doi.org/10.1093/jpe/rtr007).  
+Hooftman DAP, de Jong MJ, Oostermeijer JGB, Den Nijs HCM (2007) Modelling the long-term consequences of crop–wild relative hybridization: a case study using four generations of hybrids. J Appl Ecol 44:1035–1045. https://doi.org/10.1111/j.1365-2664.2007.01341.x
 
-ElIstrand, Norman C. 1992\. “Gene Flow by Pollen: Implications for Plant Conservation Genetics.” Oikos 63 (1): 77–86. [https://doi.org/DOI:10.2307/3545517](https://doi.org/DOI:10.2307/3545517).  
+Jenkins MA, White PS (2002) Cornus florida L. mortality and understory composition changes in western Great Smoky Mountains National Park. J Torrey Bot Soc 129:194. https://doi.org/10.2307/3088770
 
-Ellstrand, Norman C. 2003\. “Current Knowledge of Gene Flow in Plants: Implications for Transgene Flow.” Philosophical Transactions of the Royal Society of London. Series B: Biological Sciences 358 (1434): 1163–70. [https://doi.org/10.1098/rstb.2003.1299](https://doi.org/10.1098/rstb.2003.1299).  
+Jombart T (2008) adegenet: a R package for the multivariate analysis of genetic markers. Bioinformatics 24:1403–1405. https://doi.org/10.1093/bioinformatics/btn129
 
-Ellstrand, Norman C, Honor C Prentice, and James F Hancock. 1999\. “Gene Flow and Introgression from Domesticated Plants into Their Wild Relatives.” Annual Review of Ecology, Evolution, and Systematics 30: 539–63. [https://doi.org/10.1146/annurev.ecolsys.30.1.539](https://doi.org/10.1146/annurev.ecolsys.30.1.539).  
+Jombart T, Devillard S, Balloux F (2010) Discriminant analysis of principal components: a new method for the analysis of genetically structured populations. BMC Genet 11:94. https://doi.org/10.1186/1471-2156-11-94
 
-Feurtey, Alice, Amandine Cornille, Jacqui A. Shykoff, Alodie Snirc, and Tatiana Giraud. 2017\. “Crop-to-Wild Gene Flow and Its Fitness Consequences for a Wild Fruit Tree: Towards a Comprehensive Conservation Strategy of the Wild Apple in Europe.” Evolutionary Applications 10 (2): 180–88. [https://doi.org/10.1111/eva.12441](https://doi.org/10.1111/eva.12441).  
+Kamvar ZN, Tabima JF, Grünwald NJ (2014) Poppr: an R package for genetic analysis of populations with clonal, partially clonal, and/or sexual reproduction. PeerJ 2:e281. https://doi.org/10.7717/peerj.281
 
-Feurtey, Alice, Ellen Guitton, Marie De Gracia Coquerel, et al. 2020\. “Threat to Asian Wild Apple Trees Posed by Gene Flow from Domesticated Apple Trees and Their ‘Pestified’ Pathogens.” Molecular Ecology 29 (24): 4925–41. [https://doi.org/10.1111/mec.15677](https://doi.org/10.1111/mec.15677).  
+Klingeman WE, Eastwood DB, Brooker JR, Hall CR, Behe BK, Knight PR (2004) Consumer survey identifies plant management awareness and added value of dogwood powdery mildew resistance. HortTechnology 14:275–282. https://doi.org/10.21273/HORTTECH.14.2.0275
 
-Galeano, Esteban, and Barb R. Thomas. 2023\. “Unraveling Genetic Variation Among White Spruce Families Generated Through Different Breeding Strategies: Heritability, Growth, Physiology, Hormones and Gene Expression.” Frontiers in Plant Science 14 (April): 1052425\. [https://doi.org/10.3389/fpls.2023.1052425](https://doi.org/10.3389/fpls.2023.1052425).  
+Kuznetsova A, Brockhoff PB, Christensen RHB (2017) lmerTest package: tests in linear mixed effects models. J Stat Softw 82:1–26. https://doi.org/10.18637/jss.v082.i13
 
-Gao, Mingjun, Zeyun Hao, Yuese Ning, and Zuhua He. 2024\. “Revisiting Growth–Defence Trade-Offs and Breeding Strategies in Crops.” Plant Biotechnology Journal 22 (5): 1198–205. [https://doi.org/10.1111/pbi.14258](https://doi.org/10.1111/pbi.14258).  
+Lenormand T (2002) Gene flow and the limits to natural selection. Trends Ecol Evol 17:183–189. https://doi.org/10.1016/S0169-5347(02)02497-7
 
-Gilmour, A. R., R. D. Anderson, and A. L. Rae. 1985\. “The Analysis of Binomial Data by a Generalized Linear Mixed Model.” Biometrika 72 (3): 593–99.  
+Long ZT, Pendergast TH IV, Carson WP (2007) The impact of deer on relationships between tree growth and mortality in an old-growth beech-maple forest. For Ecol Manag 252:230–238. https://doi.org/10.1016/j.foreco.2007.06.034
 
-Hadziabdic, Denita, Xinwang Wang, Phillip A. Wadl, Timothy A. Rinehart, Bonnie H. Ownley, and Robert N. Trigiano. 2012\. “Genetic Diversity of Flowering Dogwood in the Great Smoky Mountains National Park.” Tree Genetics & Genomes 8 (4): 855–71. [https://doi.org/10.1007/s11295-012-0471-1](https://doi.org/10.1007/s11295-012-0471-1).  
+Mattera R, Molnar T, Struwe L (2015) Cornus × elwinortonii and Cornus × rutgersensis (Cornaceae), new names for two artificially produced hybrids of big-bracted dogwoods. PhytoKeys 55:93–111. https://doi.org/10.3897/phytokeys.55.9112
 
-Hadziabdic, D., B. M. Fitzpatrick, X. Wang, et al. 2010\. “Analysis of Genetic Diversity in Flowering Dogwood Natural Stands Using Microsatellites: The Effects of Dogwood Anthracnose.” Genetica 138 (9-10): 1047–57. [https://doi.org/10.1007/s10709-010-9490-8](https://doi.org/10.1007/s10709-010-9490-8).  
+Miles LS, Rivkin LR, Johnson MTJ, Munshi-South J, Verrelli BC (2019) Gene flow and genetic drift in urban environments. Mol Ecol 28:4138–4151. https://doi.org/10.1111/mec.15221
 
-Hagan, A. K., B. Hardin, C. H. Gilliam, G. J. Keever, J. D. Williams, and J. Eakes. 1998\. “Susceptibility of Cultivars of Several Dogwood Taxa to Powdery Mildew and Spot Anthracnose.” Journal of Environmental Horticulture 16 (3): 147–51. [https://doi.org/10.24266/0738-2898-16.3.147](https://doi.org/10.24266/0738-2898-16.3.147).  
+Mmbaga MT, Sauvé RJ (2004) Management of powdery mildew in flowering dogwood in the field with biorational and conventional fungicides. Can J Plant Sci 84:837–844. https://doi.org/10.4141/P03-104
 
-Hartig, Florian. 2016\. DHARMa: Residual Diagnostics for Hierarchical (Multi-Level / Mixed) Regression Models. Comprehensive R Archive Network. [https://doi.org/10.32614/CRAN.package.DHARMa](https://doi.org/10.32614/CRAN.package.DHARMa).  
+Mullen JM (1991) Canker of dogwood caused by *Lasiodiplodia theobromae*, a disease influenced by drought stress or cultivar selection. Plant Dis 75:886. https://doi.org/10.1094/PD-75-0886
 
-Herrera, Carlos M. 1981\. “Fruit Variation and Competition for Dispersers in Natural Populations of Smilax Aspera.” Oikos 36 (1): 51\. [https://doi.org/10.2307/3544378](https://doi.org/10.2307/3544378).  
+Noreen AME, Niissalo MA, Lum SKY, Webb EL (2016) Persistence of long-distance, insect-mediated pollen movement for a tropical canopy tree species in remnant forest patches in an urban landscape. Heredity 117:472–480. https://doi.org/10.1038/hdy.2016.64
 
-Hobbs, Richard J., Salvatore Arico, James Aronson, et al. 2006\. “Novel Ecosystems: Theoretical and Management Aspects of the New Ecological World Order.” Global Ecology and Biogeography 15 (1): 1–7. [https://doi.org/10.1111/j.1466-822X.2006.00212.x](https://doi.org/10.1111/j.1466-822X.2006.00212.x).  
+Pais AL, Whetten RW, Xiang QY (2017) Ecological genomics of local adaptation in *Cornus florida* L. by genotyping by sequencing. Ecol Evol 7:441–465. https://doi.org/10.1002/ece3.2623
 
-Holzmueller, Eric, Shibu Jose, Michael Jenkins, Ann Camp, and Alan Long. 2006\. “Dogwood Anthracnose in Eastern Hardwood Forests: What Is Known and What Can Be Done?” Journal of Forestry 104 (1): 21–26. [https://doi.org/10.1093/jof/104.1.21](https://doi.org/10.1093/jof/104.1.21).  
+Palik DJ, Snow AA, Stottlemyer AL, Miriti MN, Heaton EA (2016) Relative performance of non-local cultivars and local, wild populations of switchgrass (*Panicum virgatum*) in competition experiments. PLoS ONE 11:e0154444. https://doi.org/10.1371/journal.pone.0154444
 
-Hooftman, Danny A. P, Maaike J. De Jong, J. Gerard B Oostermeijer, and Hans (J.) C. M Den Nijs. 2007\. “Modelling the Long-Term Consequences of Crop–Wild Relative Hybridization: A Case Study Using Four Generations of Hybrids.” Journal of Applied Ecology 44 (5): 1035–45. [https://doi.org/10.1111/j.1365-2664.2007.01341.x](https://doi.org/10.1111/j.1365-2664.2007.01341.x).  
+Parikh L, Mmbaga MT, Kodati S, Blair M, Hui D, Meru G (2016a) Broad-sense heritability and genetic gain for powdery mildew resistance in multiple pseudo-F2 populations of flowering dogwoods (*Cornus florida* L.). Sci Hortic 213:216–221. https://doi.org/10.1016/j.scienta.2016.09.038
 
-Jenczewski, Eric, Joëlle Ronfort, and Anne-Marie Chèvre. 2003\. “Crop-to-Wild Gene Flow, Introgression and Possible Fitness Effects of Transgenes.” Environmental Biosafety Research 2 (1): 9–24. [https://doi.org/10.1051/ebr:2003001](https://doi.org/10.1051/ebr:2003001).  
+Parikh L, Mmbaga MT, Kodati S, Zhang G (2016b) Estimation of narrow sense heritability of powdery mildew resistance in pseudo F2 (F1) population of flowering dogwoods (*Cornus florida* L). Eur J Plant Pathol 145:17–25. https://doi.org/10.1007/s10658-015-0806-5
 
-Jenkins, Michael A., and Peter S. White. 2002\. “Cornus Florida L. Mortality and Understory Composition Changes in Western Great Smoky Mountains National Park.” Journal of the Torrey Botanical Society 129 (3): 194\. [https://doi.org/10.2307/3088770](https://doi.org/10.2307/3088770).  
+Pierce AR, Bromer WR, Rabenold KN (2008) Decline of *Cornus florida* and forest succession in a Quercus–Carya forest. Plant Ecol 195:45–53. https://doi.org/10.1007/s11258-007-9297-6
 
-Jombart, Thibaut. 2008\. “adegenet: A R Package for the Multivariate Analysis of Genetic Markers.” Bioinformatics 24 (11): 1403–5\. [https://doi.org/10.1093/bioinformatics/btn129](https://doi.org/10.1093/bioinformatics/btn129).  
+R Core Team (2026) R: a language and environment for statistical computing. R Foundation for Statistical Computing, Vienna
 
-Jombart, Thibaut, Sébastien Devillard, and François Balloux. 2010\. “Discriminant Analysis of Principal Components: A New Method for the Analysis of Genetically Structured Populations.” BMC Genetics 11: 94\. [https://doi.org/10.1186/1471-2156-11-94](https://doi.org/10.1186/1471-2156-11-94).  
+Ranney T, Grand L, Knighten J (1995) Susceptibility of cultivars and hybrids of kousa dogwood to dogwood anthracnose and powdery mildew. Arboric Urban For 21:11–16. https://doi.org/10.48044/jauf.1995.003
 
-Kamvar, Zhian N., Javier F. Tabima, and Niklaus J. Grünwald. 2014\. “Poppr: An R Package for Genetic Analysis of Populations with Clonal, Partially Clonal, and/or Sexual Reproduction.” PeerJ 2: e281\. [https://doi.org/10.7717/peerj.281](https://doi.org/10.7717/peerj.281).  
+Reader RJ (1975) Effect of air temperature on the flowering date of dogwood (*Cornus florida*). Can J Bot 53:1523–1534. https://doi.org/10.1139/b75-183
 
-Johnson, Linda M. K., and Laura F. Galloway. 2008\. “From Horticultural Plantings into Wild Populations: Movement of Pollen and Genes in Lobelia Cardinalis.” Plant Ecology 197 (1): 55–67. [https://doi.org/10.1007/s11258-007-9359-9](https://doi.org/10.1007/s11258-007-9359-9).  
+Redick CH, Jacobs DF (2020) Mitigation of deer herbivory in temperate hardwood forest regeneration: a meta-analysis of research literature. Forests 11:1220. https://doi.org/10.3390/f11111220
 
-Johnson, Marc T. J., Cindy M. Prashad, Mélanie Lavoignat, and Hargurdeep S. Saini. 2018\. “Contrasting the Effects of Natural Selection, Genetic Drift and Gene Flow on Urban Evolution in White Clover ( Trifolium Repens ).” Proceedings of the Royal Society B: Biological Sciences 285 (1883): 20181019\. [https://doi.org/10.1098/rspb.2018.1019](https://doi.org/10.1098/rspb.2018.1019).  
+Redlin SC (1991) *Discula destructiva* sp. nov., cause of dogwood anthracnose. Mycologia 83:633–642. https://doi.org/10.1080/00275514.1991.12026062
 
-Klingeman, William E., David B. Eastwood, John R. Brooker, Charles R. Hall, Bridget K. Behe, and Patricia R. Knight. 2004\. “Consumer Survey Identifies Plant Management Awareness and Added Value of Dogwood Powdery Mildew Resistance.” HortTechnology 14 (2): 275–82. [https://doi.org/10.21273/HORTTECH.14.2.0275](https://doi.org/10.21273/HORTTECH.14.2.0275).  
+Redwine AH (2013) Reproduction and functional response of *Cornus florida* across an urban landscape gradient. MS Thesis, Virginia Commonwealth University. https://scholarscompass.vcu.edu/etd/3136/
 
-Kuhman, Timothy R., Scott M. Pearson, and Monica G. Turner. 2011\. “Agricultural Land-Use History Increases Non-Native Plant Invasion in a Southern Appalachian Forest a Century After Abandonment.” Canadian Journal of Forest Research 41 (5): 920–29. [https://doi.org/10.1139/x11-026](https://doi.org/10.1139/x11-026).  
+Reed SM (2004) Self-incompatibility in *Cornus florida*. HortScience 39:335–338. https://doi.org/10.21273/HORTSCI.39.2.335
 
-Kuznetsova, Alexandra, Per B. Brockhoff, and Rune H. B. Christensen. 2017\. “lmerTest Package: Tests in Linear Mixed Effects Models.” Journal of Statistical Software 82 (13). [https://doi.org/10.18637/jss.v082.i13](https://doi.org/10.18637/jss.v082.i13).  
+Rhoades PR, Klingeman WE, Trigiano RN, Skinner JA (2011) Evaluating pollination biology of *Cornus florida* L. and *C. kousa* (Buerger ex. Miq.) Hance (Cornaceae: Cornales). J Kans Entomol Soc 84:285–297. https://doi.org/10.2317/JKES110418.1
 
-Lenormand, T. 2002\. “Gene Flow and the Limits to Natural Selection.” Trends in Ecology & Evolution 17 (4): 183–89. [https://doi.org/10.1016/S0169-5347(02)02497-7](https://doi.org/10.1016/S0169-5347\(02\)02497-7).  
+Roe AD, MacQuarrie CJK, Gros-Louis MC, et al (2014) Fitness dynamics within a poplar hybrid zone: II. Impact of exotic sex on native poplars in an urban jungle. Ecol Evol 4:1876–1889. https://doi.org/10.1002/ece3.1028
 
-Mandel, Jennifer R., Adam J. Ramsey, Massimo Iorizzo, and Philipp W. Simon. 2016\. “Patterns of Gene Flow Between Crop and Wild Carrot, Daucus Carota (Apiaceae) in the United States.” PLOS ONE 11 (9): e0161971. [https://doi.org/10.1371/journal.pone.0161971](https://doi.org/10.1371/journal.pone.0161971).  
+Rousset F (2008) genepop'007: a complete re-implementation of the genepop software for Windows and Linux. Mol Ecol Resour 8:103–106. https://doi.org/10.1111/j.1471-8286.2007.01931.x
 
-Manel, Stéphanie, Michael K. Schwartz, Gordon Luikart, and Pierre Taberlet. 2003\. “Landscape Genetics: Combining Landscape Ecology and Population Genetics.” Trends in Ecology & Evolution 18 (4): 189–97. [https://doi.org/10.1016/S0169-5347(03)00008-9](https://doi.org/10.1016/S0169-5347\(03\)00008-9).  
+Sherald JL, Stidham TM, Hadidian JM, Hoeldtke JE (1996) Progression of the dogwood anthracnose epidemic and the status of flowering dogwood in Catoctin Mountain Park. Plant Dis 80:310–312. https://doi.org/10.1094/PD-80-0310
 
-Mattera, Robert, Thomas Molnar, and Lena Struwe. 2015\. “Cornus  Elwinortonii and Cornus  Rutgersensis (Cornaceae), New Names for Two Artificially Produced Hybrids of Big-Bracted Dogwoods.” PhytoKeys 55 (August): 93–111. [https://doi.org/10.3897/phytokeys.55.9112](https://doi.org/10.3897/phytokeys.55.9112).  
+Skou AMT, Toneatto F, Kollmann J (2012) Are plant populations in expanding ranges made up of escaped cultivars? The case of *Ilex aquifolium* in Denmark. Plant Ecol 213:1131–1144. https://doi.org/10.1007/s11258-012-0071-z
 
-McRae, Brad H., Brett G. Dickson, Timothy H. Keitt, and Viral B. Shah. 2008\. “USING CIRCUIT THEORY TO MODEL CONNECTIVITY IN ECOLOGY, EVOLUTION, AND CONSERVATION.” Ecology 89 (10): 2712–24. [https://doi.org/10.1890/07-1861.1](https://doi.org/10.1890/07-1861.1).  
+Sork VL, Smouse PE, Apsit VJ, Dyer RJ, Westfall RD (2005) A two-generation analysis of pollen pool genetic structure in flowering dogwood, *Cornus florida* (Cornaceae), in the Missouri Ozarks. Am J Bot 92:262–271. https://doi.org/10.3732/ajb.92.2.262
 
-Miles, Lindsay S., L. Ruth Rivkin, Marc T. J. Johnson, Jason Munshi-South, and Brian C. Verrelli. 2019\. “Gene Flow and Genetic Drift in Urban Environments.” Molecular Ecology 28 (18): 4138–51. [https://doi.org/10.1111/mec.15221](https://doi.org/10.1111/mec.15221).  
+Suchecki PF, Gibson DJ (2008) Loss of *Cornus florida* L. leads to significant changes in the seedling and sapling strata in an eastern deciduous forest. J Torrey Bot Soc 135:506–515. https://doi.org/10.3159/08-RA-018R.1
 
-Mmbaga, M. T., and R. J. Sauvé. 2004\. “Management of Powdery Mildew in Flowering Dogwood in the Field with Biorational and Conventional Fungicides.” Canadian Journal of Plant Science 84 (3): 837–44. [https://doi.org/10.4141/P03-104](https://doi.org/10.4141/P03-104).  
+Van Rossum F, Triest L (2012) Stepping-stone populations in linear landscape elements increase pollen dispersal between urban forest fragments. Plant Ecol Evol 145:332–340. https://doi.org/10.5091/plecevo.2012.737
 
-Molnar, T. J., and J. M. Capik. 2013\. “THE RUTGERS UNIVERSITY WOODY ORNAMENTALS BREEDING PROGRAM: PAST, PRESENT, AND FUTURE.” Acta Horticulturae, no. 990 (May): 271–80. [https://doi.org/10.17660/ActaHortic.2013.990.32](https://doi.org/10.17660/ActaHortic.2013.990.32).  
+Wadl PA, Wang X, Trigiano AN, et al (2008) Molecular identification keys for cultivars and lines of *Cornus florida* and *C. kousa* based on simple sequence repeat loci. J Am Soc Hortic Sci 133:783–793. https://doi.org/10.21273/JASHS.133.6.783
 
-Moreau, Erin L. P., Ava N. Medberry, Josh A. Honig, and Thomas J. Molnar. 2024\. “Genetic Diversity Analysis of Big-Bracted Dogwood (Cornus Florida and C. Kousa) Cultivars, Interspecific Hybrids, and Wild-Collected Accessions Using RADseq.” PLOS ONE 19 (7): e0307326. [https://doi.org/10.1371/journal.pone.0307326](https://doi.org/10.1371/journal.pone.0307326).  
+Wang X, Wadl PA, Rinehart TA, et al (2009) A linkage map for flowering dogwood (*Cornus florida* L.) based on microsatellite markers. Euphytica 165:165–175. https://doi.org/10.1007/s10681-008-9802-6
 
-Mullen, J. M. 1991\. “Canker of Dogwood Caused by Lasiodiplodia Theobromae, a Disease Influenced by Drought Stress or Cultivar Selection.” Plant Disease 75 (9): 886\. [https://doi.org/10.1094/PD-75-0886](https://doi.org/10.1094/PD-75-0886).  
+Windham MT, Graham ET, Witte WT, Knighten JL, Trigiano RN (1998) *Cornus florida* 'Appalachian Spring': a white flowering dogwood resistant to dogwood anthracnose. HortScience 33:1265–1267. https://doi.org/10.21273/HORTSCI.33.7.1265
 
-Nieuwenhuis, Rense, Manfred te Grotenhuis, and Ben Pelzer. 2012\. Influence.ME: Tools for Detecting Influential Data in Mixed Effects Models. [https://doi.org/10.32614/RJ-2012-011](https://doi.org/10.32614/RJ-2012-011).  
+Windham MT, Witte WT, Trigiano RN (2003) Three white-bracted cultivars of *Cornus florida* resistant to powdery mildew. HortScience 38:1253–1255. https://doi.org/10.21273/HORTSCI.38.6.1253
 
-Noreen, A M E, M A Niissalo, S K Y Lum, and E L Webb. 2016\. “Persistence of Long-Distance, Insect-Mediated Pollen Movement for a Tropical Canopy Tree Species in Remnant Forest Patches in an Urban Landscape.” Heredity 117 (6): 472–80. [https://doi.org/10.1038/hdy.2016.64](https://doi.org/10.1038/hdy.2016.64).  
-
-Oswalt, Christopher M., Sonja N. Oswalt, and Christopher W. Woodall. 2012\. “An Assessment of Flowering Dogwood (\&Lt;i\&gt;Cornus Florida\&lt;/i\&gt; L.) Decline in the Eastern United States.” Open Journal of Forestry 02 (02): 41–53. [https://doi.org/10.4236/ojf.2012.22006](https://doi.org/10.4236/ojf.2012.22006).  
-
-Padulles Cubino, Josep, Josep Vila Subirós, and Carles Barriocanal Lozano. 2015\. “Propagule Pressure from Invasive Plant Species in Gardens in Low-Density Suburban Areas of the Costa Brava (Spain).” Urban Forestry & Urban Greening 14 (4): 941–51. [https://doi.org/10.1016/j.ufug.2015.09.002](https://doi.org/10.1016/j.ufug.2015.09.002).  
-
-Pais, Andrew L., Ross W. Whetten, and Qiu-Yun (Jenny) Xiang. 2017\. “Ecological Genomics of Local Adaptation in Cornus Florida L. By Genotyping by Sequencing.” Ecology and Evolution 7 (1): 441–65. [https://doi.org/10.1002/ece3.2623](https://doi.org/10.1002/ece3.2623).  
-
-Papa, R., and P. Gepts. 2003\. “Asymmetry of Gene Flow and Differential Geographical Structure of Molecular Diversity in Wild and Domesticated Common Bean (Phaseolus Vulgaris L.) from Mesoamerica.” Theoretical and Applied Genetics 106 (2): 239–50. [https://doi.org/10.1007/s00122-002-1085-z](https://doi.org/10.1007/s00122-002-1085-z).  
-
-Parece, Tammy, and James Campbell. 2018\. “Intra-Urban Microclimate Effects on Phenology.” Urban Science 2 (1): 26\. [https://doi.org/10.3390/urbansci2010026](https://doi.org/10.3390/urbansci2010026).  
-
-Parikh, Lipi, M. T. Mmbaga, S. Kodati, M. Blair, D. Hui, and G. Meru. 2016\. “Broad-Sense Heritability and Genetic Gain for Powdery Mildew Resistance in Multiple Pseudo-F2 Populations of Flowering Dogwoods (Cornus Florida L.).” Scientia Horticulturae 213 (December): 216–21. [https://doi.org/10.1016/j.scienta.2016.09.038](https://doi.org/10.1016/j.scienta.2016.09.038).  
-
-Parikh, Lipi, M. T. Mmbaga, S. Kodati, and G. Zhang. 2016\. “Estimation of Narrow Sense Heritability of Powdery Mildew Resistance in Pseudo F2 (F1) Population of Flowering Dogwoods (Cornus Florida L).” European Journal of Plant Pathology 145 (1): 17–25. [https://doi.org/10.1007/s10658-015-0806-5](https://doi.org/10.1007/s10658-015-0806-5).  
-
-Pierce, Aaron R., William R. Bromer, and Kerry N. Rabenold. 2008\. “Decline of Cornus Florida and Forest Succession in a Quercus–Carya Forest.” Plant Ecology 195 (1): 45–53. [https://doi.org/10.1007/s11258-007-9297-6](https://doi.org/10.1007/s11258-007-9297-6).  
-
-R Core Team. 2026\. “R: A Language and Environment for Statistical Computing.” R Foundation for Statistical Computing, Vienna, Austria.  
-
-Ranney, Thomas, Larry Grand, and John Knighten. 1995\. “Susceptibility of Cultivars and Hybrids of Kousa Dogwood to Dogwood Anthracnose and Powdery Mildew.” Arboriculture & Urban Forestry 21 (1): 11–16. [https://doi.org/10.48044/jauf.1995.003](https://doi.org/10.48044/jauf.1995.003).  
-
-Reader, R. J. 1975\. “Effect of Air Temperature on the Flowering Date of Dogwood ( Cornus Florida ).” Canadian Journal of Botany 53 (15): 1523–34. [https://doi.org/10.1139/b75-183](https://doi.org/10.1139/b75-183).  
-
-Redlin, Scott C. 1991\. “Discula Destructiva Sp. Nov., Cause of Dogwood Anthracnose.” Mycologia 83 (5): 633–42. [https://doi.org/doi.org/10.1080/00275514.1991.12026062](https://doi.org/doi.org/10.1080/00275514.1991.12026062).  
-
-Redwine, Angela Hutto. 2013\. REPRODUCTION AND FUNCTIONAL RESPONSE OF CORNUS FLORIDA ACROSS AN URBAN LANDSCAPE GRADIENT.  MS Thesis. Virginia Commonwealth University. [https://scholarscompass.vcu.edu/etd/3136/](https://scholarscompass.vcu.edu/etd/3136/).    
-
-Reed, Sandra M. 2004\. “Self-Incompatibility in Cornus Florida.” HortScience 39 (2): 335–38. [https://doi.org/10.21273/HORTSCI.39.2.335](https://doi.org/10.21273/HORTSCI.39.2.335).  
-
-Reichard, Sarah Hayden, and Clement W. Hamilton. 1997\. “Predicting Invasions of Woody Plants Introduced into North America: Predicción de Invasiones de Plantas Leñosas Introducidas a Norteamérica.” Conservation Biology 11 (1): 193–203. [https://doi.org/10.1046/j.1523-1739.1997.95473.x](https://doi.org/10.1046/j.1523-1739.1997.95473.x).  
-
-Rhoades, Paul R., William E. Klingeman, Robert N. Trigiano, and John A. Skinner. 2011\. “Evaluating Pollination Biology of Cornus Florida L. And C. Kousa (Buerger Ex. Miq.) Hance (Cornaceae: Cornales).” Journal of the Kansas Entomological Society 84 (4): 285–97. [https://doi.org/10.2317/JKES110418.1](https://doi.org/10.2317/JKES110418.1).  
-
-Roach, Deborah A., and Renata D. Wulff. 1987\. “MATERNAL EFFECTS IN PLANTS.” Annual Review of Ecology and Systematics 18 (1): 209–35. [https://doi.org/10.1146/annurev.es.18.110187.001233](https://doi.org/10.1146/annurev.es.18.110187.001233).  
-
-Roe, Amanda D., Chris J. K. MacQuarrie, Marie-Claude Gros-Louis, et al. 2014\. “Fitness Dynamics Within a Poplar Hybrid Zone: II . Impact of Exotic Sex on Native Poplars in an Urban Jungle.” Ecology and Evolution 4 (10): 1876–89. [https://doi.org/10.1002/ece3.1028](https://doi.org/10.1002/ece3.1028).  
-
-Rousset, François. 2008\. “genepop’007: A Complete Re-Implementation of the genepop Software for Windows and Linux.” Molecular Ecology Resources 8 (1): 103–6. [https://doi.org/10.1111/j.1471-8286.2007.01931.x](https://doi.org/10.1111/j.1471-8286.2007.01931.x).  
-
-Santamour, Frank S., and Alice Jacot McArdle. 1985\. “Cultivar Checklists of the Large-Bracted Dogwoods: Cornus Florida, C. Kousa, and C. Nuttallii.” Arboriculture & Urban Forestry 11 (1): 29–36. [https://doi.org/10.48044/jauf.1985.008](https://doi.org/10.48044/jauf.1985.008).  
-
-Sherald, J L, T M Stidham, J M Hadidian, J E Hoeldtke, and MacArthur Boulevard. 1996\. “Progression of the Dogwood Anthracnose Epidemic and the Status of Flowering Dogwood in Catoctin Mountain Park.” Plant Diseases 80 (3): 310–12. [https://doi.org/10.1094/PD-80-0310](https://doi.org/10.1094/PD-80-0310).  
-
-Skou, Anne-Marie T., Fiorello Toneatto, and Johannes Kollmann. 2012\. “Are Plant Populations in Expanding Ranges Made up of Escaped Cultivars? The Case of Ilex Aquifolium in Denmark.” Plant Ecology 213 (7): 1131–44. [https://doi.org/10.1007/s11258-012-0071-z](https://doi.org/10.1007/s11258-012-0071-z).  
-
-Sork, Victoria L., Peter E. Smouse, Victoria J. Apsit, Rodney J. Dyer, and Robert D. Westfall. 2005\. “A Two-Generation Analysis of Pollen Pool Genetic Structure in Flowering Dogwood, Cornus Florida (Cornaceae), in the Missouri Ozarks.” American Journal of Botany 92 (2): 262–71. [https://doi.org/10.3732/ajb.92.2.262](https://doi.org/10.3732/ajb.92.2.262).  
-
-Suchecki, Paul F., and David J. Gibson. 2008\. “Loss of Cornus Florida L. Leads to Significant Changes in The Seedling and Sapling Strata in An Eastern Deciduous Forest1.” The Journal of the Torrey Botanical Society 135 (4): 506–15. [https://doi.org/10.3159/08-RA-018R.1](https://doi.org/10.3159/08-RA-018R.1).  
-
-Trigiano, Robert N., Alan S. Windham, Mark T. Windham, and Phillip A. Wadl. 2016\. “‘Appalachian Joy’ Is a Supernumerary, White-bracted Cultivar of Flowering Dogwood (Cornus Florida) Resistant to Powdery Mildew (Erysiphe Pulchra).” HortScience 51 (5): 592–94. [https://doi.org/10.21273/HORTSCI.51.5.592](https://doi.org/10.21273/HORTSCI.51.5.592).  
-
-Tumpa, Katarina, Zlatko Šatović, Zlatko Liber, et al. 2022\. “Gene Flow Between Wild Trees and Cultivated Varieties Shapes the Genetic Structure of Sweet Chestnut (Castanea Sativa Mill.) Populations.” Scientific Reports 12 (1): 15007\. [https://doi.org/10.1038/s41598-022-17635-9](https://doi.org/10.1038/s41598-022-17635-9).  
-
-USDA. 2020\. 2019 Census of Horticultural Specialties.  
-
-Van Kleunen, Mark, Franz Essl, Jan Pergl, et al. 2018\. “The Changing Role of Ornamental Horticulture in Alien Plant Invasions.” Biological Reviews 93 (3): 1421–37. [https://doi.org/10.1111/brv.12402](https://doi.org/10.1111/brv.12402).  
-
-Van Rossum, Fabienne, and Ludwig Triest. 2012\. “Stepping-Stone Populations in Linear Landscape Elements Increase Pollen Dispersal Between Urban Forest Fragments.” Plant Ecology and Evolution 145 (3): 332–40. [https://doi.org/10.5091/plecevo.2012.737](https://doi.org/10.5091/plecevo.2012.737).  
-
-Wadl, Phillip A., Xinwang Wang, Andrew N. Trigiano, et al. 2008\. “Molecular Identification Keys for Cultivars and Lines of Cornus Florida and C. Kousa Based on Simple Sequence Repeat Loci.” Journal of the American Society for Horticultural Science 133 (6): 783–93. [https://doi.org/10.21273/JASHS.133.6.783](https://doi.org/10.21273/JASHS.133.6.783).  
-
-Wang, Nan, Shuo Cao, Zhongjie Liu, et al. 2023\. “Genomic Conservation of Crop Wild Relatives: A Case Study of Citrus.” PLOS Genetics 19 (6): e1010811. [https://doi.org/10.1371/journal.pgen.1010811](https://doi.org/10.1371/journal.pgen.1010811).  
-
-Wang, Xinwang, Phillip A. Wadl, Timothy A. Rinehart, et al. 2009\. “A Linkage Map for Flowering Dogwood (Cornus Florida L.) Based on Microsatellite Markers.” Euphytica 165 (1): 165–75. [https://doi.org/10.1007/s10681-008-9802-6](https://doi.org/10.1007/s10681-008-9802-6).  
-
-Windham, M. T., E. T. Graham, W. T. Witte, J. L. Knighten, and R. N. Trigiano. 1998\. “Cornus Florida ‘Appalachian Spring’: A White Flowering Dogwood Resistant to Dogwood Anthracnose.” HortScience 33 (7): 1265–67. [https://doi.org/10.21273/HORTSCI.33.7.1265](https://doi.org/10.21273/HORTSCI.33.7.1265).  
-
-Windham, M. T., W. T. Witte, and R. N. Trigiano. 2003\. “Three White-bracted Cultivars of Cornus Florida Resistant to Powdery Mildew.” HortScience 38 (6): 1253–55. [https://doi.org/10.21273/HORTSCI.38.6.1253](https://doi.org/10.21273/HORTSCI.38.6.1253).  
-
-Yakub, Mohamed, and Peter Tiffin. 2017\. “Living in the City: Urban Environments Shape the Evolution of a Native Annual Plant.” Global Change Biology 23 (5): 2082–89. [https://doi.org/10.1111/gcb.13528](https://doi.org/10.1111/gcb.13528).  
-
-Younginger, Brett S., Dagmara Sirová, Mitchell B. Cruzan, and Daniel J. Ballhorn. 2017\. “Is Biomass a Reliable Estimate of Plant Fitness?” Applications in Plant Sciences 5 (2): 1600094\. [https://doi.org/10.3732/apps.1600094](https://doi.org/10.3732/apps.1600094).
-
+Younginger BS, Sirová D, Cruzan MB, Ballhorn DJ (2017) Is biomass a reliable estimate of plant fitness? Appl Plant Sci 5:1600094. https://doi.org/10.3732/apps.1600094
 
 
 
@@ -345,7 +269,7 @@ Younginger, Brett S., Dagmara Sirová, Mitchell B. Cruzan, and Daniel J. Ballhor
 
 # Tables
 
-<!-- Regenerated from the reproducible pipeline (R/). Rearing location is not a model term; Admixture Percentage (AP) is a continuous fixed covariate; confidence intervals are 1000-replicate parametric bootstraps. Source CSVs and the machine-generated version are in data/results/. -->
+<!-- Regenerated from the reproducible pipeline (found in R/). Rearing location is not a model term; Admixture Percentage (AP) is a continuous fixed covariate; confidence intervals are 1000-replicate parametric bootstraps. Source CSVs and the machine-generated version are in data/results/. -->
 
 ***
 
@@ -376,95 +300,7 @@ Totals: 395 cultivar-origin seedlings (20 families), 174 native-origin seedlings
 
 ***
 
-*Tab_SiteEffect.* Test of native collection site (Pocahontas State Park, 11 families / 147 seedlings; VCU Rice Rivers Center, 5 families / 27 seedlings) on survival and each growth trait, native-origin seedlings only. Each row is a likelihood-ratio test of a `site` fixed-effect term added to a model with germination timing, seed weight, and maternal family.
-
-| Response | *n* | Site coefficient (SE) | χ² | df | *p* |
-| :-- | --: | --: | --: | --: | --: |
-| Survival | 174 | −0.424 (0.523) | 0.640 | 1 | 0.424 |
-| Plant height | 138 | −0.026 (0.063) | 0.169 | 1 | 0.681 |
-| Stem diameter | 138 | −0.047 (0.056) | 0.698 | 1 | 0.403 |
-| Number of leaves | 137 | 0.131 (0.119) | 1.215 | 1 | 0.270 |
-| Above-ground biomass | 138 | −0.121 (0.158) | 0.582 | 1 | 0.446 |
-| Below-ground biomass | 138 | −0.222 (0.197) | 1.259 | 1 | 0.262 |
-| Leaf biomass | 138 | −0.119 (0.223) | 0.286 | 1 | 0.593 |
-| Stem biomass | 138 | −0.212 (0.146) | 2.089 | 1 | 0.148 |
-
-***
-
-*Tab_MarkerDiversity.* Diversity of the nine cultivar-diagnostic microsatellite loci in the maternal trees and in the offspring arrays: number of alleles (*A*), effective number of alleles (*A*ₑ), observed and expected heterozygosity (*H*ₒ, *H*ₑ), inbreeding coefficient (*F*IS), and single-locus exclusion probability (*P*ₑ).
-
-| Sample | Locus | *A* | *A*ₑ | *H*ₒ | *H*ₑ | *F*IS | *P*ₑ |
-| :-- | :-- | --: | --: | --: | --: | --: | --: |
-| Maternal | cf020 | 13 | 8.309 | 0.842 | 0.880 | 0.043 | 0.883 |
-| Maternal | cf125 | 5 | 3.296 | 0.707 | 0.697 | −0.015 | 0.670 |
-| Maternal | cf213 | 26 | 16.291 | 0.948 | 0.939 | −0.010 | 0.942 |
-| Maternal | cf273 | 9 | 2.220 | 0.552 | 0.549 | −0.004 | 0.581 |
-| Maternal | cf581 | 5 | 1.384 | 0.207 | 0.278 | 0.255 | 0.245 |
-| Maternal | cf585 | 18 | 9.737 | 0.862 | 0.897 | 0.039 | 0.893 |
-| Maternal | cf597 | 11 | 7.258 | 0.810 | 0.862 | 0.060 | 0.875 |
-| Maternal | cf634 | 13 | 6.513 | 0.828 | 0.846 | 0.022 | 0.841 |
-| Maternal | cf701 | 9 | 4.904 | 0.690 | 0.796 | 0.134 | 0.792 |
-| Maternal | **all loci** | 109 | 59.912 | 0.716 | 0.749 | 0.058 | — |
-| Offspring | cf020 | 18 | 8.569 | 0.816 | 0.883 | 0.077 | 0.883 |
-| Offspring | cf125 | 6 | 3.008 | 0.670 | 0.668 | −0.004 | 0.670 |
-| Offspring | cf213 | 33 | 17.352 | 0.933 | 0.942 | 0.010 | 0.942 |
-| Offspring | cf273 | 10 | 2.398 | 0.571 | 0.583 | 0.020 | 0.581 |
-| Offspring | cf581 | 7 | 1.321 | 0.234 | 0.243 | 0.036 | 0.245 |
-| Offspring | cf585 | 21 | 9.333 | 0.810 | 0.893 | 0.093 | 0.893 |
-| Offspring | cf597 | 18 | 8.035 | 0.790 | 0.876 | 0.098 | 0.875 |
-| Offspring | cf634 | 17 | 6.250 | 0.830 | 0.840 | 0.012 | 0.841 |
-| Offspring | cf701 | 13 | 4.803 | 0.729 | 0.792 | 0.079 | 0.792 |
-| Offspring | **all loci** | 143 | 61.068 | 0.709 | 0.747 | 0.047 | — |
-
-***
-
-*Tab_NullAlleles.* Maximum-likelihood estimates of null-allele frequency per locus for the cultivar- and native-origin samples (Genepop; Rousset 2008), with 95% confidence intervals. A locus is excluded from the reduced marker panel when its confidence interval excludes zero in both origin classes.
-
-| Locus | Cultivar | Native | In reduced panel |
-| :-- | :-- | :-- | :--: |
-| cf020 | 0.043 [0.026, 0.062] | 0.023 [0.006, 0.045] | no |
-| cf125 | 0.004 [0.000, 0.029] | 0.010 [0.000, 0.042] | yes |
-| cf213 | 0.011 [0.002, 0.025] | 0.000 [0.000, 0.012] | yes |
-| cf273 | 0.028 [0.011, 0.051] | 0.013 [0.000, 0.040] | yes |
-| cf581 | 0.009 (no CI) | 0.018 [0.000, 0.053] | yes |
-| cf585 | 0.062 [0.045, 0.083] | 0.017 [0.004, 0.035] | no |
-| cf597 | 0.042 [0.025, 0.062] | 0.033 [0.012, 0.059] | no |
-| cf634 | 0.010 [0.000, 0.027] | 0.002 [0.000, 0.022] | yes |
-| cf701 | 0.022 [0.004, 0.043] | 0.043 [0.021, 0.070] | no |
-
-Combined multilocus exclusion probability (gstudio; Dyer 2009): full nine-locus panel *P*excl = 1.00000; reduced five-locus panel (cf125, cf213, cf273, cf581, cf634) *P*excl = 0.99904.
-
-***
-
-*Tab_CultivarVoucherPanel.* Named cultivar accessions genotyped as the reference voucher panel for admixture scoring, sorted alphabetically. Sample tags are lab shorthand; a trailing number is part of an accession's identity, not a replicate index.
-
-| Accession | Sample tag |
-| :-- | :-- |
-| Appalachian Blush | Appalachianblush |
-| Appalachian Joy | Appalachianjoy |
-| Appalachian Mist | Appalachianmist |
-| Appalachian Snow | Appalchiansnow |
-| Appalachian Snow 15 | Appalachiansnow15 |
-| Appalachian Spring | Appalachianspring |
-| Cherokee Brave | Cherokeebrave |
-| Cherokee Chief | Cherokeechief |
-| Cherokee Princess | Cherokeeprincess |
-| Cherokee Princess 3 | Cherokeeprincess3 |
-| Cloud Nine | Cloudnine |
-| Cornus Hyperion | Cornushyperion |
-| Double Pink | Doublepink |
-| Little Princess | Littleprincess |
-| Plena | Plena |
-| Red Beauty | RedBeauty |
-| Red Pygmy | Redpygmy |
-| Rubra | Rubra |
-| Rubra Pink 15 | Rubrapink15 |
-| Spring Grove | Springgrove |
-| Stellar Pink | Stellarpink |
-
-***
-
-*Tab_AdmixturePanelComparison.* Admixture Percentage (AP), summarized separately for maternal trees and their offspring array, computed from the full nine-locus panel versus the six-locus subset used by Wadl *et al.* (2008) as a cultivar lineage-identification key.
+*Tab_AdmixturePanelComparison.* Admixture Percentage (AP), summarized separately for maternal trees and their offspring array, computed from the full nine-locus panel versus the six-locus subset used by Wadl et al. (2008) as a cultivar lineage-identification key.
 
 | Group | Marker set | *n* | Mean AP (%) | SD | Range (%) |
 | :-- | :-- | --: | --: | --: | :-- |
@@ -473,10 +309,9 @@ Combined multilocus exclusion probability (gstudio; Dyer 2009): full nine-locus 
 | Maternal | Wadl (6 loci) | 58 | 51.667 | 10.288 | 33.333–91.667 |
 | Offspring | Wadl (6 loci) | 828 | 52.104 | 10.102 | 25.000–100.000 |
 
-
 ***
 
-*Tab_Survival.* Model selection and latent-scale quantitative-genetic parameters for seedling survival, from binomial generalized linear mixed models (logit link). Subsets: Total (all seedlings), Native and Cultivar (split by maternal-tree location), AP (seedlings with a genotype, comparing the family model with and without Admixture Percentage as a fixed covariate). Variance components, proportion of latent-scale variance, and half-sib heritability (*h*²) with 1000-replicate bootstrap 95% CIs; residual variance fixed at π²/3.
+*Tab_Survival.* Model selection and latent-scale quantitative-genetic parameters for seedling survival, from binomial generalized linear mixed models (logit link). Subsets: Total, Native, and Cultivar (split by maternal-tree location) compare family, origin + family, and fixed only (germination timing + seed weight, no random effects) models; AP (seedlings with a genotype) instead compares the family model with and without Admixture Percentage as an additional fixed covariate (family vs. AP + family). Variance components, proportion of latent-scale variance, and half-sib heritability (*h*²) with 1000-replicate bootstrap 95% CIs; residual variance fixed at π²/3.
 
 | Subset | Model | AICc | ΔAICc | *w*AICc | *V*origin | *V*family | *P*family | *h*² |
 | :-- | :-- | --: | --: | --: | :-- | :-- | --: | :-- |
@@ -491,6 +326,21 @@ Combined multilocus exclusion probability (gstudio; Dyer 2009): full nine-locus 
 | AP | AP + family | 132.480 | 2.028 | 0.266 | — | — | — | — |
 
 Likelihood-ratio tests: family effect χ² = 3.427, *p* = 0.032 (Total) and χ² = 3.522, *p* = 0.030 (Cultivar); origin effect χ² = 1.431 × 10⁻⁷, *p* = 0.500.
+
+***
+
+*Tab_GerminationTiming.* Model comparison and quantitative-genetic parameters for germination timing (developmental time since germination), testing whether origin predicts the timing of germination itself. Origin was fit as a random effect; the germination-timing covariate is omitted because it is the response, so the fixed only model here contains seed weight alone (no random effects). 1000-replicate bootstrap 95% CIs.
+
+| | Model / parameter | Value |
+| :-- | :-- | :-- |
+| AIC | family | AICc = 4636.503, ΔAICc = 0.000, *w*AICc = 0.735 |
+| AIC | origin + family | AICc = 4638.538, ΔAICc = 2.036, *w*AICc = 0.265 |
+| AIC | fixed only | AICc = 4662.576, ΔAICc = 26.073, *w*AICc = 0.000 |
+| Variance | *V*origin | 10.665 [0.000, 71.826] |
+| Variance | *V*family | 23.303 [7.617, 42.205] |
+| Heritability | *h*² | 0.421 [0.145, 0.722] |
+| LRT | origin random effect | *p* = 0.475 |
+| LRT | family random effect | *p* < 0.001 |
 
 ***
 
@@ -691,114 +541,6 @@ Likelihood-ratio tests: family effect χ² = 3.427, *p* = 0.032 (Total) and χ²
 | Stem biomass | Cultivar | original | — | 0.037 [0.006, 0.083]*** | 0.304 [0.258, 0.353] | 0.438 [0.072, 0.891] |
 | Stem biomass | Cultivar | obs | 3 | 0.035 [0.006, 0.073]*** | 0.273 [0.231, 0.315] | 0.450 [0.081, 0.883] |
 | Stem biomass | Cultivar | fam | urb09 | 0.011 [0.000, 0.035] | 0.303 [0.254, 0.355] | 0.141 [0.000, 0.431] |
-
-***
-
-*Tab_RepeatedAIC.* Comparison of repeated-measures models for plant height, stem diameter, and number of leaves across four censuses (start and end of each growing season). Candidate models: fixed effects only; + individual plant; + plant and family; + plant and origin; + plant, family, and origin. Models compared by maximum likelihood.
-
-(A) Plant height
-
-| Model | AIC | ΔAIC | *w*AIC | AICc | ΔAICc | *w*AICc |
-| :-- | --: | --: | --: | --: | --: | --: |
-| plant + family | −915.247 | 0.000 | 0.517 | −915.158 | 0.000 | 0.520 |
-| plant + family + origin | −915.109 | 0.138 | 0.483 | −915.000 | 0.158 | 0.480 |
-| plant + origin | −858.968 | 56.279 | 0.000 | −858.879 | 56.279 | 0.000 |
-| plant | −801.361 | 113.887 | 0.000 | −801.289 | 113.869 | 0.000 |
-| fixed only | −96.875 | 818.372 | 0.000 | −96.820 | 818.338 | 0.000 |
-
-(B) Stem diameter
-
-| Model | AIC | ΔAIC | *w*AIC | AICc | ΔAICc | *w*AICc |
-| :-- | --: | --: | --: | --: | --: | --: |
-| plant + family | −1389.793 | 0.000 | 0.731 | −1389.703 | 0.000 | 0.733 |
-| plant + family + origin | −1387.793 | 2.000 | 0.269 | −1387.683 | 2.020 | 0.267 |
-| plant | −1346.875 | 42.918 | 0.000 | −1346.803 | 42.900 | 0.000 |
-| plant + origin | −1346.362 | 43.431 | 0.000 | −1346.272 | 43.431 | 0.000 |
-| fixed only | −1062.438 | 327.355 | 0.000 | −1062.382 | 327.321 | 0.000 |
-
-(C) Number of leaves
-
-| Model | AIC | ΔAIC | *w*AIC | AICc | ΔAICc | *w*AICc |
-| :-- | --: | --: | --: | --: | --: | --: |
-| plant + family | 2321.183 | 0.000 | 0.731 | 2321.278 | 0.000 | 0.733 |
-| plant + family + origin | 2323.183 | 2.000 | 0.269 | 2323.299 | 2.021 | 0.267 |
-| plant + origin | 2342.074 | 20.891 | 0.000 | 2342.169 | 20.891 | 0.000 |
-| plant | 2342.144 | 20.961 | 0.000 | 2342.219 | 20.942 | 0.000 |
-| fixed only | 2469.840 | 148.656 | 0.000 | 2469.898 | 148.621 | 0.000 |
-
-***
-
-*Tab_RepeatedHeritability.* Variance components (origin, family, plant, residual — residual not shown), proportion of phenotypic variance, and narrow-sense heritability (*h*²) from the repeated-measures origin + family and family models, with 1000-replicate bootstrap 95% CIs, for the original data and after removing outlier observations (obs) or the most influential family (fam). Significance from `ranova`: · *p* < 0.1, * *p* < 0.05, ** *p* < 0.01, *** *p* < 0.001.
-
-| Trait | Model | Sensitivity | *V*origin | *V*family | *V*plant | *h*² |
-| :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| Plant height | origin + family | original | 0.021 [0.000, 0.111]* | 0.008 [0.004, 0.014]*** | 0.023 [0.019, 0.027]*** | 0.438 [0.150, 0.849] |
-| Plant height | origin + family | obs | 0.019 [0.000, 0.098]* | 0.009 [0.004, 0.014]*** | 0.020 [0.017, 0.024] | 0.517 [0.185, 0.957] |
-| Plant height | origin + family | fam | 0.009 [0.000, 0.052] | 0.006 [0.002, 0.011]*** | 0.023 [0.019, 0.026] | 0.381 [0.137, 0.691] |
-| Plant height | family | original | — | 0.012 [0.006, 0.019]*** | 0.023 [0.020, 0.027]*** | 0.796 [0.432, 1.158] |
-| Plant height | family | obs | — | 0.012 [0.006, 0.021]*** | 0.021 [0.018, 0.024] | 0.926 [0.508, 1.347] |
-| Plant height | family | fam | — | 0.007 [0.003, 0.013]*** | 0.023 [0.019, 0.026] | 0.555 [0.280, 0.882] |
-| Stem diameter | origin + family | original | 0.000 [0.000, 0.006] | 0.003 [0.001, 0.005]*** | 0.010 [0.008, 0.012]*** | 0.291 [0.109, 0.496] |
-| Stem diameter | origin + family | obs | 0.001 [0.000, 0.009] | 0.003 [0.001, 0.004]*** | 0.009 [0.007, 0.010] | 0.337 [0.143, 0.556] |
-| Stem diameter | origin + family | fam | 0.002 [0.000, 0.013] | 0.002 [0.001, 0.004]*** | 0.010 [0.008, 0.012] | 0.250 [0.072, 0.452] |
-| Stem diameter | family | original | — | 0.003 [0.001, 0.005]*** | 0.010 [0.008, 0.012]*** | 0.303 [0.131, 0.524] |
-| Stem diameter | family | obs | — | 0.003 [0.001, 0.005]*** | 0.009 [0.007, 0.010] | 0.375 [0.175, 0.595] |
-| Stem diameter | family | fam | — | 0.003 [0.001, 0.005]*** | 0.010 [0.008, 0.012] | 0.310 [0.121, 0.534] |
-| Number of leaves | origin + family | original | 0.003 [0.000, 0.030] | 0.008 [0.001, 0.016]*** | 0.043 [0.033, 0.055]*** | 0.153 [0.026, 0.296] |
-| Number of leaves | origin + family | obs | 0.004 [0.000, 0.032] | 0.008 [0.002, 0.015]*** | 0.043 [0.033, 0.054] | 0.167 [0.044, 0.311] |
-| Number of leaves | origin + family | fam | 0.008 [0.000, 0.053] | 0.007 [0.002, 0.015]*** | 0.041 [0.030, 0.053] | 0.134 [0.031, 0.263] |
-| Number of leaves | family | original | — | 0.009 [0.002, 0.017]*** | 0.043 [0.032, 0.055]*** | 0.164 [0.044, 0.316] |
-| Number of leaves | family | obs | — | 0.009 [0.003, 0.017]*** | 0.042 [0.032, 0.054] | 0.187 [0.065, 0.353] |
-| Number of leaves | family | fam | — | 0.003 [0.000, 0.008]· | 0.043 [0.032, 0.054] | 0.060 [0.000, 0.152] |
-
-***
-
-*Tab_CovariateEffects.* Estimated effects of the two family-level covariates on survival (logit scale) and on each end-of-experiment growth trait (ln scale), from the family model, for the full sample and within each origin class. Cells give the coefficient (SE). Germination timing is scaled developmental time since germination (higher = earlier germination, more growing time before measurement); seed weight is the scaled maternal family mean. · *p* < 0.1, * *p* < 0.05, ** *p* < 0.01, *** *p* < 0.001.
-
-| Response | Subset | Germination timing | Seed weight |
-| :-- | :-- | --: | --: |
-| Survival | Total | +2.000 (0.241)*** | −0.381 (0.162)* |
-| Survival | Native | +1.480 (0.360)*** | −1.036 (0.455)* |
-| Survival | Cultivar | +2.336 (0.336)*** | −0.503 (0.349) |
-| Plant height | Total | +0.095 (0.012)*** | +0.030 (0.019) |
-| Plant height | Native | +0.150 (0.029)*** | −0.016 (0.073) |
-| Plant height | Cultivar | +0.080 (0.013)*** | −0.055 (0.031)· |
-| Stem diameter | Total | +0.087 (0.011)*** | +0.001 (0.013) |
-| Stem diameter | Native | +0.134 (0.027)*** | +0.022 (0.048) |
-| Stem diameter | Cultivar | +0.074 (0.011)*** | −0.037 (0.023) |
-| Number of leaves | Total | −0.003 (0.027) | −0.017 (0.032) |
-| Number of leaves | Native | −0.013 (0.059) | −0.060 (0.102) |
-| Number of leaves | Cultivar | −0.004 (0.031) | −0.026 (0.064) |
-| Above-ground biomass | Total | +0.265 (0.032)*** | +0.013 (0.045) |
-| Above-ground biomass | Native | +0.359 (0.075)*** | −0.081 (0.131) |
-| Above-ground biomass | Cultivar | +0.237 (0.035)*** | −0.188 (0.076)* |
-| Below-ground biomass | Total | +0.375 (0.039)*** | +0.003 (0.049) |
-| Below-ground biomass | Native | +0.576 (0.094)*** | +0.074 (0.203) |
-| Below-ground biomass | Cultivar | +0.324 (0.041)*** | −0.190 (0.081)* |
-| Leaf biomass | Total | +0.289 (0.046)*** | −0.025 (0.056) |
-| Leaf biomass | Native | +0.386 (0.105)*** | −0.174 (0.184) |
-| Leaf biomass | Cultivar | +0.256 (0.050)*** | −0.289 (0.089)** |
-| Stem biomass | Total | +0.255 (0.030)*** | +0.040 (0.044) |
-| Stem biomass | Native | +0.347 (0.070)*** | −0.007 (0.148) |
-| Stem biomass | Cultivar | +0.230 (0.032)*** | −0.142 (0.077)· |
-
-***
-
-*Tab_GerminationTiming.* Model comparison and quantitative-genetic parameters for germination timing (developmental time since germination), testing whether origin predicts the timing of germination itself. Origin was fit as a random effect; the germination-timing covariate is omitted because it is the response. 1000-replicate bootstrap 95% CIs.
-
-| | Model / parameter | Value |
-| :-- | :-- | :-- |
-| AIC | family | AICc = 4636.503, ΔAICc = 0.000, *w*AICc = 0.735 |
-| AIC | origin + family | AICc = 4638.538, ΔAICc = 2.036, *w*AICc = 0.265 |
-| AIC | fixed only | AICc = 4662.576, ΔAICc = 26.073, *w*AICc = 0.000 |
-| Variance | *V*origin | 10.665 [0.000, 71.826] |
-| Variance | *V*family | 23.303 [7.617, 42.205] |
-| Heritability | *h*² | 0.421 [0.145, 0.722] |
-| LRT | origin random effect | *p* = 0.475 |
-| LRT | family random effect | *p* < 0.001 |
-
-
-***
 
 # Figures
 
