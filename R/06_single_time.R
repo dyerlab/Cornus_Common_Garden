@@ -25,6 +25,8 @@
 #          data/results/growth_quantgen.csv          (full + origin models)
 #          data/results/growth_origin_quantgen.csv   (within-origin models)
 #          data/results/growth_covariates.csv
+#          data/results/growth_ap_effects.csv        (AP_z coefficient per trait)
+#          data/results/germination_timing.csv
 # -----------------------------------------------------------------------------
 
 source("R/00_setup.R")
@@ -119,20 +121,38 @@ write_csv(growth_aic, file.path(paths$results, "growth_aic.csv"))
 vc_row <- function(model, label, sensitivity, removed) {
   qg <- quantgen_summary(model)                       # Gaussian: residual from model
   bc <- boot_quantgen(model, nsim = NSIM, seed = SEED)
-  rv <- tryCatch(as.data.frame(lmerTest::ranova(model)), error = function(e) NULL)
-  p_origin <- if (!is.null(rv) && "(1 | origin)" %in% rownames(rv)) rv["(1 | origin)", "Pr(>Chisq)"] else NA_real_
-  p_family <- if (!is.null(rv) && "(1 | family)" %in% rownames(rv)) rv["(1 | family)", "Pr(>Chisq)"] else NA_real_
+  rv <- tryCatch(as.data.frame(lmerTest::ranova(model)), error = function(e) {
+    message("ranova failed for ", label, "/", sensitivity, " (removed=", removed, "): ", conditionMessage(e))
+    NULL
+  })
+  p_origin     <- if (!is.null(rv) && "(1 | origin)" %in% rownames(rv)) rv["(1 | origin)", "Pr(>Chisq)"] else NA_real_
+  p_family     <- if (!is.null(rv) && "(1 | family)" %in% rownames(rv)) rv["(1 | family)", "Pr(>Chisq)"] else NA_real_
+  chisq_origin <- if (!is.null(rv) && "(1 | origin)" %in% rownames(rv)) rv["(1 | origin)", "LRT"] else NA_real_
+  chisq_family <- if (!is.null(rv) && "(1 | family)" %in% rownames(rv)) rv["(1 | family)", "LRT"] else NA_real_
   bc %>%
     filter(parameter %in% c("V_origin", "V_family", "V_residual",
                             "P_origin", "P_family", "P_residual", "h2")) %>%
     select(parameter, estimate, ci_low, ci_high) %>%
     pivot_wider(names_from = parameter, values_from = c(estimate, ci_low, ci_high)) %>%
     mutate(model = label, sensitivity = sensitivity, removed = removed,
-           p_origin = p_origin, p_family = p_family, .before = 1)
+           p_origin = p_origin, p_family = p_family,
+           chisq_origin = chisq_origin, chisq_family = chisq_family, .before = 1)
 }
 
-refit <- function(model, data) lmer(stats::formula(model), data = droplevels(data),
-                                    REML = TRUE, control = LMM_CTRL)
+refit <- function(model, data) {
+  # Rebind the formula's environment to this frame before refitting. Without
+  # this, the formula carries fit_lmer()'s environment (from the ORIGINAL
+  # model), which has no local `data` binding -- so when lmerTest::ranova()
+  # later re-evaluates the stored call to refit reduced models, R's lexical
+  # scoping walks up the search path and resolves the symbol `data` to base
+  # R's data() function instead of this argument. That produces exactly the
+  # errors seen: "no applicable method for 'droplevels' applied to an object
+  # of class \"function\"" (2+ random terms) and "number of rows in use has
+  # changed" (1 random term, resolving to some other/unfiltered object).
+  frm <- stats::formula(model)
+  environment(frm) <- environment()
+  lmer(frm, data = droplevels(data), REML = TRUE, control = LMM_CTRL)
+}
 
 sensitivity_rows <- function(y, mod_name, label, data_key) {
   d   <- fitted_all[[y]]$data[[data_key]]
@@ -212,11 +232,14 @@ gd_qg <- boot_quantgen(gd_models$origin_family, nsim = NSIM, seed = SEED) %>%
 gd_ranova <- as.data.frame(lmerTest::ranova(gd_models$origin_family))
 
 germination_timing <- bind_rows(
-  gd_aic %>% transmute(what = "AIC", model, value = sprintf("AICc=%.1f dAICc=%.2f wAICc=%.2f", AICc, dAICc, wAICc)),
+  gd_aic %>% transmute(what = "AIC", model, value = sprintf("AICc=%.3f dAICc=%.3f wAICc=%.3f", AICc, dAICc, wAICc)),
   gd_qg  %>% transmute(what = "quantgen", model = parameter, value = sprintf("%.3f [%.3f, %.3f]", estimate, ci_low, ci_high)),
   tibble(what = "ranova_p",
          model = rownames(gd_ranova)[-1],
-         value = sprintf("%.4f", gd_ranova[["Pr(>Chisq)"]][-1]))
+         value = sprintf("%.3f", gd_ranova[["Pr(>Chisq)"]][-1])),
+  tibble(what = "ranova_chisq",
+         model = rownames(gd_ranova)[-1],
+         value = sprintf("%.3f", gd_ranova[["LRT"]][-1]))
 )
 write_csv(germination_timing, file.path(paths$results, "germination_timing.csv"))
 message("\n--- germination timing (GD) ---")
@@ -236,6 +259,24 @@ origin_blups <- imap_dfr(TRAITS, function(y, trait_name) {
 write_csv(origin_blups, file.path(paths$results, "origin_blups.csv"))
 message("\n--- origin conditional modes (ln scale) ---")
 print(as.data.frame(origin_blups %>% mutate(across(where(is.numeric), ~ round(.x, 4)))), row.names = FALSE)
+
+# ---- 6d. AP_z fixed effect for the AP + family growth models  -----
+# Tests whether Admixture Percentage predicts each growth trait, beyond
+# maternal family alone (Results, Cultivar Impacts: "the AP coefficient was
+# not significant for any trait"). Written so that claim can cite an exact,
+# reproducible p-value per trait rather than the smallest one only.
+
+growth_ap_effects <- imap_dfr(TRAITS, function(y, trait_name) {
+  m  <- fitted_all[[trait_name]]$models[["AP_AP_family"]]
+  co <- as.data.frame(summary(m)$coefficients)
+  tibble(trait = trait_name, term = rownames(co),
+         estimate = co[, "Estimate"], se = co[, "Std. Error"],
+         df = co[, "df"], t = co[, "t value"], p = co[, "Pr(>|t|)"]) %>%
+    filter(term == "AP_z")
+})
+write_csv(growth_ap_effects, file.path(paths$results, "growth_ap_effects.csv"))
+message("\n--- AP_z fixed effect per trait (AP + family model) ---")
+print(as.data.frame(growth_ap_effects %>% mutate(across(where(is.numeric), ~ round(.x, 3)))), row.names = FALSE)
 
 # ---- 7. Console summary -----------------------------------------
 

@@ -92,13 +92,29 @@ write_csv(repeated_aic, file.path(paths$results, "repeated_aic.csv"))
 
 # ---- 4. Variance / heritability with sensitivity  -> Tab_RepeatedHeritability ----
 
-refit <- function(model, data) lmer(stats::formula(model), data = droplevels(data),
-                                    REML = TRUE, control = LMM_CTRL)
+refit <- function(model, data) {
+  # Rebind the formula's environment to this frame before refitting. Without
+  # this, the formula carries fit_lmer()'s environment (from the ORIGINAL
+  # model), which has no local `data` binding -- so when lmerTest::ranova()
+  # later re-evaluates the stored call to refit reduced models, R's lexical
+  # scoping walks up the search path and resolves the symbol `data` to base
+  # R's data() function instead of this argument. That produces exactly the
+  # errors seen: "no applicable method for 'droplevels' applied to an object
+  # of class \"function\"" (2+ random terms) and "number of rows in use has
+  # changed" (1 random term, resolving to some other/unfiltered object).
+  frm <- stats::formula(model)
+  environment(frm) <- environment()
+  lmer(frm, data = droplevels(data), REML = TRUE, control = LMM_CTRL)
+}
 
 vc_row <- function(model, label, sensitivity, removed) {
   bc <- boot_quantgen(model, nsim = NSIM, seed = SEED)
-  rv <- tryCatch(as.data.frame(lmerTest::ranova(model)), error = function(e) NULL)
-  getp <- function(term) if (!is.null(rv) && term %in% rownames(rv)) rv[term, "Pr(>Chisq)"] else NA_real_
+  rv <- tryCatch(as.data.frame(lmerTest::ranova(model)), error = function(e) {
+    message("ranova failed for ", label, "/", sensitivity, " (removed=", removed, "): ", conditionMessage(e))
+    NULL
+  })
+  getp     <- function(term) if (!is.null(rv) && term %in% rownames(rv)) rv[term, "Pr(>Chisq)"] else NA_real_
+  getchisq <- function(term) if (!is.null(rv) && term %in% rownames(rv)) rv[term, "LRT"] else NA_real_
   bc %>%
     filter(parameter %in% c("V_origin", "V_family", "V_plant", "V_residual",
                             "P_origin", "P_family", "P_plant", "P_residual", "h2")) %>%
@@ -106,7 +122,9 @@ vc_row <- function(model, label, sensitivity, removed) {
     pivot_wider(names_from = parameter, values_from = c(estimate, ci_low, ci_high)) %>%
     mutate(model = label, sensitivity = sensitivity, removed = removed,
            p_origin = getp("(1 | origin)"), p_family = getp("(1 | family)"),
-           p_plant  = getp("(1 | plant)"), .before = 1)
+           p_plant  = getp("(1 | plant)"),
+           chisq_origin = getchisq("(1 | origin)"), chisq_family = getchisq("(1 | family)"),
+           chisq_plant  = getchisq("(1 | plant)"), .before = 1)
 }
 
 sensitivity_rows <- function(trait_name, mod_name, label) {
