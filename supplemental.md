@@ -102,9 +102,23 @@ DAPC is known to be prone to manufacturing apparent group separation when too ma
 
 Cross-validation retained 18 of the 20 allowed principal-component axes — a large number relative to $N = 58$, and the regime in which DAPC is most prone to overfitting. Even so, observed classification accuracy (56.1%) was close to the no-information rate set by the class imbalance (55.2% native/cultivar split) and indistinguishable from the permutation null (permutation mean 50.9%, 95th percentile 61.5%, $p = 0.237$). That the test had ample room to overfit and still did not exceed chance strengthens, rather than weakens, the conclusion that native and cultivar maternal trees are not distinguishable on overall multilocus genotype at these nine loci.
 
+## Pairwise Relatedness Among Maternal Trees
+
+The origin classification used throughout the main text groups maternal trees by sampling location -- native forest sites versus urban cultivar plantings -- rather than by any direct measure of ancestry, so the two groups could differ in relatedness structure independent of cultivar status per se. Native-origin mothers were sampled from only two nearby forest sites, while cultivar-origin mothers represent independently propagated named lines. Given evidence for isolation by distance in *C. florida* (Dyer et al. 2012), it is plausible a priori that native mothers are more closely related to one another than cultivar mothers are, and that this -- rather than a genuine origin effect -- could account for some of the asymmetry in family-level variance components reported in the main text (Results, Family-Level Variation and Trait Heritability).
+
+We tested this using Nason's pairwise coancestry coefficient ($F_{ij}$, expressed on the relatedness scale as $r = 2F_{ij}$; `gstudio`; Dyer 2009), computed for all pairwise comparisons among the same 58 genotyped maternal trees used in the linkage-disequilibrium and DAPC analyses above. Pairwise relatedness values are not independent -- every individual contributes to multiple pairs -- so within-group pairs were not treated as independent samples. Instead, the native/cultivar origin label was permuted across the same 58 individuals 9,999 times, holding the true group sizes (26 native, 32 cultivar) fixed, and the mean within-group relatedness and a two-sample Kolmogorov-Smirnov statistic between the within-native and within-cultivar relatedness distributions were recomputed under each relabeling, giving an empirical null for both statistics without requiring the pairs to be independent.
+
+**Table S3.** Pairwise relatedness (Nason's coancestry, expressed as $r = 2F_{ij}$) among native versus cultivar maternal trees, with permutation-based *p*-values (9,999 relabelings) for the difference in means and for a two-sample Kolmogorov-Smirnov statistic.
+
+| N (native, cultivar) | Mean *r*, native | Mean *r*, cultivar | Observed difference | *p* (mean difference) | Observed *D* (KS) | *p* (KS) |
+|---|---|---|---|---|---|---|
+| 58 (26, 32) | -0.000 | -0.001 | 0.001 | 0.923 | 0.034 | 0.995 |
+
+Neither statistic showed evidence of a difference in relatedness structure between the two groups: the observed difference in mean pairwise relatedness was smaller than expected under random relabeling of the same 58 individuals (*p* = 0.923), and the two within-group relatedness distributions were, if anything, more similar to each other than a random split would typically produce (*p* = 0.995). We therefore find no evidence that native-origin maternal trees are more closely related to one another than cultivar-origin maternal trees are, and conclude that the family-level variance asymmetry between origin groups reported in the main text is unlikely to be an artifact of differential kinship structure between them.
+
 ## Summary of Marker Analyses
 
-Together with the admixture-percentage comparisons in the main text (Results, Genetic Analysis), these two analyses — one examining correlation structure among loci, the other examining multivariate separability of the full genotype — find no evidence that native and cultivar maternal trees form distinguishable genetic groups at these nine microsatellite loci.
+Together with the admixture-percentage comparisons in the main text (Results, Genetic Analysis), these three analyses — examining correlation structure among loci, multivariate separability of the full genotype, and pairwise relatedness structure — find no evidence that native and cultivar maternal trees form distinguishable genetic groups, or differ systematically in relatedness, at these nine microsatellite loci.
 
 ## Software
 
