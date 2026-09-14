@@ -5,19 +5,19 @@ Center for Life Science Education
 Virginia Commonwealth University  
 Richmond, Virginia 23284
 
-Andrew Eckert, Rodney Dyer[^1]  
+Andrew Eckert, Rodney Dyer 
 School of Life Sciences and Sustainability  
 Virginia Commonwealth University  
 Richmond, Virginia 23116
 
-***
+
 # Abstract
 
 Ornamental cultivars of native plants are increasingly abundant in urban landscapes, creating large domestic reservoirs adjacent to wild populations. Whether cultivar alleles that escape into wild stands persist depends on how cultivar-origin offspring perform during early recruitment into natural habitats. We tested two competing hypotheses for flowering dogwood (*Cornus florida*): that cultivar ancestry imposes an early fitness penalty under wild conditions (*maladaptation*), or that cultivar-origin seedlings perform at least as well as wild seedlings, leaving early viability selection unable to restrain gene escape (*cultivar persistence*). We monitored survival, growth, and biomass over two growing seasons for 569 open-pollinated seedlings from 36 maternal families (20 managed landscape, 16 second-growth forest) grown in an unmanipulated, deeply shaded forest understory common garden. Seedlings were classified by landscape provenance (maternal origin) and neutral genetic ancestry (admixture percentage with commercial voucher lines). Overall survival was high (~82%) and did not differ by origin or admixture score. While broad origin explained little growth variation, maternal family accounted for substantial variance among cultivar-origin seedlings, yielding moderate narrow-sense heritabilities for height, above-ground biomass, and stem biomass ($h^2 \approx 0.3–0.5$) alongside heterogeneous family survival. Native families, in contrast, exhibited near-zero heritable variation. Cultivar-origin seedlings were not disadvantaged in a deeply shaded understory, suggesting that early viability selection is unlikely to limit the establishment of escaped cultivar alleles.  These results highlight the potential for long-term introgression and genetic homogenization in declining wild *C. florida* populations.
 
 **Keywords:** crop-to-wild gene flow · cultivar gene escape · narrow-sense heritability · common garden · introgression · Cornus florida
 
-***
+
 # Introduction
 
 The flowering dogwood (*Cornus florida* L., Cornaceae) is an ecologically important understory tree in mesic forests of eastern North America. Populations of native *C. florida* currently face several demographic pressures, the most important of which include the fungal pathogen *Discula destructiva* (Redlin 1991; Sherald et al. 1996; Carr and Banas 2000; Jenkins and White 2002), which thrives in the moist and shaded understories, resulting in significant mortality, and exotic invasive species such as *Microstegium vimineum* (Trin.) A. Camus, whose dense groundcover significantly limits seedling recruitment (Pierce et al. 2008; Suchecki and Gibson 2008).  Since the mid-1700s, dogwoods have been cultivated for their copious floral displays, striking bract color, and exceptional growth vigor in open spaces.  As a result of cultivation, many recognized cultivars are assayable through multilocus genotyping (Wadl et al. 2008). In residential and commercial landscapes, these trees are commonly grown with significant canopy openings, are completely free from overstory competition, and benefit from extensive human provisioning, including irrigation, fertilization, and pest control. This long-standing commercial demand, with an estimated annual sales rate of $31 million, has created a massive, highly managed suburban and urban reservoir of cultivar genotypes, selected to persist under environmental conditions divergent from the species’ native environment spatially proximate to remnant natural forests.
@@ -30,7 +30,7 @@ In this study, we tested two competing hypotheses regarding the consequences of 
 
 To differentiate between these two hypotheses, we sampled offspring arrays from maternal trees from managed landscapes and adjacent native second-growth forests surrounding the metropolitan region of Richmond, Virginia.  We classified offspring in two ways.  First, we used the location of the maternal tree in the landscape to designate *cultivar* if the tree was located in a landscaped and managed location (commercial and residential properties in Richmond, Virginia) or as *native* if the maternal tree was sampled from second-growth forests (Pocahontas State Park and the Rice Rivers Center).  To correct for potential pollen-mediated gene flow from native populations onto cultivar trees or longer-term introgression of cultivar genes into native populations, we also used multilocus genotyping to compare genetic admixture of offspring genotypes from well-known cultivar varieties planted in the mid-Atlantic region.  Seeds were germinated and 569 seedlings were transplanted into a common garden located within the deeply shaded understory of a second-growth mixed hardwood forest at the VCU Rice Rivers Center.  All seedlings were monitored across two growing seasons for survival, growth (height and stem diameter), and dry above- and below-ground biomass.  Crucially, because light was not experimentally manipulated, our common garden provides a direct empirical test of early seedling performance under natural forest understory conditions—allowing us to evaluate whether cultivar-origin seedlings face a viability bottleneck when recruiting into deeply shaded, natural environments.  
 
-***
+
 # Methods
 
 ## Study species
@@ -66,7 +66,9 @@ After harvest and tissue processing, we evaluated the following traits intended 
 Mixed-effects models with continuous response variables were fitted using the *lme4* package (version 2.0.6; Bates et al. 2015), with significance of fixed effects evaluated from *t*-tests with Satterthwaite degrees of freedom (*lmerTest*; Kuznetsova et al. 2017). Survival was fitted with a binomial error distribution and logit link (*lme4*; Bates et al. 2015). Variance-component and heritability estimates were taken from models fit by restricted maximum likelihood (REML); models compared by AIC were fit by maximum likelihood. Models included maternal family and, under the location-based classification, origin as random effects, with developmental time since germination (a proxy for germination timing; excluded when modeling germination date itself) and the maternal family's mean seed weight included as fixed covariates to account for early developmental and maternal effects. Under the admixture-based classification, each seedling's AP was included as a continuous fixed covariate in place of the origin random effect. Traits measured repeatedly across the two growing seasons (height, stem diameter, number of leaves) additionally included individual plant as a random effect and a fixed term for census. For each trait, we compared models with and without origin (or AP) using Akaike Information Criterion (AIC), to evaluate whether cultivar ancestry explained variation in seedling performance beyond that attributable to maternal family alone.
 
 Narrow-sense heritability (*$h^2$*) was estimated assuming open-pollinated maternal arrays represent half-sib families (*$h^2 = \frac{4 V_{\text{family}}}{V_{\text{total}}}$*). Because open-pollinated seed arrays in natural and/or urban environments may contain fractions of full-sibs, selfed offspring, or correlated paternity, this standard formulation represents an upper-bound estimate of narrow-sense heritability. Estimates for each trait were taken from the best supported model, using both the combined sample and, separately, each putative origin subset. Maternal family is nested within origin — no family contributed both native and cultivar offspring — so a model fit to the combined sample yields a single family-variance estimate shared across all families, which need not represent either origin class individually; fitting the family model separately within each origin subset instead lets family-level variance differ freely between native and cultivar lineages, allowing origin-specific heritability to be estimated directly. Survival heritability was estimated on the latent liability scale following Gilmour et al. (1985). For quantitative plant traits, we estimated narrow-sense heritability under a half-sib design, in which maternal family variance is treated as one-quarter of the additive genetic variance. Full model structure, variance decomposition, and heritability derivations, along with model diagnostics and sensitivity analyses, are provided in the Supplementary Materials.  All statistical analyses were performed in `R` (version 4.5.3; R Core Team 2026) and all code and data used are available in the online supplementary materials.
+
 # Results
+
 ## Genetic Analysis 
 
 The nine microsatellite markers assayed had moderate to high levels of polymorphism (with 5–26 alleles per locus) in maternal individuals and comparable diversity among the offspring genotypes (Tab_MarkerDiversity, Supplementary Materials). Maximum-likelihood estimates of null-allele frequency were low at every locus (all point estimates < 0.07) but their confidence intervals excluded zero at four loci (cf020, cf585, cf597, cf701) found in both native and cultivar samples (Tab_NullAlleles, Supplementary Materials).  Genetic marker panels, including either the full set of loci or only the subset not indicated as having any null alleles, retained almost identical discriminatory power ($P_{excl,multi,full} > 0.9999$ vs $P_{excl,multi} = 0.9990$).
@@ -143,10 +145,6 @@ The authors declare no competing interests.
 
 Maternal trees on private property were sampled with landowner permission. Sampling in Pocahontas State Park and at the VCU Rice Rivers Center was conducted under [permit numbers — to be added].
 
-[^1]: Corresponding author: rjdyer@vcu.edu.
-
-
-***
 
 # Literature Cited
 
@@ -261,14 +259,10 @@ Windham MT, Witte WT, Trigiano RN (2003) Three white-bracted cultivars of *Cornu
 Younginger BS, Sirová D, Cruzan MB, Ballhorn DJ (2017) Is biomass a reliable estimate of plant fitness? Appl Plant Sci 5:1600094. https://doi.org/10.3732/apps.1600094
 
 
-
-***
-
 # Tables
 
 <!-- Regenerated from the reproducible pipeline (found in R/). Rearing location is not a model term; Admixture Percentage (AP) is a continuous fixed covariate; confidence intervals are 1000-replicate parametric bootstraps. Source CSVs and the machine-generated version are in data/results/. -->
 
-***
 
 *Tab_Samples.* Number of *Cornus florida* seedlings per maternal family at the start of the common garden (Beginning) and alive at the final census, 2019-09-18 (End). Families are labeled by anonymized code (`urb` = cultivar origin, from managed landscapes; `nat` = native origin, from second-growth forest).
 
@@ -295,8 +289,6 @@ Younginger BS, Sirová D, Cruzan MB, Ballhorn DJ (2017) Is biomass a reliable es
 
 Totals: 395 cultivar-origin seedlings (20 families), 174 native-origin seedlings (16 families); 569 seedlings total, 468 alive at the final census.
 
-***
-
 *Tab_AdmixturePanelComparison.* Admixture Percentage (AP), summarized separately for maternal trees and their offspring array, computed from the full nine-locus panel versus the six-locus subset used by Wadl et al. (2008) as a cultivar lineage-identification key.
 
 | Group | Marker set | *n* | Mean AP (%) | SD | Range (%) |
@@ -306,7 +298,6 @@ Totals: 395 cultivar-origin seedlings (20 families), 174 native-origin seedlings
 | Maternal | Wadl (6 loci) | 58 | 51.667 | 10.288 | 33.333–91.667 |
 | Offspring | Wadl (6 loci) | 828 | 52.104 | 10.102 | 25.000–100.000 |
 
-***
 
 *Tab_Survival.* Model selection and latent-scale quantitative-genetic parameters for seedling survival, from binomial generalized linear mixed models (logit link). Subsets: Total, Native, and Cultivar (split by maternal-tree location) compare family, origin + family, and fixed only (germination timing + seed weight, no random effects) models; AP (seedlings with a genotype) instead compares the family model with and without Admixture Percentage as an additional fixed covariate (family vs. AP + family). Variance components, proportion of latent-scale variance, and half-sib heritability (*h*²) with 1000-replicate bootstrap 95% CIs; residual variance fixed at π²/3.
 
@@ -324,7 +315,6 @@ Totals: 395 cultivar-origin seedlings (20 families), 174 native-origin seedlings
 
 Likelihood-ratio tests: family effect χ² = 3.427, *p* = 0.032 (Total) and χ² = 3.522, *p* = 0.030 (Cultivar); origin effect χ² = 1.431 × 10⁻⁷, *p* = 0.500.
 
-***
 
 *Tab_GerminationTiming.* Model comparison and quantitative-genetic parameters for germination timing (developmental time since germination), testing whether origin predicts the timing of germination itself. Origin was fit as a random effect; the germination-timing covariate is omitted because it is the response, so the fixed only model here contains seed weight alone (no random effects). 1000-replicate bootstrap 95% CIs.
 
@@ -339,7 +329,6 @@ Likelihood-ratio tests: family effect χ² = 3.427, *p* = 0.032 (Total) and χ²
 | LRT | origin random effect | *p* = 0.475 |
 | LRT | family random effect | *p* < 0.001 |
 
-***
 
 *Tab_GrowthAIC.* Comparison of mixed-effects models for the end-of-experiment growth traits, by AIC and AICc. Candidate models: fixed effects only (germination timing + seed weight), + maternal family, + family and origin (origin as a random effect). For the AP subset (seedlings with a genotype) the comparison is the family model with and without Admixture Percentage as a fixed covariate. Native and Cultivar subsets are split by maternal-tree location. Models compared by maximum likelihood.
 
@@ -441,7 +430,6 @@ Likelihood-ratio tests: family effect χ² = 3.427, *p* = 0.032 (Total) and χ²
 | Cultivar | family | 566.636 | 0.000 | 0.999 | 566.823 | 0.000 | 0.999 |
 | Cultivar | fixed only | 580.704 | 14.068 | 0.001 | 580.828 | 14.005 | 0.001 |
 
-***
 
 *Tab_GrowthHeritability.* Variance components (origin, family, residual), proportion of phenotypic variance, and narrow-sense heritability (*h*²) for the end-of-experiment growth traits, from the origin + family and family models, with 1000-replicate bootstrap 95% CIs. Each is shown for the original data and after a sensitivity pass: removing individual observations with |standardized residual| > 3 (obs), or removing the single most influential maternal family (fam; family shown). Random-effect significance from `ranova`: · *p* < 0.1, * *p* < 0.05, ** *p* < 0.01, *** *p* < 0.001.
 
@@ -490,7 +478,6 @@ Likelihood-ratio tests: family effect χ² = 3.427, *p* = 0.032 (Total) and χ²
 | Stem biomass | family | obs | 4 | — | 0.046 [0.016, 0.085]*** | 0.278 [0.241, 0.320] | 0.567 [0.213, 0.956] |
 | Stem biomass | family | fam | urb09 | — | 0.016 [0.000, 0.038]* | 0.318 [0.276, 0.368] | 0.188 [0.000, 0.441] |
 
-***
 
 *Tab_OriginHeritability.* Within-origin variance components and narrow-sense heritability (family model only), analyzed separately for putative native and putative cultivar seedlings, with 1000-replicate bootstrap 95% CIs and the same sensitivity pass as Tab_GrowthHeritability. Significance from `ranova`: · *p* < 0.1, * *p* < 0.05, ** *p* < 0.01, *** *p* < 0.001.
 
@@ -545,7 +532,6 @@ Likelihood-ratio tests: family effect χ² = 3.427, *p* = 0.032 (Total) and χ²
 
 **Fig_Survival.** Proportion of *Cornus florida* seedlings alive at each census in the common garden, for native-origin (blue) and cultivar-origin (orange) seedlings, classified by maternal-tree location. Points are observed proportions; shaded bands are 95% confidence intervals. Survival to the final census was 79.310% for native-origin and 83.544% for cultivar-origin seedlings.
 
-***
 
 ![](media/fig_blups.png)
 
