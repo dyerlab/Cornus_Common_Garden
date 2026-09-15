@@ -8,7 +8,7 @@ Rscript R/run_all.R           # full run (bootstrap NSIM = 1000, ~15-20 min)
 NSIM=50 Rscript R/run_all.R    # fast dry run
 ```
 
-`run_all.R` runs steps 01–15 in order, then deletes any scratch files
+`run_all.R` runs steps 01–16 in order, then deletes any scratch files
 (`cmdline.txt`, `fichier.in`, `Rplots.pdf`) tools leave in the working directory.
 
 ## Layout
@@ -50,6 +50,7 @@ missing `SENSITIVE/` and skips, and steps 05–12 use the committed files.
 | `13_multilocus_ld.R` | Tab_LinkageDisequilibrium — index of association (Ia, rbarD) within each origin group, on the 58 unrelated maternal trees |
 | `14_dapc_origin.R` | Tab_DAPC — discriminant analysis of principal components, testing whether native/cultivar maternal trees separate on full multilocus genotype |
 | `15_relatedness_check.R` | Tab_Relatedness — pairwise relatedness among maternal trees, checking whether native mothers are more closely related to one another than cultivar mothers |
+| `16_offspring_relatedness.R` | Tab_HeritabilityRelatedness — within-mother offspring relatedness (same Nason/`gstudio` method as Tab_Relatedness, applied to each mother's own genotyped offspring, pooled by origin) and heritability re-expressed at the pooled median realized relatedness, bracketed by the half-sib (r = 0.25) and full-sib (r = 0.5) assumptions |
 
 ## Analysis choices
 
@@ -61,7 +62,9 @@ missing `SENSITIVE/` and skips, and steps 05–12 use the committed files.
 - Growth-trait responses are ln-transformed; AGB and stem biomass values of 0 are
   treated as missing.
 - Half-sib design: V_A = 4 · V_family; h² = V_A / V_P. Survival h² is on the latent
-  (logit) scale with residual variance fixed at π²/3.
+  (logit) scale with residual variance fixed at π²/3. `16_offspring_relatedness.R` checks
+  this half-sib assumption against realized marker-based relatedness among
+  each mother's own genotyped offspring.
 - Confidence intervals are 1000-replicate parametric bootstraps (`lme4::bootMer`).
 - Random-effect significance is a boundary-corrected likelihood-ratio test
   (`lmerTest::ranova` for LMMs).

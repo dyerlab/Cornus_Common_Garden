@@ -536,3 +536,8 @@ Likelihood-ratio tests: family effect χ² = 3.427, *p* = 0.032 (Total) and χ²
 ![](media/fig_blups.png)
 
 **Fig_BLUPs.** Maternal-family conditional modes (best linear unbiased predictors) from the binomial generalized linear mixed model of survival fit to cultivar-origin seedlings only, on the logit scale. Points are family estimates, ordered from lowest to highest predicted survival; horizontal bars are ± 1 standard error. Families whose intervals fall entirely above or below zero contribute above- or below-average survival, showing that survival was heterogeneous among cultivar-origin families.
+
+![](media/fig_offspring_heritability.png)
+
+**FIG_Heritability.** The extimated distribution of heritability expressed under realized within-mother offspring relatedness for native and cultivar family arrays.  The point estimate (dot) represents heribility estimated from simulating median relatedness among sibling arrays.  The range of potential heritabilities spanning from half-sibling to full-sibling is delineated by the vertical line.
+
