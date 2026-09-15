@@ -21,14 +21,9 @@ The rest of this file is a standalone summary of the study; repository and repro
 
 **Result: supports cultivar persistence** — no evidence for maladaptation.
 
-<table>
-<tr>
-<td>&nbsp;</td>
-<td>![](https://dyerlab.github.io/Cornus_Common_Garden/media/fig_offspring_heritability.png)
-*Heritability re-expressed under realized within-mother offspring relatedness, for native and cultivar family arrays across each measured trait. The violin shows bootstrap uncertainty in heritability at each origin’s median pairwise sibling relatedness (maternal families resampled with replacement within origin); the point marks that median-relatedness estimate, and the vertical line spans the range implied by a strict half-sib to strict full-sib assumption.*</td>
-<td>&nbsp;</td>
-</tr>
-</table>
+![](https://dyerlab.github.io/Cornus_Common_Garden/media/fig_offspring_heritability.png)
+*Heritability re-expressed under realized within-mother offspring relatedness, for native and cultivar family arrays across each measured trait. The violin shows bootstrap uncertainty in heritability at each origin’s median pairwise sibling relatedness (maternal families resampled with replacement within origin); the point marks that median-relatedness estimate, and the vertical line spans the range implied by a strict half-sib to strict full-sib assumption.*
+
 
 ## Study design & data
 
