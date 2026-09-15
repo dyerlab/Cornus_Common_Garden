@@ -279,6 +279,15 @@ by_origin_cap <- by_origin %>%
   mutate(origin_cap = tools::toTitleCase(origin)) %>%
   select(origin_cap, median_r)
 
+# Explicit trait/origin ordering (rather than an alphabetical arrange()) so
+# the table interleaves Native/Cultivar rows within each trait -- matching
+# how it is presented in Tab_HeritabilityRelatedness -- instead of grouping
+# all Native rows before all Cultivar rows. trait_order comes from
+# p_family's own row order, which already follows 06_single_time.R's TRAITS
+# sequence (height, stem_diam, leaf_number, AGB, BGB, leaf_biomass,
+# stem_biomass).
+trait_order <- unique(p_family$trait)
+
 offspring_heritability_summary <- p_family %>%
   inner_join(by_origin_cap, by = "origin_cap") %>%
   rename(origin = origin_cap) %>%
@@ -292,7 +301,7 @@ offspring_heritability_summary <- p_family %>%
     h2_ceiling_halfsib,
     h2_floor_fullsib
   ) %>%
-  arrange(origin, trait)
+  arrange(match(trait, trait_order), match(origin, c("Native", "Cultivar")))
 write_csv(
   offspring_heritability_summary,
   file.path(paths$results, "offspring_heritability_summary.csv")

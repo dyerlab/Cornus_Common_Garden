@@ -300,28 +300,32 @@ Neither statistic showed evidence of a difference in relatedness structure betwe
 
 Every heritability estimate in the main text assumes open-pollinated maternal arrays are half-sib families ($r = 0.25$, so $h^2 = 4 V_{\text{family}}/V_P$), which the main text already flags as an upper-bound assumption (Results, Family-Level Variation and Trait Heritability): open pollination can mix in full-sib pairs (shared father, $r = 0.5$) within a mother's own offspring array, which would push the true relatedness-based multiplier below 4 (down to a floor of 2 if every pair were full sibs).
 
-To gauge how much this matters in practice, we estimated realized pairwise relatedness (Nason's coancestry, $r = 2F_{ij}$; `gstudio`; Dyer 2009; same method as Tab_Relatedness above) among each mother's own genotyped offspring, restricted to offspring with a complete nine-locus genotype, and pooled all within-mother sibling pairs within each origin (native, cultivar) rather than averaging per mother first, since the question of interest is the shape of the realized relatedness distribution across each origin's half-sib arrays rather than any individual mother's estimate. We then re-expressed heritability for each trait's origin-specific family-variance estimate ($P_{\text{family}} = V_{\text{family}}/V_P$; the same quantity behind Tab_OriginHeritability) as $h^2 = P_{\text{family}} / r$, using each origin's pooled median realized relatedness in place of the assumed $r = 0.25$ (median rather than mean: with only nine loci, a minority of pairwise $F_{ij}$ estimates are noisy outliers well outside the biologically sensible [0, 1] range, which disproportionately distort the mean but not the median). Full method, including two `gstudio`-specific estimation pitfalls this avoids (a missing-genotype imputation bug, and family-local rather than population-level reference allele frequencies), is documented in `R/16_offspring_relatedness.R`.
+To gauge how much this matters in practice, we estimated realized pairwise relatedness (Nason's coancestry, $r = 2F_{ij}$; `gstudio`; Dyer 2009; same method as Tab_Relatedness above) among each mother's own genotyped offspring, restricted to offspring with a complete nine-locus genotype, and pooled all within-mother sibling pairs within each origin (native, cultivar) rather than averaging per mother first, since the question of interest is the shape of the realized relatedness distribution across each origin's half-sib arrays rather than any individual mother's estimate (Fig_OffspringRelatedness). We then re-expressed heritability for each trait's origin-specific family-variance estimate ($P_{\text{family}} = V_{\text{family}}/V_P$; the same quantity behind Tab_OriginHeritability) as $h^2 = P_{\text{family}} / r$, using each origin's pooled median realized relatedness in place of the assumed $r = 0.25$ (median rather than mean: with only nine loci, a minority of pairwise $F_{ij}$ estimates are noisy outliers well outside the biologically sensible [0, 1] range, which disproportionately distort the mean but not the median). Full method, including two `gstudio`-specific estimation pitfalls this avoids (a missing-genotype imputation bug, and family-local rather than population-level reference allele frequencies), is documented in `R/16_offspring_relatedness.R`.
 
 **Tab_HeritabilityRelatedness.** Heritability re-expressed under realized within-mother offspring relatedness, bracketed by the half-sib ($r = 0.25$) and full-sib ($r = 0.5$) assumptions. $h^2_{\text{dist}}$ is the point estimate at each origin's pooled median pairwise relatedness among complete-genotype offspring (native median $r$ = 0.259, $n$ = 1421 pairs among 24 mothers; cultivar median $r$ = 0.291, $n$ = 1810 pairs among 31 mothers).
 
 | Trait                | Origin   | Half Sibling | Relatedness | Full Sibling |
 |----------------------|----------|:------------:|:-----------:|:------------:|
 | Plant height         | Native   | 0.238        | 0.230       | 0.119        |
-| Stem diameter        | Native   | 0.008        | 0.008       | 0.004        |
-| Number of leaves     | Native   | 0.000        | 0.000       | 0.000        |
-| Above-ground biomass | Native   | 0.000        | 0.000       | 0.000        |
-| Below-ground biomass | Native   | 0.103        | 0.099       | 0.051        |
-| Leaf biomass         | Native   | 0.000        | 0.000       | 0.000        |
-| Stem biomass         | Native   | 0.090        | 0.087       | 0.045        |
 | Plant height         | Cultivar | 0.474        | 0.408       | 0.237        |
+| Stem diameter        | Native   | 0.008        | 0.008       | 0.004        |
 | Stem diameter        | Cultivar | 0.247        | 0.213       | 0.124        |
+| Number of leaves     | Native   | 0.000        | 0.000       | 0.000        |
 | Number of leaves     | Cultivar | 0.263        | 0.226       | 0.131        |
+| Above-ground biomass | Native   | 0.000        | 0.000       | 0.000        |
 | Above-ground biomass | Cultivar | 0.322        | 0.277       | 0.161        |
+| Below-ground biomass | Native   | 0.103        | 0.099       | 0.051        |
 | Below-ground biomass | Cultivar | 0.233        | 0.201       | 0.117        |
+| Leaf biomass         | Native   | 0.000        | 0.000       | 0.000        |
 | Leaf biomass         | Cultivar | 0.130        | 0.112       | 0.065        |
+| Stem biomass         | Native   | 0.090        | 0.087       | 0.045        |
 | Stem biomass         | Cultivar | 0.438        | 0.376       | 0.219        |
 
 Across both origins and every trait, the realized-relatedness point estimate falls below the published half-sib value, consistent with a modest admixture of full-sib pairs within maternal offspring arrays rather than a pure half-sib design; native traits whose family-variance estimate is already at or near zero (number of leaves, above-ground biomass, leaf biomass) are unaffected by the relatedness assumption, since $h^2 = 0$ regardless of the divisor. This does not change the qualitative pattern reported in the main text — heritability differs more by origin than it does across relatedness assumptions within an origin — but it does confirm that the half-sib figures reported there are best read as upper bounds.
+
+![](media/fig_offspring_relatedness.png)
+
+**Fig_OffspringRelatedness.** Density of pairwise Nason relatedness ($r = 2F_{ij}$) among genotyped offspring within each mother's own array, pooled by origin. Dashed line marks the half-sib expectation ($r = 0.25$); dotted line marks the full-sib expectation ($r = 0.5$). Native median $r$ = 0.259 ($n$ = 1421 pairs among 24 mothers); cultivar median $r$ = 0.291 ($n$ = 1810 pairs among 31 mothers). Both distributions sit slightly above the half-sib expectation and below the full-sib expectation, consistent with a mixture of half- and full-sib pairs within maternal offspring arrays.
 
 ## Summary of Marker Analyses
 
