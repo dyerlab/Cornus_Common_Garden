@@ -296,6 +296,10 @@ We tested this using Nason's pairwise coancestry coefficient ($F_{ij}$, expresse
 
 Neither statistic showed evidence of a difference in relatedness structure between the two groups: the observed difference in mean pairwise relatedness was smaller than expected under random relabeling of the same 58 individuals (*p* = 0.923), and the two within-group relatedness distributions were, if anything, more similar to each other than a random split would typically produce (*p* = 0.995). We therefore find no evidence that native-origin maternal trees are more closely related to one another than cultivar-origin maternal trees are, and conclude that the family-level variance asymmetry between origin groups reported in the main text is unlikely to be an artifact of differential kinship structure between them.
 
+## Summary of Marker Analyses
+
+Together with the admixture-percentage comparisons in the main text (Results, Genetic Analysis), the three analyses above — examining correlation structure among loci, multivariate separability of the full genotype, and pairwise relatedness among maternal trees — find no evidence that native and cultivar maternal trees form distinguishable genetic groups, or differ systematically in relatedness, at these nine microsatellite loci. The following section takes up a related but separate question: not whether the two origin groups are genetically distinguishable, but how the heritability estimates reported throughout depend on the relatedness assumed within each maternal family.
+
 ## Realized Within-Mother Offspring Relatedness and Heritability
 
 Every heritability estimate in the main text assumes open-pollinated maternal arrays are half-sib families ($r = 0.25$, so $h^2 = 4 V_{\text{family}}/V_P$), which the main text already flags as an upper-bound assumption (Results, Family-Level Variation and Trait Heritability): open pollination can mix in full-sib pairs (shared father, $r = 0.5$) within a mother's own offspring array, which would push the true relatedness-based multiplier below 4 (down to a floor of 2 if every pair were full sibs).
@@ -326,10 +330,6 @@ Across both origins and every trait, the realized-relatedness point estimate fal
 ![](media/fig_offspring_relatedness.png)
 
 **Fig_OffspringRelatedness.** Density of pairwise Nason relatedness ($r = 2F_{ij}$) among genotyped offspring within each mother's own array, pooled by origin. Dashed line marks the half-sib expectation ($r = 0.25$); dotted line marks the full-sib expectation ($r = 0.5$). Native median $r$ = 0.259 ($n$ = 1421 pairs among 24 mothers); cultivar median $r$ = 0.291 ($n$ = 1810 pairs among 31 mothers). Both distributions sit slightly above the half-sib expectation and below the full-sib expectation, consistent with a mixture of half- and full-sib pairs within maternal offspring arrays.
-
-## Summary of Marker Analyses
-
-Together with the admixture-percentage comparisons in the main text (Results, Genetic Analysis), these three analyses — examining correlation structure among loci, multivariate separability of the full genotype, and pairwise relatedness structure — find no evidence that native and cultivar maternal trees form distinguishable genetic groups, or differ systematically in relatedness, at these nine microsatellite loci.
 
 ## Software
 
