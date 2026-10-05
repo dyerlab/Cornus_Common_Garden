@@ -36,7 +36,7 @@
 #                                  rendered as Tab_CultivarVoucherPanel by
 #                                  R/11_tables.R)
 #   data/results/admixture_wadl.csv   group, mom, id, AP, n_loci -- AP recomputed
-#                                  using only the six-locus Wadl et al. (2008) key
+#                                  using only the six loci reported by Wadl et al. (2008)
 #                                  (WADL_LOCI), for maternal trees and offspring.
 #                                  Descriptive only; rendered alongside the
 #                                  full-panel numbers as Tab_AdmixturePanelComparison.
@@ -60,9 +60,10 @@ source("R/00_setup.R")
 suppressPackageStartupMessages({ library(readr); library(dplyr); library(tidyr); library(stringr); library(purrr) })
 
 LOCI <- c("cf020", "cf125", "cf213", "cf273", "cf581", "cf585", "cf597", "cf634", "cf701")
-# The six loci Wadl et al. (2008) used as a lineage-identification key, a subset
-# of the full panel above (three loci -- cf020, cf125, cf701 -- come from Wang et
-# al. 2009 and are not part of the original Wadl key). Used below only for the
+# The six loci reported by Wadl et al. (2008), a subset of the full panel above.
+# Only four of them (cf213, cf581, cf585, cf597) form Wadl's lineage-identification
+# key; cf273 and cf634 appear in that paper but not in the key, and three loci --
+# cf020, cf125, cf701 -- come from Wang et al. 2009. Used below only for the
 # descriptive full-panel-vs-Wadl-panel AP comparison (Tab_AdmixturePanelComparison),
 # never as a model covariate.
 WADL_LOCI <- c("cf213", "cf273", "cf581", "cf585", "cf597", "cf634")
@@ -277,9 +278,9 @@ message("AP computed for ", nrow(admixture_maternal), " maternal trees; ",
         round(min(admixture_maternal$AP), 1), "-",
         round(max(admixture_maternal$AP), 1), "%")
 
-# ---- 3c. Same scoring restricted to the six-locus Wadl et al. (2008) key -
+# ---- 3c. Same scoring restricted to the six loci reported by Wadl et al. (2008) -
 # Descriptive comparison only (Tab_AdmixturePanelComparison): does restricting
-# to the original lineage-identification loci change the AP distribution
+# to the loci reported by Wadl et al. (2008) change the AP distribution
 # relative to the full nine-locus panel scored above? Never used as a model
 # covariate -- the full-panel AP in admixture.csv / admixture_maternal.csv
 # remains what steps 05-09 join on.

@@ -135,7 +135,8 @@ ap_cmp <- bind_rows(
 w("\n## Tab_AdmixturePanelComparison\n")
 w("Admixture Percentage (AP), summarized separately for maternal trees and their ",
   "offspring array, computed from the full nine-locus panel versus the six-locus ",
-  "subset used by Wadl et al. (2008) as a cultivar lineage-identification key.\n")
+  "subset reported by Wadl et al. (2008), which includes their four-locus cultivar ",
+  "lineage-identification key (*cf213*, *cf581*, *cf585*, *cf597*).\n")
 writeLines(md_table(ap_cmp %>%
   transmute(Group = str_to_title(group), `Marker set`, n,
             `Mean AP (%)` = sprintf("%.3f", mean_AP), SD = sprintf("%.3f", sd_AP),
