@@ -152,16 +152,21 @@ Any mistakes in these data are the sole responsibility of [R. Dyer](mailto:rjdye
 
 The following items need to be addressed:
 
-1. In the materials and methods, blocks are mentioned at one point, but this is after the description of the garden, so were there formal blocks, like a randomized block design, or did you just randomize seedlings within the entire garden? 
-2. Typically, I am asked to give the equations for the linear mixed models I fit in the main text. This helps everyone kind of figure out what you fit exactly, although your writing is quite clear. Not sure if you want to do that, but it’s a common ask from reviewers.
-3. Although you point out that more description for some of the methods is located in the supplement, unless I missed it, it does not state in the main manuscript that you used bootstrapping to get confidence in intervals. That might be helpful since there are numerous ways to get these intervals. 
-4. A common interpretation of low additive genetic variance in the context of what this manuscript is about often includes selection producing well-fitted populations to their local environments. Given that you argue the cultivars are sort of babied by humans, no such babying occurs for the trees in the natural stands, and they could’ve been under intense selection pressures for these early life-hood traits to meet a fitness optimum, and therefore have lower level levels of diversity. Maybe it’s the selectionist in me, but that might need to be mentioned.
-5. Paragraph 1: (Pierce et al. 2008; Suchecki and Gibson 2008) These are about forest successional structure rather than stiltgrass specifically What I originally had but maybe should have placed the citations earlier in the sentence: Changes in forest successional composition toward more shade tolerant species increases disease severity and competition from exotic invasive species like *Microstegium vimineum* (Trin) A. Camus has limited seedling recruitment (Pierce, Bromer, and Rabenold 2008; Suchecki and Gibson 2008).
-6. annual sales of $31 million came from USDA. 2020. “2019 Census of Horticultural Specialties.”
-7. Paragraph 2: I'm not sure the Herrera 1981 citation fits. It's about endozoochory, but not in *C. florida* specifically
-8. Methods: seeds were not weighed in 2017
-9. I believe the molecular key in Wadl et al. 2008 is based on only 4 loci: CF213, CF581, CF585, CF597. CF634 and CF273 are in the paper but not in the key
-10. Results: survival was higher in this experiment than in Redwine 2013
+1. In the materials and methods, ‘blocks’ are mentioned at one point, but this is after the description of the garden, so were there formal blocks, like a randomized block design, or did you just randomize seedlings within the entire garden?  *Remove any reference to ‘block’ from the methods or results section, it has some specific statistical meanings in common gardens that we want to make sure we do not confuse the readers, we did not block our samples.*
+2. Typically, I am asked to give the equations for the linear mixed models I fit in the main text. This helps everyone kind of figure out what you fit exactly, although your writing is quite clear. Not sure if you want to do that, but it’s a common ask from reviewers. *Insert the full equation into the text at the approriate location and make sure the terms are defined.*
+3. Although you point out that more description for some of the methods is located in the supplement, unless I missed it, it does not state in the main manuscript that you used bootstrapping to get confidence in intervals. That might be helpful since there are numerous ways to get these intervals.  *Check on this and update as necessary for clarity.*
+4. A common interpretation of low additive genetic variance in the context of what this manuscript is about often includes selection producing well-fitted populations to their local environments. Given that you argue the cultivars are sort of babied by humans, no such babying occurs for the trees in the natural stands, and they could’ve been under intense selection pressures for these early life-hood traits to meet a fitness optimum, and therefore have lower level levels of diversity. Maybe it’s the selectionist in me, but that might need to be mentioned. *Let’s explore where this is best injected as another option.*
+
+### Clarifications
+
+The following are clarifications on citations and references.
+
+1. Paragraph 1: (Pierce et al. 2008; Suchecki and Gibson 2008) These are about forest successional structure rather than stiltgrass specifically What I originally had but maybe should have placed the citations earlier in the sentence: Changes in forest successional composition toward more shade tolerant species increases disease severity and competition from exotic invasive species like *Microstegium vimineum* (Trin) A. Camus has limited seedling recruitment (Pierce, Bromer, and Rabenold 2008; Suchecki and Gibson 2008).
+2. Annual sales of $31 million came from USDA. 2020. “2019 Census of Horticultural Specialties.”
+3. Paragraph 2: I'm not sure the Herrera 1981 citation fits. It's about endozoochory, but not in *C. florida* specifically
+4. Methods: seeds were not weighed in 2017
+5. I believe the molecular key in Wadl et al. 2008 is based on only 4 loci: CF213, CF581, CF585, CF597. CF634 and CF273 are in the paper but not in the key
+6. Results: survival was higher in this experiment than in Redwine 2013
 
 
 
