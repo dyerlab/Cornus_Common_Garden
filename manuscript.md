@@ -20,7 +20,7 @@ Ornamental cultivars of native plants are increasingly abundant in urban landsca
 
 # Introduction
 
-The flowering dogwood (*Cornus florida* L., Cornaceae) is an ecologically important understory tree in mesic forests of eastern North America. Populations of native *C. florida* currently face several demographic pressures, the most important of which include the fungal pathogen *Discula destructiva* (Redlin 1991; Sherald et al. 1996; Carr and Banas 2000; Jenkins and White 2002), which thrives in the moist and shaded understories, resulting in significant mortality, and exotic invasive species such as *Microstegium vimineum* (Trin.) A. Camus, ==whose dense groundcover significantly limits seedling recruitment.== Changes in forest successional composition toward more shade-tolerant species increase both disease severity and competition from such invasives (Pierce et al. 2008; Suchecki and Gibson 2008).  Since the mid-1700s, dogwoods have been cultivated for their copious floral displays, striking bract color, and exceptional growth vigor in open spaces.  As a result of cultivation, many recognized cultivars are assayable through multilocus genotyping (Wadl et al. 2008). In residential and commercial landscapes, these trees are commonly grown with significant canopy openings, are completely free from overstory competition, and benefit from extensive human provisioning, including irrigation, fertilization, and pest control. This long-standing commercial demand, with an estimated annual sales rate of $31 million (USDA 2020), has created a massive, highly managed suburban and urban reservoir of cultivar genotypes, selected to persist under environmental conditions divergent from the species’ native environment spatially proximate to remnant natural forests.
+The flowering dogwood (*Cornus florida* L., Cornaceae) is an ecologically important understory tree in mesic forests of eastern North America. Populations of native *C. florida* currently face several demographic pressures, the most important of which include the fungal pathogen *Discula destructiva* (Redlin 1991; Sherald et al. 1996; Carr and Banas 2000; Jenkins and White 2002), which thrives in the moist and shaded understories, resulting in significant mortality, and exotic invasive species such as *Microstegium vimineum* (Trin.) A. Camus, whose dense groundcover significantly limits seedling recruitment (Flory and Clay 2010, Schmit et al. 2020).  Changes in forest successional composition toward more shade-tolerant species increase both disease severity and competition from such invasives (Pierce et al. 2008; Suchecki and Gibson 2008).  Since the mid-1700s, dogwoods have been cultivated for their copious floral displays, striking bract color, and exceptional growth vigor in open spaces and many recognized cultivars are assayable through multilocus genotyping (Wadl et al. 2008). In residential and commercial landscapes, these trees are commonly grown with significant canopy openings, are completely free from overstory competition, and benefit from extensive human provisioning, including irrigation, fertilization, and pest control. This long-standing commercial demand, with an estimated annual sales rate of $31 million (USDA 2020), has created a massive, highly managed suburban and urban reservoir of cultivar genotypes, selected to persist under environmental conditions divergent from the species’ native environment spatially proximate to remnant natural forests.
 
 This spatial proximity suggests that the potential for asymmetric gene escape of cultivars into native forest populations is substantial. *Cornus florida* possesses several life-history traits that facilitate either pollen- or seed-mediated gene flow across the urban-native interface. The species has a predominantly outcrossing mating system with strong prezygotic barriers to selfing (Reed 2004; Dyer et al. 2012). Although there is support for environmental influence on flowering time (Reader 1975), there remains significant phenological overlap in the approximately 2–4-week flowering window between urban cultivars and native *C. florida* individuals. Pollination services are provided by a broad suite of insect pollinators spanning at least 11 insect families, many of which are commonly found in both forest and urban habitats (Carr 2010; Rhoades et al. 2011). *Cornus florida* produces bright red drupes in the fall, which are an important food resource for a variety of forest species and may be dispersed via endozoochory (==Herrera 1981==; Dyer et al. 2012). These dispersal mechanisms have historically functioned to maintain high levels of genetic diversity within the species (Hadziabdic et al. 2010, 2012; Pais et al. 2017).
 
@@ -121,7 +121,7 @@ The stark asymmetry in heritable variation between origins—where native family
 
 As a first, more limited step toward that verification, we asked how heritability estimates would change if the half-sib assumption were relaxed to reflect realized sibship structure rather than the assumed constant -- canopy openness is known to influence correlated paternity in this species (Gardiakos 2009), and cultivar landscapes are characteristically more open than closed native-forest canopy. We estimated pairwise marker-based relatedness among each mother's own genotyped offspring, pooled within origin, to characterize the realized relatedness distribution for native and cultivar families separately (Fig_OffspringRelatedness, Supplementary Materials), and re-expressed heritability at each origin's median realized relatedness in place of the assumed $r = 0.25$. This shifted point estimates modestly downward for every trait with detectable family variance -- traits whose family-variance estimate was already indistinguishable from zero were, by construction, unaffected -- but left the qualitative pattern intact: heritability remained low in the native subset and moderate in the cultivar subset across the full half-sib-to-full-sib range (Fig_Heritability; Tab_HeritabilityRelatedness, Supplementary Materials).
 
-With indications that cultivar seedlings can readily survive and perform as well as wild seedlings, an additional factor shaping the persistence of cultivar alleles in native forests is landscape-level parameters that influence gene flow, such as the shape and size of donor populations and the matrix through which gene flow occurs. Much of urban landscape genetics investigates whether urban land cover impedes or facilitates gene flow, and the answer to that question is often organism-specific (Miles et al. 2019). Previous research has found that conspecific canopy cover is a significant facilitator of pollen flow in *C. florida* (DiLeo et al. 2014), but has provided conflicting evidence regarding the influence of canopy openings, with scale likely an important factor (Sork et al. 2005; DiLeo et al. 2014). The permeability of the intervening environment will shape whether gene flow can repeatedly facilitate the establishment of cultivar genotypes in forested habitats. Linear landscape elements have been found to promote insect-mediated pollen flow in urban spaces (Van Rossum and Triest 2012). Additionally, natural areas within cities can experience increased pollen immigration (Noreen et al. 2016) and serve as hybridization zones that facilitate the establishment of hybrid populations (Roe et al. 2014). Thus, urban natural areas represent a possible repository for seed and pollen migration.
+With indications that cultivar seedlings can readily survive and perform as well as wild seedlings, an additional factor shaping the persistence of cultivar alleles in native forests is landscape-level parameters that influence gene flow, such as the shape and size of donor populations and the matrix through which gene flow occurs. Much of urban landscape genetics investigates whether urban land cover impedes or facilitates gene flow, and the answer to that question is often organism-specific (e.g., Miles et al. 2019). Previous research has found that conspecific canopy cover is a significant facilitator of pollen flow in *C. florida* (DiLeo et al. 2014), but has provided conflicting evidence regarding the influence of canopy openings, with scale likely an important factor (Sork et al. 2005; DiLeo et al. 2014). The permeability of the intervening environment will shape whether gene flow can repeatedly facilitate the establishment of cultivar genotypes in forested habitats. Linear landscape elements have been found to promote insect-mediated pollen flow in urban spaces (Van Rossum and Triest 2012). Additionally, natural areas within cities can experience increased pollen immigration (Noreen et al. 2016) and serve as hybridization zones that facilitate the establishment of hybrid populations (Roe et al. 2014). Thus, urban natural areas represent a possible repository for seed and pollen migration.
 
 Importantly, our experimental design eliminated certain forces such as selection pressure imposed by disease. Some cultivar lines are known to have differential resistance to a variety of diseases, from the susceptibility of *Cherokee Chief* to canker caused by *Lasiodiplodia theobromae* (Mullen 1991), to the spot anthracnose (Elsinoe corni Jenkins & Bitanc. (1948))–resistant *Cherokee Brave* (Hagan et al. 1998). Powdery mildew (*Erysiphe pulchra* Cooke & Peck, Braun & Takamatsu, 2000) resistance is a highly heritable trait in *C. florida* (Parikh et al. 2016a), with *Kay’s Appalachian Mist*, *Jean’s Appalachian Snow*, and *Karen’s Appalachian Blush* all showing resistance (Windham et al. 2003). Although these diseases are mostly cosmetic for adult trees, they can be impactful for seedlings and inhibit growth (Hagan et al. 1998; Mmbaga and Sauvé 2004). *Discula destructiva*, however, has been highly destructive to *C. florida* populations, and resistance could pose a significant advantage in the cooler, more humid parts of the *C. florida* range. *Appalachian Spring* is a *C. florida* cultivar derived from a resistant individual found in Catoctin Mountain, MD, amid a high incidence of conspecific loss to *D. destructiva* (Windham et al. 1998). The vigor and prolific blooming of this strain do not indicate a defense-growth trade-off common in crop breeding (Gao et al. 2024). Transfer of disease resistance to nearby wild populations of *C. florida* could benefit them, particularly those under disease pressure.
 
@@ -160,115 +160,121 @@ Agapow PM, Burt A (2001) Indices of multilocus linkage disequilibrium. Mol Ecol 
 
 Bates D, Mächler M, Bolker B, Walker S (2015) Fitting linear mixed-effects models using lme4. J Stat Softw 67:1–48. https://doi.org/10.18637/jss.v067.i01
 
-Carr DE, Banas LE (2000) Dogwood anthracnose (*Discula destructiva*): effects of and consequences for host (Cornus florida) demography. Am Midl Nat 143:169–177. https://doi.org/10.1674/0003-0031(2000)143[0169:DADDEO]2.0.CO;2
+Carr DE, Banas LE (2000) Dogwood anthracnose (*Discula destructiva*): effects of and consequences for host (Cornus florida) demography. Am Midl Nat 143:169–177. https://doi.org/10.1674/0003-0031(2000)143%5B0169:DADDEO%5D2.0.CO;2.    
 
-Carr D (2010) Canopy disturbance and reproduction in *Cornus florida* L. MS Thesis, Virginia Commonwealth University. https://scholarscompass.vcu.edu/etd/2245/
+Carr D (2010) Canopy disturbance and reproduction in *Cornus florida* L. MS Thesis, Virginia Commonwealth University. https://scholarscompass.vcu.edu/etd/2245/.
 
-DiLeo MF, Siu JC, Rhodes MK, et al (2014) The gravity of pollination: integrating at-site features into spatial analysis of contemporary pollen movement. Mol Ecol 23:3973–3982. https://doi.org/10.1111/mec.12839
+DiLeo MF, Siu JC, Rhodes MK, et al (2014) The gravity of pollination: integrating at-site features into spatial analysis of contemporary pollen movement. Mol Ecol 23:3973–3982. https://doi.org/10.1111/mec.12839.
 
-Dyer RJ (2009) GeneticStudio: a suite of programs for spatial analysis of genetic-marker data. Mol Ecol Resour 9:110–113. https://doi.org/10.1111/j.1755-0998.2008.02384.x
+Dyer RJ (2009) GeneticStudio: a suite of programs for spatial analysis of genetic-marker data. Mol Ecol Resour 9:110–113. https://doi.org/10.1111/j.1755-0998.2008.02384.x.
 
-Dyer RJ, Chan DM, Gardiakos VA, Meadows CA (2012) Pollination graphs: quantifying pollen pool covariance networks and the influence of intervening landscape on genetic connectivity in the North American understory tree, Cornus florida L. Landsc Ecol 27:239–251. https://doi.org/10.1007/s10980-011-9696-x
+Dyer RJ, Chan DM, Gardiakos VA, Meadows CA (2012) Pollination graphs: quantifying pollen pool covariance networks and the influence of intervening landscape on genetic connectivity in the North American understory tree, Cornus florida L. Landsc Ecol 27:239–251. https://doi.org/10.1007/s10980-011-9696-x.
 
 Ellstrand NC (1992) Gene flow by pollen: implications for plant conservation genetics. Oikos 63:77–86. https://doi.org/10.2307/3545517
 
-Feurtey A, Cornille A, Shykoff JA, Snirc A, Giraud T (2017) Crop-to-wild gene flow and its fitness consequences for a wild fruit tree: towards a comprehensive conservation strategy of the wild apple in Europe. Evol Appl 10:180–188. https://doi.org/10.1111/eva.12441
+Feurtey A, Cornille A, Shykoff JA, Snirc A, Giraud T (2017) Crop-to-wild gene flow and its fitness consequences for a wild fruit tree: towards a comprehensive conservation strategy of the wild apple in Europe. Evol Appl 10:180–188. https://doi.org/10.1111/eva.12441.
+
+Flory SL, Clay, K (2010). Non-native grass invasion suppresses forest succession. *Oecologia*, 164:1029–1038. https://doi.org/10.1007/s00442-010-1697-y.
 
 Gardiakos, V. A. 2009. Pollen-mediated gene movement in flowering dogwood, *Cornus florida* L. Master's Thesis. Virginia Commonwealth University, Richmond, VA. 
 
-Galeano E, Thomas BR (2023) Unraveling genetic variation among white spruce families generated through different breeding strategies: heritability, growth, physiology, hormones and gene expression. Front Plant Sci 14:1052425. https://doi.org/10.3389/fpls.2023.1052425
+Galeano E, Thomas BR (2023) Unraveling genetic variation among white spruce families generated through different breeding strategies: heritability, growth, physiology, hormones and gene expression. Front Plant Sci 14:1052425. https://doi.org/10.3389/fpls.2023.1052425.
 
-Gao M, Hao Z, Ning Y, He Z (2024) Revisiting growth–defence trade-offs and breeding strategies in crops. Plant Biotechnol J 22:1198–1205. https://doi.org/10.1111/pbi.14258
+Gao M, Hao Z, Ning Y, He Z (2024) Revisiting growth–defence trade-offs and breeding strategies in crops. Plant Biotechnol J 22:1198–1205. https://doi.org/10.1111/pbi.14258.
 
-Gilmour AR, Anderson RD, Rae AL (1985) The analysis of binomial data by a generalized linear mixed model. Biometrika 72:593–599
+Gilmour AR, Anderson RD, Rae AL (1985) The analysis of binomial data by a generalized linear mixed model. Biometrika 72:593–599. [https://doi.org/10.1093/biomet/72.3.593](https://doi.org/10.1093/biomet/72.3.593).
 
-Gross KL (1984) Effects of seed size and growth form on seedling establishment of six monocarpic perennial plants. J Ecol 72:369–387. https://doi.org/10.2307/2260053
+Gross KL (1984) Effects of seed size and growth form on seedling establishment of six monocarpic perennial plants. J Ecol 72:369–387. https://doi.org/10.2307/2260053.
 
-Hadziabdic D, Fitzpatrick BM, Wang X, et al (2010) Analysis of genetic diversity in flowering dogwood natural stands using microsatellites: the effects of dogwood anthracnose. Genetica 138:1047–1057. https://doi.org/10.1007/s10709-010-9490-8
+Hadziabdic D, Fitzpatrick BM, Wang X, et al (2010) Analysis of genetic diversity in flowering dogwood natural stands using microsatellites: the effects of dogwood anthracnose. Genetica 138:1047–1057. https://doi.org/10.1007/s10709-010-9490-8.
 
-Hadziabdic D, Wang X, Wadl PA, Rinehart TA, Ownley BH, Trigiano RN (2012) Genetic diversity of flowering dogwood in the Great Smoky Mountains National Park. Tree Genet Genomes 8:855–871. https://doi.org/10.1007/s11295-012-0471-1
+Hadziabdic D, Wang X, Wadl PA, Rinehart TA, Ownley BH, Trigiano RN (2012) Genetic diversity of flowering dogwood in the Great Smoky Mountains National Park. Tree Genet Genomes 8:855–871. https://doi.org/10.1007/s11295-012-0471-1.
 
-Hagan AK, Hardin B, Gilliam CH, Keever GJ, Williams JD, Eakes J (1998) Susceptibility of cultivars of several dogwood taxa to powdery mildew and spot anthracnose. J Environ Hortic 16:147–151. https://doi.org/10.24266/0738-2898-16.3.147
+Hagan AK, Hardin B, Gilliam CH, Keever GJ, Williams JD, Eakes J (1998) Susceptibility of cultivars of several dogwood taxa to powdery mildew and spot anthracnose. J Environ Hortic 16:147–151. https://doi.org/10.24266/0738-2898-16.3.147.
 
-Herrera CM (1981) Fruit variation and competition for dispersers in natural populations of *Smilax aspera*. Oikos 36:51
+Hamm TP, Trigiano RN, Nowicki M, Moreau ELP, Molnar TJ, Xiang Q-YJ, Boggess SL, Hewezi T, Klingeman WE, Hadziabdic D, Staton ME (2026) Ornamental origins and genomic frontiers: a review of big-bracted dogwood research. Frontiers in Plant Sciences, 16:1735902. https://doi.org/10.3389/fpls.2025.1735902.
 
-Hooftman DAP, de Jong MJ, Oostermeijer JGB, Den Nijs HCM (2007) Modelling the long-term consequences of crop–wild relative hybridization: a case study using four generations of hybrids. J Appl Ecol 44:1035–1045. https://doi.org/10.1111/j.1365-2664.2007.01341.x
+Herrera CM (1981) Fruit variation and competition for dispersers in natural populations of *Smilax aspera*. Oikos 36:51. [https://doi.org/10.2307/3544378](https://www.google.com/search?q=https://doi.org/10.2307/3544378).
 
-Jenkins MA, White PS (2002) Cornus florida L. mortality and understory composition changes in western Great Smoky Mountains National Park. J Torrey Bot Soc 129:194. https://doi.org/10.2307/3088770
+Hooftman DAP, de Jong MJ, Oostermeijer JGB, Den Nijs HCM (2007) Modelling the long-term consequences of crop–wild relative hybridization: a case study using four generations of hybrids. J Appl Ecol 44:1035–1045. https://doi.org/10.1111/j.1365-2664.2007.01341.x.
 
-Jombart T, Devillard S, Balloux F (2010) Discriminant analysis of principal components: a new method for the analysis of genetically structured populations. BMC Genet 11:94. https://doi.org/10.1186/1471-2156-11-94
+Jenkins MA, White PS (2002) Cornus florida L. mortality and understory composition changes in western Great Smoky Mountains National Park. J Torrey Bot Soc 129:194. https://doi.org/10.2307/3088770.
 
-Kamvar ZN, Tabima JF, Grünwald NJ (2014) Poppr: an R package for genetic analysis of populations with clonal, partially clonal, and/or sexual reproduction. PeerJ 2:e281. https://doi.org/10.7717/peerj.281
+Jombart T, Devillard S, Balloux F (2010) Discriminant analysis of principal components: a new method for the analysis of genetically structured populations. BMC Genet 11:94. https://doi.org/10.1186/1471-2156-11-94.
 
-Klingeman WE, Eastwood DB, Brooker JR, Hall CR, Behe BK, Knight PR (2004) Consumer survey identifies plant management awareness and added value of dogwood powdery mildew resistance. HortTechnology 14:275–282. https://doi.org/10.21273/HORTTECH.14.2.0275
+Kamvar ZN, Tabima JF, Grünwald NJ (2014) Poppr: an R package for genetic analysis of populations with clonal, partially clonal, and/or sexual reproduction. PeerJ 2:e281. https://doi.org/10.7717/peerj.281.
 
-Kuznetsova A, Brockhoff PB, Christensen RHB (2017) lmerTest package: tests in linear mixed effects models. J Stat Softw 82:1–26. https://doi.org/10.18637/jss.v082.i13
+Klingeman WE, Eastwood DB, Brooker JR, Hall CR, Behe BK, Knight PR (2004) Consumer survey identifies plant management awareness and added value of dogwood powdery mildew resistance. HortTechnology 14:275–282. https://doi.org/10.21273/HORTTECH.14.2.0275.
 
-Lenormand T (2002) Gene flow and the limits to natural selection. Trends Ecol Evol 17:183–189. https://doi.org/10.1016/S0169-5347(02)02497-7
+Kuznetsova A, Brockhoff PB, Christensen RHB (2017) lmerTest package: tests in linear mixed effects models. J Stat Softw 82:1–26. https://doi.org/10.18637/jss.v082.i13.
 
-Long ZT, Pendergast TH IV, Carson WP (2007) The impact of deer on relationships between tree growth and mortality in an old-growth beech-maple forest. For Ecol Manag 252:230–238. https://doi.org/10.1016/j.foreco.2007.06.034
+Lenormand T (2002) Gene flow and the limits to natural selection. Trends Ecol Evol 17:183–189. https://doi.org/10.1016/S0169-5347(02)02497-7.
 
-Mattera R, Molnar T, Struwe L (2015) Cornus × elwinortonii and Cornus × rutgersensis (Cornaceae), new names for two artificially produced hybrids of big-bracted dogwoods. PhytoKeys 55:93–111. https://doi.org/10.3897/phytokeys.55.9112
+Long ZT, Pendergast TH IV, Carson WP (2007) The impact of deer on relationships between tree growth and mortality in an old-growth beech-maple forest. For Ecol Manag 252:230–238. https://doi.org/10.1016/j.foreco.2007.06.034.
 
-Miles LS, Rivkin LR, Johnson MTJ, Munshi-South J, Verrelli BC (2019) Gene flow and genetic drift in urban environments. Mol Ecol 28:4138–4151. https://doi.org/10.1111/mec.15221
+Mattera R, Molnar T, Struwe L (2015) Cornus × elwinortonii and Cornus × rutgersensis (Cornaceae), new names for two artificially produced hybrids of big-bracted dogwoods. PhytoKeys 55:93–111. https://doi.org/10.3897/phytokeys.55.9112.
 
-Mmbaga MT, Sauvé RJ (2004) Management of powdery mildew in flowering dogwood in the field with biorational and conventional fungicides. Can J Plant Sci 84:837–844. https://doi.org/10.4141/P03-104
+Miles LS, Rivkin LR, Johnson MTJ, Munshi-South J, Verrelli BC (2019) Gene flow and genetic drift in urban environments. Mol Ecol 28:4138–4151. https://doi.org/10.1111/mec.15221.
 
-Mullen JM (1991) Canker of dogwood caused by *Lasiodiplodia theobromae*, a disease influenced by drought stress or cultivar selection. Plant Dis 75:886. https://doi.org/10.1094/PD-75-0886
+Mmbaga MT, Sauvé RJ (2004) Management of powdery mildew in flowering dogwood in the field with biorational and conventional fungicides. Can J Plant Sci 84:837–844. https://doi.org/10.4141/P03-104.
 
-Noreen AME, Niissalo MA, Lum SKY, Webb EL (2016) Persistence of long-distance, insect-mediated pollen movement for a tropical canopy tree species in remnant forest patches in an urban landscape. Heredity 117:472–480. https://doi.org/10.1038/hdy.2016.64
+Mullen JM (1991) Canker of dogwood caused by *Lasiodiplodia theobromae*, a disease influenced by drought stress or cultivar selection. Plant Dis 75:886. https://doi.org/10.1094/PD-75-0886.
 
-Pais AL, Whetten RW, Xiang QY (2017) Ecological genomics of local adaptation in *Cornus florida* L. by genotyping by sequencing. Ecol Evol 7:441–465. https://doi.org/10.1002/ece3.2623
+Noreen AME, Niissalo MA, Lum SKY, Webb EL (2016) Persistence of long-distance, insect-mediated pollen movement for a tropical canopy tree species in remnant forest patches in an urban landscape. Heredity 117:472–480. https://doi.org/10.1038/hdy.2016.64.
 
-Palik DJ, Snow AA, Stottlemyer AL, Miriti MN, Heaton EA (2016) Relative performance of non-local cultivars and local, wild populations of switchgrass (*Panicum virgatum*) in competition experiments. PLoS ONE 11:e0154444. https://doi.org/10.1371/journal.pone.0154444
+Pais AL, Whetten RW, Xiang QY (2017) Ecological genomics of local adaptation in *Cornus florida* L. by genotyping by sequencing. Ecol Evol 7:441–465. https://doi.org/10.1002/ece3.2623.
 
-Parikh L, Mmbaga MT, Kodati S, Blair M, Hui D, Meru G (2016a) Broad-sense heritability and genetic gain for powdery mildew resistance in multiple pseudo-F2 populations of flowering dogwoods (*Cornus florida* L.). Sci Hortic 213:216–221. https://doi.org/10.1016/j.scienta.2016.09.038
+Palik DJ, Snow AA, Stottlemyer AL, Miriti MN, Heaton EA (2016) Relative performance of non-local cultivars and local, wild populations of switchgrass (*Panicum virgatum*) in competition experiments. PLoS ONE 11:e0154444. https://doi.org/10.1371/journal.pone.0154444.
 
-Parikh L, Mmbaga MT, Kodati S, Zhang G (2016b) Estimation of narrow sense heritability of powdery mildew resistance in pseudo F2 (F1) population of flowering dogwoods (*Cornus florida* L). Eur J Plant Pathol 145:17–25. https://doi.org/10.1007/s10658-015-0806-5
+Parikh L, Mmbaga MT, Kodati S, Blair M, Hui D, Meru G (2016a) Broad-sense heritability and genetic gain for powdery mildew resistance in multiple pseudo-F2 populations of flowering dogwoods (*Cornus florida* L.). Sci Hortic 213:216–221. https://doi.org/10.1016/j.scienta.2016.09.038.
 
-Pierce AR, Bromer WR, Rabenold KN (2008) Decline of *Cornus florida* and forest succession in a Quercus–Carya forest. Plant Ecol 195:45–53. https://doi.org/10.1007/s11258-007-9297-6
+Parikh L, Mmbaga MT, Kodati S, Zhang G (2016b) Estimation of narrow sense heritability of powdery mildew resistance in pseudo F2 (F1) population of flowering dogwoods (*Cornus florida* L). Eur J Plant Pathol 145:17–25. https://doi.org/10.1007/s10658-015-0806-5.
 
-R Core Team (2026) R: a language and environment for statistical computing. R Foundation for Statistical Computing, Vienna
+Pierce AR, Bromer WR, Rabenold KN (2008) Decline of *Cornus florida* and forest succession in a Quercus–Carya forest. Plant Ecol 195:45–53. https://doi.org/10.1007/s11258-007-9297-6.
 
-Ranney T, Grand L, Knighten J (1995) Susceptibility of cultivars and hybrids of kousa dogwood to dogwood anthracnose and powdery mildew. Arboric Urban For 21:11–16. https://doi.org/10.48044/jauf.1995.003
+R Core Team (2026) R: a language and environment for statistical computing. R Foundation for Statistical Computing, Vienna.
 
-Reader RJ (1975) Effect of air temperature on the flowering date of dogwood (*Cornus florida*). Can J Bot 53:1523–1534. https://doi.org/10.1139/b75-183
+Ranney T, Grand L, Knighten J (1995) Susceptibility of cultivars and hybrids of kousa dogwood to dogwood anthracnose and powdery mildew. Arboric Urban For 21:11–16. https://doi.org/10.48044/jauf.1995.003.
 
-Redick CH, Jacobs DF (2020) Mitigation of deer herbivory in temperate hardwood forest regeneration: a meta-analysis of research literature. Forests 11:1220. https://doi.org/10.3390/f11111220
+Reader RJ (1975) Effect of air temperature on the flowering date of dogwood (*Cornus florida*). Can J Bot 53:1523–1534. https://doi.org/10.1139/b75-183.
 
-Redlin SC (1991) *Discula destructiva* sp. nov., cause of dogwood anthracnose. Mycologia 83:633–642. https://doi.org/10.1080/00275514.1991.12026062
+Redick CH, Jacobs DF (2020) Mitigation of deer herbivory in temperate hardwood forest regeneration: a meta-analysis of research literature. Forests 11:1220. https://doi.org/10.3390/f11111220.
 
-Redwine AH (2013) Reproduction and functional response of *Cornus florida* across an urban landscape gradient. MS Thesis, Virginia Commonwealth University. https://scholarscompass.vcu.edu/etd/3136/
+Redlin SC (1991) *Discula destructiva* sp. nov., cause of dogwood anthracnose. Mycologia 83:633–642. https://doi.org/10.1080/00275514.1991.12026062.
 
-Reed SM (2004) Self-incompatibility in *Cornus florida*. HortScience 39:335–338. https://doi.org/10.21273/HORTSCI.39.2.335
+Redwine AH (2013) Reproduction and functional response of *Cornus florida* across an urban landscape gradient. MS Thesis, Virginia Commonwealth University. https://scholarscompass.vcu.edu/etd/3136/.
 
-Rhoades PR, Klingeman WE, Trigiano RN, Skinner JA (2011) Evaluating pollination biology of *Cornus florida* L. and *C. kousa* (Buerger ex. Miq.) Hance (Cornaceae: Cornales). J Kans Entomol Soc 84:285–297. https://doi.org/10.2317/JKES110418.1
+Reed SM (2004) Self-incompatibility in *Cornus florida*. HortScience 39:335–338. https://doi.org/10.21273/HORTSCI.39.2.335.
 
-Roe AD, MacQuarrie CJK, Gros-Louis MC, et al (2014) Fitness dynamics within a poplar hybrid zone: II. Impact of exotic sex on native poplars in an urban jungle. Ecol Evol 4:1876–1889. https://doi.org/10.1002/ece3.1028
+Rhoades PR, Klingeman WE, Trigiano RN, Skinner JA (2011) Evaluating pollination biology of *Cornus florida* L. and *C. kousa* (Buerger ex. Miq.) Hance (Cornaceae: Cornales). J Kans Entomol Soc 84:285–297. https://doi.org/10.2317/JKES110418.1.
 
-Rousset F (2008) genepop'007: a complete re-implementation of the genepop software for Windows and Linux. Mol Ecol Resour 8:103–106. https://doi.org/10.1111/j.1471-8286.2007.01931.x
+Roe AD, MacQuarrie CJK, Gros-Louis MC, et al (2014) Fitness dynamics within a poplar hybrid zone: II. Impact of exotic sex on native poplars in an urban jungle. Ecol Evol 4:1876–1889. https://doi.org/10.1002/ece3.1028.
 
-Sherald JL, Stidham TM, Hadidian JM, Hoeldtke JE (1996) Progression of the dogwood anthracnose epidemic and the status of flowering dogwood in Catoctin Mountain Park. Plant Dis 80:310–312. https://doi.org/10.1094/PD-80-0310
+Rousset F (2008) genepop'007: a complete re-implementation of the genepop software for Windows and Linux. Mol Ecol Resour 8:103–106. https://doi.org/10.1111/j.1471-8286.2007.01931.x.
 
-Skou AMT, Toneatto F, Kollmann J (2012) Are plant populations in expanding ranges made up of escaped cultivars? The case of *Ilex aquifolium* in Denmark. Plant Ecol 213:1131–1144. https://doi.org/10.1007/s11258-012-0071-z
+Schmit JP, Matthews ER, Brolis A. (2020). Effects of culling white-tailed deer on tree regeneration and Microstegium vimineum, an invasive grass. *Forest Ecology and Management*, 463:118015. https://doi.org/10.1016/j.foreco.2020.118015.
 
-Sork VL, Smouse PE, Apsit VJ, Dyer RJ, Westfall RD (2005) A two-generation analysis of pollen pool genetic structure in flowering dogwood, *Cornus florida* (Cornaceae), in the Missouri Ozarks. Am J Bot 92:262–271. https://doi.org/10.3732/ajb.92.2.262
+Sherald JL, Stidham TM, Hadidian JM, Hoeldtke JE (1996) Progression of the dogwood anthracnose epidemic and the status of flowering dogwood in Catoctin Mountain Park. Plant Dis 80:310–312. https://doi.org/10.1094/PD-80-0310.
 
-Suchecki PF, Gibson DJ (2008) Loss of *Cornus florida* L. leads to significant changes in the seedling and sapling strata in an eastern deciduous forest. J Torrey Bot Soc 135:506–515. https://doi.org/10.3159/08-RA-018R.1
+Skou AMT, Toneatto F, Kollmann J (2012) Are plant populations in expanding ranges made up of escaped cultivars? The case of *Ilex aquifolium* in Denmark. Plant Ecol 213:1131–1144. https://doi.org/10.1007/s11258-012-0071-z.
+
+Sork VL, Smouse PE, Apsit VJ, Dyer RJ, Westfall RD (2005) A two-generation analysis of pollen pool genetic structure in flowering dogwood, *Cornus florida* (Cornaceae), in the Missouri Ozarks. Am J Bot 92:262–271. https://doi.org/10.3732/ajb.92.2.262.
+
+Suchecki PF, Gibson DJ (2008) Loss of *Cornus florida* L. leads to significant changes in the seedling and sapling strata in an eastern deciduous forest. J Torrey Bot Soc 135:506–515. https://doi.org/10.3159/08-RA-018R.1.
 
 USDA (2020) 2019 Census of horticultural specialties. U.S. Department of Agriculture, National Agricultural Statistics Service, Washington, DC
 
-Van Rossum F, Triest L (2012) Stepping-stone populations in linear landscape elements increase pollen dispersal between urban forest fragments. Plant Ecol Evol 145:332–340. https://doi.org/10.5091/plecevo.2012.737
+Van Rossum F, Triest L (2012) Stepping-stone populations in linear landscape elements increase pollen dispersal between urban forest fragments. Plant Ecol Evol 145:332–340. https://doi.org/10.5091/plecevo.2012.737.
 
-Wadl PA, Wang X, Trigiano AN, et al (2008) Molecular identification keys for cultivars and lines of *Cornus florida* and *C. kousa* based on simple sequence repeat loci. J Am Soc Hortic Sci 133:783–793. https://doi.org/10.21273/JASHS.133.6.783
+Wadl PA, Wang X, Trigiano AN, et al (2008) Molecular identification keys for cultivars and lines of *Cornus florida* and *C. kousa* based on simple sequence repeat loci. J Am Soc Hortic Sci 133:783–793. https://doi.org/10.21273/JASHS.133.6.783.
 
-Wang X, Wadl PA, Rinehart TA, et al (2009) A linkage map for flowering dogwood (*Cornus florida* L.) based on microsatellite markers. Euphytica 165:165–175. https://doi.org/10.1007/s10681-008-9802-6
+Wang X, Wadl PA, Rinehart TA, et al (2009) A linkage map for flowering dogwood (*Cornus florida* L.) based on microsatellite markers. Euphytica 165:165–175. https://doi.org/10.1007/s10681-008-9802-6.
 
-Windham MT, Graham ET, Witte WT, Knighten JL, Trigiano RN (1998) *Cornus florida* 'Appalachian Spring': a white flowering dogwood resistant to dogwood anthracnose. HortScience 33:1265–1267. https://doi.org/10.21273/HORTSCI.33.7.1265
+Windham MT, Graham ET, Witte WT, Knighten JL, Trigiano RN (1998) *Cornus florida* 'Appalachian Spring': a white flowering dogwood resistant to dogwood anthracnose. HortScience 33:1265–1267. https://doi.org/10.21273/HORTSCI.33.7.1265.
 
-Windham MT, Witte WT, Trigiano RN (2003) Three white-bracted cultivars of *Cornus florida* resistant to powdery mildew. HortScience 38:1253–1255. https://doi.org/10.21273/HORTSCI.38.6.1253
+Windham MT, Witte WT, Trigiano RN (2003) Three white-bracted cultivars of *Cornus florida* resistant to powdery mildew. HortScience 38:1253–1255. https://doi.org/10.21273/HORTSCI.38.6.1253.
 
-Younginger BS, Sirová D, Cruzan MB, Ballhorn DJ (2017) Is biomass a reliable estimate of plant fitness? Appl Plant Sci 5:1600094. https://doi.org/10.3732/apps.1600094
+Younginger BS, Sirová D, Cruzan MB, Ballhorn DJ (2017) Is biomass a reliable estimate of plant fitness? Appl Plant Sci 5:1600094. https://doi.org/10.3732/apps.1600094.
 
 
 # Tables
