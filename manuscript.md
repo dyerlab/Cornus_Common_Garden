@@ -5,7 +5,7 @@ Center for Life Science Education
 Virginia Commonwealth University  
 Richmond, Virginia 23284
 
-Andrew Eckert, Rodney Dyer 
+Andrew Eckert, Rodney Dyer   
 School of Life Sciences and Sustainability  
 Virginia Commonwealth University  
 Richmond, Virginia 23116
