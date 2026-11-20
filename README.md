@@ -1,10 +1,10 @@
-# Early fitness consequences of cultivar gene escape in flowering dogwood (*Cornus florida*, Cornaceae L.)
+# Early fitness consequences of cultivar gene escape in flowering dogwood (*Cornus florida* L., Cornaceae)
 
 Jane Remfert, Andrew Eckert, Rodney Dyer 
 
 Open-pollinated dogwood seedlings from managed-landscape ("cultivar") and second-growth-forest ("native") mothers were grown together for two years in a deeply shaded forest common garden and scored for survival, growth, and biomass. Cultivar-origin seedlings were **not** disadvantaged — survival was high and did not vary with origin or genetic admixture, and origin explained little trait variation — so early viability selection is unlikely to stop escaped cultivar alleles from establishing, and longer-term introgression into wild populations deserves attention.
 
-This repository holds the manuscript (`manuscript.md`, `supplemental.md`), the data, and the `R` code that reproduces every table and figure. 
+This repository holds the manuscript (`manuscript.md`, `supplemental.md`), the cover letter (`index.md`), the data, and the `R` code that reproduces every table and figure. The final text was edited with co-authors in Google Docs; the submitted `.md` files were converted from those `.docx` exports with pandoc, so edit the Google Docs and re-export them rather than editing the `.md` files directly.
 
 An online version of the manuscript is [here](https://dyerlab.github.io/Cornus_Common_Garden/manuscript.html) and supplemental materials are [here](https://dyerlab.github.io/Cornus_Common_Garden/supplemental.html)
 
@@ -32,7 +32,7 @@ The rest of this file is a standalone summary of the study; repository and repro
   - **16 native-origin families / 174 seedlings** — mothers in second-growth forest (Pocahontas State Park + VCU Rice Rivers Center).
 - **Common garden**: understory of a second-growth hardwood forest at the VCU Rice Rivers Center, deer exclosure, seedlings in pots placed at random. Two growing seasons; survival censuses at peak growth and end of season each year; final harvest/census **2019-09-18**. 468 alive at the end.
 - **Traits**: germination timing (developmental "days"), survival, plant height (PH), stem diameter (SD), number of leaves (NL), above- and below-ground biomass (AGB, BGB), AGB partitioned into leaf (LB) and stem (SB) biomass. PH/SD/NL measured at four censuses (repeated measures); biomass at harvest.
-- **Genetics**: 9 cultivar-diagnostic microsatellite loci (Wadl et al. 2008; Wang et al. 2009) on maternal trees, offspring, and ~19 known cultivar voucher lines. Used to build **Admixture Percentage (AP)** = proportion of a seedling's alleles shared with the best-matching cultivar voucher (all cultivars pooled).
+- **Genetics**: 9 cultivar-diagnostic microsatellite loci (Wadl et al. 2008; Wang et al. 2009) on maternal trees, offspring, and 21 named cultivar voucher accessions. Used to build **Admixture Percentage (AP)** = proportion of a seedling's alleles shared with the best-matching cultivar voucher (all cultivars pooled).
 - **Two ancestry classifications, analyzed in parallel**: (1) *origin* = maternal-tree location (cultivar vs. native); (2) *AP* = continuous genetic admixture.
 - **Covariates**: scaled developmental time since germination (proxy for germination timing); scaled maternal-family mean seed weight (provisioning).
 
@@ -46,13 +46,13 @@ The rest of this file is a standalone summary of the study; repository and repro
 - **Heritability**: half-sib design, **h² = 4·V_family / V_P**. Survival h² on the latent liability scale with residual variance fixed at π²/3 ≈ 3.29 (Gilmour et al. 1985).
 - **Uncertainty**: 1,000-replicate parametric bootstrap CIs (`bootMer`); random-effect significance by LRT (`ranova`, boundary-corrected for the GLMM). An h² is called "significant" when its bootstrap CI excludes zero.
 - **Diagnostics / sensitivity**: residual-vs-fitted, Q–Q, Cook's D; `DHARMa` simulated residuals for the GLMM (no meaningful violations). Every model refit (a) dropping individual outliers |resid z| > 3 and (b) dropping the single most influential maternal family.
-- **Key assumptions / caveats**: random effects independent and normally distributed; families treated as pure half-sibs (paternity unknown; open-pollinated); missing seed weights (1 cultivar mom / 14 seedlings; 8 native moms / 61 seedlings) imputed with the origin mean → conservative for detecting seed-weight effects; cultivar voucher panel incomplete (~19 lines) and diagnostic alleles not proven exclusive to cultivars; two years only — no data on reproduction or later-generation hybrid breakdown; rearing/nursery location not modeled.
+- **Key assumptions / caveats**: random effects independent and normally distributed; families treated as pure half-sibs (paternity unknown; open-pollinated); missing seed weights (1 cultivar mom / 14 seedlings; 8 native moms / 61 seedlings) imputed with the origin mean → conservative for detecting seed-weight effects; cultivar voucher panel incomplete (21 accessions) and diagnostic alleles not proven exclusive to cultivars; two years only — no data on reproduction or later-generation hybrid breakdown; rearing/nursery location not modeled.
 
 ## Findings
 
 **1. Native collection-site effect (can the two native sources be pooled?)** LRT of a `site` fixed term added to the family model, per trait, native-origin seedlings only (Pocahontas 11 families/147 vs. Rice Rivers Center 5/27). No site effect on survival or any trait (all *p* = 0.15–0.68; Tab_SiteEffect) → native sources pooled into one *native* category.
 
-**2. Marker diversity & power.** Highly polymorphic — 5–26 alleles/locus in mothers, similar in offspring (Tab_MarkerDiversity). Null-allele frequencies low everywhere (all point estimates < 0.07) but CIs excluded zero at four loci (cf020, cf585, cf597, cf701) in both origin classes (Tab_NullAlleles). Combined exclusion probability high for the full nine-locus panel (*P*excl > 0.9999) and a reduced five-locus panel (*P*excl = 0.999) → the panel keeps strong discriminating power.
+**2. Marker diversity & power.** Highly polymorphic — 5–21 alleles/locus in mothers, similar in offspring (Tab_MarkerDiversity). Null-allele frequencies generally low (point estimates ≤ 0.12, highest in natives at cf020 and cf634) but CIs excluded zero at three loci (cf020, cf597, cf634) in both origin classes (Tab_NullAlleles). Combined exclusion probability high for the full nine-locus panel (*P*excl > 0.9999) and the subset of loci without null alleles (*P*excl = 0.9998) → the panel keeps strong discriminating power.
 
 **3. Does origin/admixture affect survival?** Binomial GLMM; model selection ± origin, ± family; separate AP models; native/cultivar subset fits.
 - Overall survival **~82 %** (native 79.3 %, cultivar 83.5 %); mortality roughly constant through time (Fig_Survival).
@@ -72,14 +72,14 @@ The rest of this file is a standalone summary of the study; repository and repro
 **6. Family-level variation & heritability in growth (within-origin).** Data split by origin; family model fit within each; same sensitivity passes.
 - **Native subset**: fixed-effects-only model best for every growth trait; family-variance CIs include zero throughout.
 - **Cultivar subset**: family model best-supported for every growth trait except LB; significant, modest family variance for **PH (11.9 % of V_P), AGB (8.1 %), SB (11.0 %)**.
-- **Significant narrow-sense h² (cultivar subset)**: PH 0.47 [0.11, 0.93], SB ≈ 0.44 [0.07, 0.89], AGB 0.32 [0.03, 0.72] — moderate, comparable to other tree species.
+- **Significant narrow-sense h² (cultivar subset)**: PH 0.47 [0.11, 0.93], SB 0.44 [0.07, 0.89], AGB 0.32 [0.03, 0.72] — moderate, comparable to other tree species.
 - **Sensitivity**: robust to removing outlier individuals (the family effect if anything strengthens; biggest shift BGB h² 0.23 → 0.36). Removing the single most influential family (**urb09** for most traits) matters more — e.g. SB: V_family 0.046 → 0.016, h² 0.51 → 0.19, LRT still *p* = 0.022. The heritable signal is real but partly leveraged by one family.
 
 **7. Covariate effects.**
 - **Earlier germination** is a strong positive predictor of survival and of every growth trait except NL, in both origin classes (Tab_CovariateEffects) → a developmental head start is a general early advantage.
 - **Maternal seed weight** is weaker and inconsistent: negatively associated with survival overall and in the native subset; among cultivar seedlings negatively associated with AGB, BGB, LB (smaller-seeded families accumulated more biomass); not significant for growth in native seedlings.
 
-**8. Marker-panel validation — do native and cultivar maternal trees form distinguishable genetic groups?** Three complementary checks on the 58 unrelated maternal trees, run because AP (above) looks at each locus independently and found only a diffuse difference between groups. No evidence of non-random multilocus allelic association within either origin group (index of association; native *I*_A = −0.071, *p* = 0.717; cultivar *I*_A = 0.063, *p* = 0.235; Tab_LinkageDisequilibrium). Discriminant analysis of principal components (DAPC) on the full nine-locus genotype does not separate the groups better than chance (56.061% cross-validated classification accuracy vs. 55.172% no-information rate; permutation *p* = 0.237; Tab_DAPC). And native mothers are not more closely related to one another than cultivar mothers are (Tab_Relatedness), so the origin-dependent family-variance asymmetry (Finding 6) is unlikely to simply reflect unequal kinship structure. Together these suggest the cultivar-diagnostic loci may be less exclusively informative in this sample than assumed, consistent with the broad AP overlap noted in Finding 3.
+**8. Marker-panel validation — do native and cultivar maternal trees form distinguishable genetic groups?** Three complementary checks on the 28 fully genotyped, unrelated maternal trees (9 native, 19 cultivar), run because AP (above) looks at each locus independently and found only a diffuse difference between groups. No evidence of non-random multilocus allelic association within either origin group (index of association; native *I*_A = −0.116, *p* = 0.607; cultivar *I*_A = 0.079, *p* = 0.262; Table S11). Discriminant analysis of principal components (DAPC) on the full nine-locus genotype does not separate the groups better than chance (64.4% holdout classification accuracy vs. 67.9% no-information rate; permutation *p* = 0.273). And native mothers are not more closely related to one another than cultivar mothers are (permutation *p* = 0.672 for mean relatedness, *p* = 0.887 for the distributions), so the origin-dependent family-variance asymmetry (Finding 6) is unlikely to simply reflect unequal kinship structure. Together these suggest the cultivar-diagnostic loci may be less exclusively informative in this sample than assumed, consistent with the broad AP overlap noted in Finding 3.
 
 ## Bottom line
 
@@ -96,10 +96,11 @@ The rest of this file is a standalone summary of the study; repository and repro
 
 | Path | Contents |
 |---|---|
+| `index.md` | Cover letter to *Conservation Genetics*; landing page of the online version, linking to the manuscript and supplement |
 | `manuscript.md` | Full manuscript: main text, Literature Cited, tables, figure legends |
 | `supplemental.md` | Supplementary Materials — statistical model structure, variance decomposition, marker validation (linkage disequilibrium, DAPC, relatedness), diagnostics |
 | `data/*.csv` | Input data (see **Data files** below) |
-| `media/` | Manuscript figures (`fig_survival`, `fig_blups`, `fig_lmm_qq`, `fig_within_family_variance`) and per-model diagnostic panels under `diagnostics/` |
+| `media/` | Manuscript figures (`fig_survival`, `fig_blups`, `fig_offspring_heritability`, `fig_lmm_qq`, `fig_offspring_relatedness`, `fig_within_family_variance`) and per-model diagnostic panels under `diagnostics/` |
 | `R/` | Analysis pipeline — one script per step, plus `run_all.R`; see `R/README.md` |
 
 `data/derived/` (analysis intermediates) and `data/results/` (result tables + `manuscript_tables.md`) are both regenerated by the pipeline from `data/*.csv` and are not tracked; the result tables also appear, rendered, in `manuscript.md`. Non-anonymized source files, the de-anonymization key, and project notes are kept locally in `SENSITIVE/` and are never published.
