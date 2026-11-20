@@ -39,7 +39,7 @@ fig_survival <- ggplot(sbc, aes(date, prop_alive, colour = origin, fill = origin
   geom_point(size = 1.8) +
   scale_colour_manual(values = origin_cols, labels = c("Native", "Cultivar")) +
   scale_fill_manual(values = origin_cols, guide = "none") +
-  scale_y_continuous(limits = c(0, 1), expand = expansion(mult = c(0, 0.02))) +
+  scale_y_continuous(expand = expansion(mult = 0.05)) +  # axis floats to the data
   labs(x = NULL, y = "Proportion alive") +
   theme_ms
 

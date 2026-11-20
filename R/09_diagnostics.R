@@ -133,13 +133,13 @@ qq_all <- bind_rows(map(all_diag, "resid")) %>%
 fig_lmm_qq <- ggplot(qq_all, aes(sample = std_resid)) +
   stat_qq(alpha = 0.3, size = 0.5, colour = "#2c7fb8") +
   stat_qq_line(linetype = 2, colour = "grey40") +
-  facet_wrap(~ model, nrow = 2, scales = "free_y") +
+  facet_wrap(~ model, nrow = 4, scales = "free_y") +
   labs(x = "Theoretical quantiles", y = "Standardised residual") +
   theme_classic(base_size = 9) +
   theme(strip.background = element_blank(), axis.text = element_text(colour = "black"))
 
-ggsave(file.path(paths$figures, "fig_lmm_qq.png"), fig_lmm_qq, width = 9, height = 4.2, dpi = 300)
-ggsave(file.path(paths$figures, "fig_lmm_qq.pdf"), fig_lmm_qq, width = 9, height = 4.2)
+ggsave(file.path(paths$figures, "fig_lmm_qq.png"), fig_lmm_qq, width = 6.5, height = 8.5, dpi = 300)
+ggsave(file.path(paths$figures, "fig_lmm_qq.pdf"), fig_lmm_qq, width = 6.5, height = 8.5)
 
 # ---- Per-family influence for the single-time family models -------
 

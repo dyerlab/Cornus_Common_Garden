@@ -94,7 +94,7 @@ if (!all(file.exists(plate7))) {
 # genotypes.csv stores each locus as "allele1:allele2". Split into two integer
 # columns per locus. OffID 0 marks the maternal tree; keep only offspring.
 
-geno_raw <- read_csv(file.path(paths$data, "genotypes.csv"), show_col_types = FALSE)
+geno_raw <- read_csv(study_genotypes_file(), show_col_types = FALSE)
 
 split_alleles <- function(df, loci) {
   for (l in loci) {

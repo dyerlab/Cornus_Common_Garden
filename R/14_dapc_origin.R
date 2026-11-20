@@ -11,7 +11,7 @@
 # chance."
 #
 # Method: Discriminant Analysis of Principal Components (DAPC; Jombart,
-# Devillard & Balloux 2010), restricted to the 58 unrelated maternal trees
+# Devillard & Balloux 2010), restricted to the 28 genotyped garden maternal trees
 # for the same reason as 13_multilocus_ld.R -- pooling in the offspring would
 # let shared maternal-family membership (not origin) drive apparent
 # separation, since siblings correlate at every locus together.
@@ -25,11 +25,11 @@
 #      (xvalDapc) on the real labels, not by hand.
 #   2. Significance is assessed by permutation: with that same number of PCA
 #      axes held fixed, the origin labels are shuffled 999 times (preserving
-#      the 26/32 group sizes) and the same repeated-holdout classification
+#      the 9/19 group sizes) and the same repeated-holdout classification
 #      accuracy is recomputed each time. The reported p-value is the fraction
 #      of permutations whose accuracy meets or exceeds the observed accuracy.
 #
-# Input : data/genotypes.csv
+# Input : data/genotypes.csv via study_genotypes_file() (garden mothers only)
 # Output: data/results/dapc_origin.csv   (one row: observed vs. permutation
 #         summary) and data/results/dapc_origin_permutations.csv (the full
 #         null distribution, for a histogram/sanity check if wanted)
@@ -45,7 +45,7 @@ suppressPackageStartupMessages({ library(adegenet) })
 
 LOCI <- c("cf020", "cf125", "cf213", "cf273", "cf581", "cf585", "cf597", "cf634", "cf701")
 
-geno <- read_csv(file.path(paths$data, "genotypes.csv"), show_col_types = FALSE) %>%
+geno <- read_csv(study_genotypes_file(), show_col_types = FALSE) %>%
   filter(OffID == 0)   # maternal trees only -- see header
 
 gid <- df2genind(
@@ -67,7 +67,7 @@ mat <- tab(gid, NA.method = "mean")
 grp <- pop(gid)
 
 # ---- 1. Choose the number of PCA axes to retain, by cross-validation ------
-# Kept deliberately small relative to N = 58 (n.pca.max = 20) -- retaining
+# Kept deliberately small relative to N (n.pca.max = 20; N = 28 garden mothers) -- retaining
 # PCs approaching N-1 is exactly the overfitting regime DAPC is criticized
 # for; n.da = 1 is the only possible value for a 2-group discriminant.
 
@@ -144,4 +144,4 @@ write_csv(tibble(permutation = seq_len(N_PERM), accuracy = perm_accuracy),
           file.path(paths$results, "dapc_origin_permutations.csv"))
 
 message("\np_value < 0.05 would indicate the two groups are more separable, on the full",
-        " multivariate genotype, than a random same-sized split of these 58 trees.")
+        " multivariate genotype, than a random same-sized split of these ", nInd(gid), " trees.")

@@ -11,6 +11,12 @@ NSIM=50 Rscript R/run_all.R    # fast dry run
 `run_all.R` runs steps 01–16 in order, then deletes any scratch files
 (`cmdline.txt`, `fichier.in`, `Rplots.pdf`) tools leave in the working directory.
 
+All genetic analyses (02–04, 13–16) are restricted to the study material via
+`study_genotypes_file()` in `00_setup.R`: the maternal trees whose families were
+planted in the garden (28 of 36 garden mothers were genotyped) and the 397
+genotyped garden seedlings. `data/genotypes.csv` itself holds the larger
+collection (58 mothers, 828 offspring) and is left unchanged.
+
 ## Layout
 
 | Path | Contents |
@@ -47,7 +53,7 @@ missing `SENSITIVE/` and skips, and steps 05–12 use the committed files.
 | `10_figures.R` | Fig_Survival, Fig_BLUPs |
 | `11_tables.R` | `manuscript_tables.md` — all Tab_* blocks in Markdown |
 | `12_within_family_variance.R` | Discussion analysis: is within-family phenotypic variance larger for cultivar than native arrays? (`NPERM` permutation reps, default 9999) |
-| `13_multilocus_ld.R` | Tab_LinkageDisequilibrium — index of association (Ia, rbarD) within each origin group, on the 58 unrelated maternal trees |
+| `13_multilocus_ld.R` | Tab_LinkageDisequilibrium — index of association (Ia, rbarD) within each origin group, on the 28 genotyped garden maternal trees |
 | `14_dapc_origin.R` | Tab_DAPC — discriminant analysis of principal components, testing whether native/cultivar maternal trees separate on full multilocus genotype |
 | `15_relatedness_check.R` | Tab_Relatedness — pairwise relatedness among maternal trees, checking whether native mothers are more closely related to one another than cultivar mothers |
 | `16_offspring_relatedness.R` | Tab_HeritabilityRelatedness — within-mother offspring relatedness (same Nason/`gstudio` method as Tab_Relatedness, applied to each mother's own genotyped offspring, pooled by origin) and heritability re-expressed at the pooled median realized relatedness, bracketed by the half-sib (r = 0.25) and full-sib (r = 0.5) assumptions |

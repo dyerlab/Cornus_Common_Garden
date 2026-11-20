@@ -60,7 +60,7 @@
 #      a formal re-estimate; pollen-donor structure is left to a follow-up
 #      manuscript.
 #
-# Input : data/genotypes.csv (all genotyped offspring, OffID != 0)
+# Input : data/genotypes.csv via study_genotypes_file() (genotyped garden seedlings, OffID != 0)
 #         data/results/growth_origin_quantgen.csv (P_family per trait/origin,
 #           from 06_single_time.R, "family" model, "original" sensitivity)
 # Output: data/results/offspring_relatedness_pairs.csv     (every within-mother sib pair, complete genotypes only)
@@ -87,7 +87,7 @@ MIN_OFFSPRING <- 2 # a mother needs >= 2 complete-genotype offspring for a pairw
 # ---- 1. Load genotyped offspring, drop incomplete genotypes ---------------
 
 pop <- read_population(
-  file.path(paths$data, "genotypes.csv"),
+  study_genotypes_file(),
   type = "separated",
   locus.columns = 6:14
 )

@@ -14,27 +14,22 @@
 # detect a family variance component there, confounded with (not caused by)
 # the origin label.
 #
-# Uses ALL 58 genotyped adult trees in genotypes.csv (OffID == 0: 26 native,
-# 32 cultivar) rather than restricting to the 36 families that happened to
-# contribute offspring to THIS common garden. An earlier version restricted
-# to that 36-family list (traits_harvest.csv), but 8 of those 36 have no
-# genotyped mother at all (7 native: nat18, nat24, nat28, nat30-33; 1
-# cultivar: urb10), leaving only 28 (9 native, 19 cultivar) -- a needless
-# loss of power. The question here ("are native-origin trees more related to
-# each other than cultivar accessions are to each other?") is about the
-# relatedness structure of the source populations themselves, not something
-# specific to whichever subset happened to produce measured offspring in
-# this one experiment, so there is no reason to throw away the extra 22
-# genotyped adults (02_admixture.R, 13_multilocus_ld.R, and 14_dapc_origin.R
-# all use this same full 58-mother panel for the same reason).
+# Restricted to the maternal trees whose families were planted in THIS
+# common garden (study_genotypes_file() in 00_setup.R): 28 of the 36 garden
+# mothers were genotyped (9 native, 19 cultivar; nat18, nat24, nat28,
+# nat30-33 and urb10 were not). An earlier version used all 58 genotyped
+# adults in the larger collection, but 30 of those have no family in the
+# garden, so they cannot bear on the garden-based family-variance asymmetry
+# this check is meant to address. 02-04 and 13-16 all use the same
+# study-only set.
 #
 # Method: pairwise relatedness from Nason's coancestry coefficient Fij
 # (gstudio::rel_nason, averaged across loci, reported on the relatedness
 # scale r = 2*Fij, following rel_nason()'s own as.relatedness=TRUE convention)
 # -- the same coefficient already underlying the isolation-by-distance
 # framing (Dyer et al. 2012) used elsewhere in this manuscript, computed
-# once from the fixed genotypes for all C(58,2) = 1653 pairs among the 58
-# genotyped adults.
+# once from the fixed genotypes for all C(28,2) = 378 pairs among the 28
+# genotyped garden mothers.
 #
 # (Wang's (2002) dyadic-moment estimator has the lowest sampling variance
 # among the available pairwise estimators and was the first choice here, but
@@ -43,10 +38,10 @@
 # package -- so this uses gstudio's Nason coefficient instead, which is
 # already part of this project's toolchain and needs no extra install.)
 #
-# Rather than treating the 325 within-native or 496 within-cultivar pairs as
+# Rather than treating the 36 within-native or 171 within-cultivar pairs as
 # independent samples (they are not -- every individual appears in multiple
-# pairs), the origin label is permuted across the same 58 individuals,
-# holding the true group sizes (26/32) fixed, and the same pairwise values
+# pairs), the origin label is permuted across the same 28 individuals,
+# holding the true group sizes (9/19) fixed, and the same pairwise values
 # are relabeled "within-native" / "within-cultivar" under each permutation.
 # This gives a null distribution for (a) the difference in mean within-group
 # relatedness and (b) a two-sample Kolmogorov-Smirnov statistic between the
@@ -55,7 +50,7 @@
 # real individuals into groups of the true sizes already reproduces the
 # correct sampling variability for those sizes under the null.
 #
-# Input : data/genotypes.csv (all genotyped adults, OffID == 0)
+# Input : data/genotypes.csv via study_genotypes_file() (garden mothers, OffID == 0)
 # Output: data/results/relatedness_check.csv          (observed stats + p-values)
 #         data/results/relatedness_permutations.csv   (null distributions)
 # -----------------------------------------------------------------------------
@@ -67,9 +62,9 @@ set.seed(SEED)
 NPERM <- 9999
 LOCI  <- c("cf020", "cf125", "cf213", "cf273", "cf581", "cf585", "cf597", "cf634", "cf701")
 
-# ---- 1. Load all genotyped adult trees -----------------------------------
+# ---- 1. Load genotyped garden mothers -----------------------------------
 
-pop <- read_population(file.path(paths$data, "genotypes.csv"),
+pop <- read_population(study_genotypes_file(),
                         type = "separated", locus.columns = 6:14)
 
 geno <- pop %>%
@@ -83,7 +78,7 @@ message(nrow(geno), " genotyped adult trees (",
 origin <- setNames(geno$Origin, geno$ID)
 ids    <- geno$ID
 
-# ---- 2. Nason pairwise relatedness for all 1653 pairs ---------------------
+# ---- 2. Nason pairwise relatedness for all pairs ---------------------
 # genetic_relatedness(..., mode="Nason") returns the multilocus-averaged
 # coancestry Fij; multiply by 2 to put it on the relatedness scale r (what
 # rel_nason()'s own as.relatedness=TRUE argument does for a single locus).
@@ -121,8 +116,8 @@ obs_cultivar <- rel$r_nason[rel$type == "cultivar"]
 obs_mean_diff <- mean(obs_native) - mean(obs_cultivar)
 obs_ks        <- ks_stat(obs_native, obs_cultivar)
 
-# ---- 4. Permutation: shuffle origin labels across the 58 adults, holding ---
-#         group sizes (26/32) fixed; relabel the SAME fixed pairwise values --
+# ---- 4. Permutation: shuffle origin labels across the 28 mothers, holding ---
+#         group sizes (9/19) fixed; relabel the SAME fixed pairwise values --
 
 n_native <- sum(origin == "native")
 

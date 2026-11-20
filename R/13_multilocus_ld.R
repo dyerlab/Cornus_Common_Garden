@@ -20,10 +20,10 @@
 # with a 999-permutation test of the null of no multilocus association
 # (linkage equilibrium), via poppr (Kamvar, Tabima & Grunwald 2014), computed
 # for two datasets:
-#   (1) maternal trees only (58 unrelated individuals) -- the clean test:
+#   (1) maternal trees only (28 genotyped garden mothers) -- the clean test:
 #       no two of these individuals are siblings, so any Ia signal here
 #       cannot be a family/kinship artifact.
-#   (2) maternal trees + their offspring, pooled (886 individuals) -- included
+#   (2) maternal trees + their offspring, pooled (28 mothers + 397 garden seedlings) -- included
 #       for completeness only. This dataset contains many maternal half- and
 #       full-sib families, and sibling groups are *expected* to show elevated
 #       multilocus association purely from shared parentage (a Wahlund-type
@@ -40,7 +40,7 @@
 # treatment is a one-line parenthetical noting the test was done and returned
 # no evidence of multilocus disequilibrium (data not shown).
 #
-# Input : data/genotypes.csv
+# Input : data/genotypes.csv via study_genotypes_file() (garden mothers + garden seedlings)
 # Output: data/results/multilocus_ld.csv
 # -----------------------------------------------------------------------------
 
@@ -56,7 +56,7 @@ suppressPackageStartupMessages({ library(adegenet); library(poppr) })
 
 LOCI <- c("cf020", "cf125", "cf213", "cf273", "cf581", "cf585", "cf597", "cf634", "cf701")
 
-geno <- read_csv(file.path(paths$data, "genotypes.csv"), show_col_types = FALSE)
+geno <- read_csv(study_genotypes_file(), show_col_types = FALSE)
 
 # genotypes.csv stores missing loci as an empty string, not the literal "NA".
 build_genind <- function(df) {

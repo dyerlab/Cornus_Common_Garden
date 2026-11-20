@@ -26,7 +26,7 @@ LOCI <- c("cf020", "cf125", "cf213", "cf273", "cf581", "cf585", "cf597", "cf634"
 
 # ---- 1. Load genotypes as gstudio locus objects -------------------------
 
-pop <- read_population(file.path(paths$data, "genotypes.csv"),
+pop <- read_population(study_genotypes_file(),
                        type = "separated", locus.columns = 6:14)
 
 pop <- pop %>%

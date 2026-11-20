@@ -23,7 +23,7 @@ suppressPackageStartupMessages({ library(dplyr); library(tidyr); library(readr);
 
 LOCI <- c("cf020", "cf125", "cf213", "cf273", "cf581", "cf585", "cf597", "cf634", "cf701")
 
-geno <- read_csv(file.path(paths$data, "genotypes.csv"), show_col_types = FALSE) %>%
+geno <- read_csv(study_genotypes_file(), show_col_types = FALSE) %>%
   mutate(group = if_else(OffID == 0, "maternal", "offspring"),
          ind   = paste(ID, OffID, sep = "_"))
 
@@ -148,7 +148,7 @@ message("reduced marker set (", length(reduced), " loci): ", paste(reduced, coll
 
 # ---- 4. Exclusion probabilities --------------------------------------
 
-pop <- read_population(file.path(paths$data, "genotypes.csv"),
+pop <- read_population(study_genotypes_file(),
                        type = "separated", locus.columns = 6:14)
 
 pe <- genetic_diversity(pop, mode = "Pe")

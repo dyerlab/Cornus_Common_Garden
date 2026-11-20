@@ -47,6 +47,38 @@ check_packages <- function(pkgs = required_packages) {
   invisible(TRUE)
 }
 
+# ---- Study genotypes ------------------------------------------------------
+# data/genotypes.csv holds every genotyped tree in the larger collection (58
+# maternal trees + 828 offspring), but only some of those mothers contributed
+# families to THIS common garden. Every genetic analysis in the manuscript is
+# restricted to the study material:
+#   * maternal trees (OffID == 0) whose family was planted in the garden
+#     (mom present in data/germination.csv: 36 families, 28 of them genotyped)
+#   * offspring that are garden seedlings (mom + id present in germination.csv)
+# The filtered rows are written verbatim (same text, same columns) to
+# data/derived/genotypes_study.csv so gstudio::read_population() and
+# read_csv() parse it identically to the original. Returns that path.
+study_genotypes_file <- function() {
+  out  <- file.path(paths$derived, "genotypes_study.csv")
+  germ <- utils::read.csv(file.path(paths$data, "germination.csv"),
+                          colClasses = "character")
+  garden_moms <- unique(germ$mom)
+  garden_kids <- paste(germ$mom, germ$id)
+
+  lines  <- readLines(file.path(paths$data, "genotypes.csv"))
+  fields <- strsplit(lines[-1], ",", fixed = TRUE)
+  id     <- vapply(fields, `[`, "", 1)
+  offid  <- vapply(fields, `[`, "", 2)
+  keep   <- ifelse(offid == "0", id %in% garden_moms,
+                   paste(id, offid) %in% garden_kids)
+
+  writeLines(c(lines[1], lines[-1][keep]), out)
+  message("study genotypes: ", sum(keep & offid == "0"), " maternal trees, ",
+          sum(keep & offid != "0"), " garden seedlings (of ", length(keep),
+          " genotyped individuals in data/genotypes.csv)")
+  out
+}
+
 # ---- Small utilities ------------------------------------------------------
 `%||%` <- function(x, y) if (is.null(x) || length(x) == 0) y else x
 
